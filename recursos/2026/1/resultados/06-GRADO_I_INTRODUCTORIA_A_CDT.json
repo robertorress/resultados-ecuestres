@@ -1,0 +1,405 @@
+{
+   "concurso": {
+      "nombre": "CDT EL CARRIZAL",
+      "prueba": "GRADO I INTRODUCTORIA A",
+      "fecha_actualizacion": "25/04/2026 11:11:32",
+      "categoria": "CDT",
+      "potros": 0,
+      "infantiles": 0,
+      "siete_annos": 0,
+      "vaquera": 0
+   },
+   "delegado": {
+      "nombre": "CARLOS URIAS ZU\u00D1IGA",
+      "licencia": "12722"
+   },
+   "jueces": [
+      {
+         "nombre": "ANTONIO BATRES MARTIN",
+         "licencia": "1859",
+         "puesto": "JUEZ B:"
+      },
+      {
+         "nombre": "CESAR RODRIGUEZ FERNANDEZ",
+         "licencia": "380571",
+         "puesto": "JUEZ H:"
+      },
+      {
+         "nombre": "CARLOS URIAS ZU\u00D1IGA",
+         "licencia": "12722",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      }
+   ],
+   "resultados": {
+      "cabecera": [
+         {
+            "nombre": "PUESTO"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "JINETE"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "CABALLO"
+         },
+         {
+            "nombre": "JUEZ B"
+         },
+         {
+            "nombre": "JUEZ H"
+         },
+         {
+            "nombre": "JUEZ C"
+         },
+         {
+            "nombre": "-"
+         },
+         {
+            "nombre": "-"
+         },
+         {
+            "nombre": "TOTAL"
+         }
+      ],
+      "datos": [
+         {
+            "puesto": "NOP",
+            "jinete_licencia": "CM15503 ",
+            "jinete_nombre": "Jos\u00E9 Tomas Martin Campos ",
+            "caballo_licencia": "CM5828 ",
+            "caballo_nombre": "AFRICA ",
+            "notas": [
+               {
+                  "juez": "JUEZ B",
+                  "licencia": "1859",
+                  "nota": 0,
+                  "pos": ""
+               },
+               {
+                  "juez": "JUEZ H",
+                  "licencia": "380571",
+                  "nota": 0,
+                  "pos": ""
+               },
+               {
+                  "juez": "JUEZ C",
+                  "licencia": "12722",
+                  "nota": 0,
+                  "pos": ""
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": ""
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": ""
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "MOVIMIENTO"
+                  },
+                  {
+                     "nombre": "JUEZ B"
+                  },
+                  {
+                     "nombre": "JUEZ H"
+                  },
+                  {
+                     "nombre": "JUEZ C"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": 1,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrar al paso medio\nParada - inmovilidad - saludo. Partir al paso medio\nPista a mano derecha",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": 2,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nVuelta a la derecha de 10 m \u00D8 alpaso medio",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": 3,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nMedia vuelta a la derecha de 10 m \u00D8\nMedia vuelta a la izquierda de 10 m \u00D8\nPaso medio",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": 4,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nTrazar un bucle de 10m al paso medio",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": 5,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nVuelta a la izquierda de 10 m \u00D8 al paso medio",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": 6,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nMedia vuelta a la izquierda 10 m \u00D8\nMedia vuelta a la derecha de 10 m \u00D8\nPaso medio",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": 7,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trazar un bucle de 10 metros al paso medio.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": 8,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nPaso medio permitiendo al caballo estirarse en riendas largas",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": 9,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones entre M y K",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": 10,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nSemic\u00EDrculo a la izquierda de 20 \u00D8\nSemic\u00EDrculo a la derecha de 20m \u00D8",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": 11,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nGiro a la derecha\nGiro a la derecha",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": 12,
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar por la l\u00EDnea central\nParada. Inmovilidad y Saludo.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "id": "NC  1",
+                     "orden": "NC  1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Aires (soltura y regularidad)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "id": "NC  2",
+                     "orden": "NC  2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Actividad (deseo de ir hacia delante, elasticidad\nde los trancos, flexibilidad del dorso y\nremetimiento de los posteriores)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "id": " NC  3",
+                     "orden": " NC  3",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n (atenci\u00F3n y confianza; armon\u00EDa,\nligereza y facilidad de los movimientos; rectitud,\naceptaci\u00F3n de la embocadura y ligereza del\ntercio anterior)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "id": "NC  4",
+                     "orden": "NC  4",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n (atenci\u00F3n y confianza; armon\u00EDa,\nligereza y facilidad de los movimientos; rectitud,\naceptaci\u00F3n de la embocadura y ligereza del\ntercio anterior)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": "",
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 1,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         }
+      ]
+   }
+}

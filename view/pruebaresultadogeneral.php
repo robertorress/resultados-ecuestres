@@ -1,0 +1,370 @@
+<?php require_once 'database/resultadojson.php'; ?>
+
+<nav aria-label="Navegación principal">
+    <div class="nav-wrapper blue darken-4">
+
+        <ul class="brand-logo center hide-on-med-and-down">
+            <li><?php echo escape_html($this->m_model->GetConcurso()) ?></li>
+        </ul>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.php"><i class="left large material-icons notranslate">home</i>INICIO</a></li>
+            <li>
+                <?php
+                echo "<a href=\"?c=Prueba&a=ListadoOrdenSalida&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">access_time</i>ORDEN DE SALIDA</a>";
+                ?>
+            </li>
+            <li class="active">
+                <?php
+                echo "<a href=\"?c=Prueba&a=ListadoResultado&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">visibility</i>RESULTADOS</a>";
+                ?>
+            </li>
+        </ul>
+
+        <ul class="right show-on-medium-and-down" style="display:none;padding-right:5%">
+            <?php echo escape_html($this->m_model->GetConcurso()) ?>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav blue accent-1">
+            <div class="user-view">
+            </div>
+            <li><a href="index.php"><i class="large material-icons notranslate">home</i>INICIO</a></li>
+            <li>
+                <?php
+                echo "<a href=\"?c=Prueba&a=ListadoOrdenSalida&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">access_time</i>ORDEN DE SALIDA</a>";
+                ?>
+            </li>
+            <li class="active">
+                <?php
+                echo "<a href=\"?c=Prueba&a=ListadoResultado&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">visibility</i>RESULTADOS</a>";
+                ?>
+            </li>
+        </ul>
+
+        <!-- Cambiamos la palabra 'menu' por su código Unicode universal &#xE5D2;-->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger" aria-label="Abrir menú de navegación"><i class="material-icons notranslate">&#xE5D2;</i></a>
+
+    </div>
+</nav>
+
+<style>
+	.material-icons {
+		translate: no !important;
+	}
+
+	@media only screen and (max-width: 600px) {
+		table.tabla-movil th,
+		table.tabla-movil td {
+			font-size: 11px !important;
+			padding: 5px 2px !important;
+		}
+
+		table.tabla-movil th:nth-child(1),
+		table.tabla-movil td:nth-child(1) {
+			width: 10% !important;
+		}
+
+		table.tabla-movil th:nth-child(2),
+		table.tabla-movil td:nth-child(2) {
+			width: 75% !important;
+			word-break: break-word;
+		}
+
+		table.tabla-movil th:nth-child(3),
+		table.tabla-movil td:nth-child(3) {
+			width: 15% !important;
+			text-align: right !important;
+		}
+	}
+</style>
+
+
+<div class="row">
+    <div class="col s12 center">
+        <div class="card grey darken-1">
+            <div class="card-content">
+                <span class="card-title white-text">RESULTADOS GENERALES</span>
+                <span class="card-title white-text">(PROVISIONALES)</span>
+
+                <div class="row">
+                    <div class="col s12 center">
+
+                        <?php
+                        $id = request_positive_int('id');
+
+                        if ($id !== null) {
+                            foreach ($this->m_model->GetPruebas() as $prueba) {
+                            $json_file = false;
+                            $json_error = null;
+
+                            try {
+                                $reprises = CResultadoJson::load((string)$prueba->link);
+                                $json_file = true;
+                            } catch (Exception $exception) {
+                                $json_error = $exception->getMessage();
+                                }
+                            echo "<div class=\"card-panel blue-grey lighten-1\">";
+
+                            //Vemos si se ha cargado bien el archivo
+                            if ($json_file == false) {
+                                echo '<div class="status-message error" role="alert"><i class="material-icons" aria-hidden="true">error</i>';
+                                echo htmlspecialchars($json_error ?? 'No se pudo cargar el archivo de resultados', ENT_QUOTES, 'UTF-8') . '</div>';
+                            } else {
+
+                                $concurso = $reprises["concurso"];
+                                $jueces = $reprises["jueces"];
+                                $delegado = $reprises["delegado"];
+                                $resultados_cabecera = $reprises["resultados"]["cabecera"];
+                                $resultados_datos = $reprises["resultados"]["datos"];
+
+                                echo "<h4>" . escape_html($prueba->titulo) . "</h4>";
+
+                                //resultados
+                                echo "<div class=\"tabla-movil-wrapper\" style=\"overflow-x: auto;\">";
+                                echo "<table class=\"tabla-movil\">";
+
+                                //Inicio cabecera
+                                echo  "<thead><tr>";
+                                echo "<th></th>";
+                                echo "<th class=\"center-align\">ATLETA<br>CABALLO</th>";
+                                if ($concurso["potros"] == 1) {
+                                    echo "<th class=\"center-align hide-on-small-only\">TROTE</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">PASO</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">GALOPE</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">SUMISIÓN</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">EXP. FUTURO</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">P</th>";
+                                    echo "<th class=\"center-align\">TOTAL</th>";
+                                } else if ($concurso["infantiles"] == 1) {
+                                    echo "<th class=\"center-align hide-on-small-only\">POSICIÓN</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">AYUDAS</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">PRECISIÓN</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">IMP. GENERAL</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">CALIDAD</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">TÉCNICA</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">P.</th>";
+                                    echo "<th class=\"center-align\">TOTAL</th>";
+                                } else if ($concurso["siete_annos"] == 1) {
+                                    echo "<th class=\"center-align hide-on-small-only\">TROTE</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">PASO</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">GALOPE</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">SUMISIÓN</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">EXP. FUTURO</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">CALIDAD</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">TÉCNICA</th>";
+                                    echo "<th class=\"center-align hide-on-small-only\">P.</th>";
+                                    echo "<th class=\"center-align\">TOTAL</th>";
+                                } else {
+                                    foreach ($resultados_cabecera as $cabecera) {
+                                        //Si no hay juez, hay un "-" en el campo
+                                        if ((str_contains($cabecera["nombre"], "JUEZ")) || (str_contains($cabecera["nombre"], "PRESIDENTE")) || (str_contains($cabecera["nombre"], "VOCAL"))) {
+                                            echo "<th class=\"center-align hide-on-small-only\">" . $cabecera["nombre"] . "</th>";
+                                        }
+                                    }
+                                    echo "<th class=\"center-align\">TOTAL</th>";
+                                }
+                                //Fin cabecera
+                                echo  "</tr></thead>";
+
+                                //datos
+                                echo  "<tbody>";
+                                foreach ($resultados_datos as $dato) {
+                                    //notas
+                                    echo "<tr>";
+                                    echo "<td class=\"center-align\">" . $dato["puesto"] . "</td>";
+                                    echo "<td>";
+                                    echo "<p>";
+                                    echo $dato["jinete_nombre"];
+                                    echo "<br>";
+                                    echo $dato["caballo_nombre"];
+                                    echo "</p>";
+                                    echo "</td>";
+
+                                    //Es un reprise normal
+                                    if (($concurso["potros"] == 0) && ($concurso["infantiles"] == 0) && ($concurso["siete_annos"] == 0)) {
+                                        foreach ($dato["notas"] as $nota) {
+                                            //Si no hay pos, entonces no hay nota de juez, está vacío.
+                                            if (is_numeric($nota["pos"]) && ($nota["pos"] > 0)) {
+                                                //Redondeamos al tercer número (bcdiv) y formatemos (number_format) en español (. => miles y , => decimales)
+                                                echo "<td class=\"center-align hide-on-small-only\">";
+                                                echo number_format(bcdiv($nota["nota"], 1, 3), 3, ',', '.');
+                                                echo "<br>";
+                                                echo "(" . $nota["pos"] . ")";
+                                                echo  "</td>";
+                                            }
+                                        }
+
+                                        //Total con tres decimales (bcdiv) y en formato español (number_format, "." => miles y "," => decimales)
+                                        echo "<td class=\"center-align\">";
+                                        if (is_numeric($dato["puesto"]) && ($dato["puesto"] > 0)) {
+                                            echo format_score($dato["total"]);
+                                        }
+                                    } else if ($concurso["potros"] == 1) {
+                                        if (is_numeric($dato["puesto"]) && ($dato["puesto"] > 0)) {
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["trote_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["potros"]["trote_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["paso_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["potros"]["paso_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["galope_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["potros"]["galope_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["sumision_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["potros"]["sumision_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["expectativa_futuro_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["potros"]["expectativa_futuro_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["potros"]["errores"], 1, 1), 1, ',', '.');
+                                            echo  "</td>";
+
+                                            //Total
+                                            echo "<td class=\"center-align\">";
+                                            echo format_score($dato["potros"]["total"]);
+                                            echo  "</td>";
+                                        }
+                                    } else if ($concurso["infantiles"] == 1) {
+                                        if (is_numeric($dato["puesto"]) && ($dato["puesto"] > 0)) {
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["jinete_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["jinete_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["ayudas_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["ayudas_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["precision_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["precision_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["impresion_general_nota"], 1, 1), 1, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["impresion_general_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["calidad_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["calidad_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["tecnica_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["infantiles"]["tecnica_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["infantiles"]["errores"], 1, 1), 1, ',', '.');
+                                            echo  "</td>";
+
+                                            //Total
+                                            echo "<td class=\"center-align\">";
+                                            echo format_score($dato["infantiles"]["total"]);
+                                        }
+                                    } else if ($concurso["siete_annos"] == 1) {
+                                        if (is_numeric($dato["puesto"]) && ($dato["puesto"] > 0)) {
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["trote_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["trote_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["paso_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["paso_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["galope_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["galope_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["sumision_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["sumision_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["expectativa_futuro_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["expectativa_futuro_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["calidad_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["calidad_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["tecnica_nota"], 1, 3), 3, ',', '.');
+                                            echo "<br>";
+                                            echo "(" . $dato["siete_annos"]["tecnica_pos"] . ")";
+                                            echo  "</td>";
+
+                                            echo "<td class=\"center-align hide-on-small-only\">";
+                                            echo number_format(bcdiv($dato["siete_annos"]["errores"], 1, 1), 1, ',', '.');
+                                            echo  "</td>";
+
+                                            //Total
+                                            echo "<td class=\"center-align\">";
+                                            echo format_score($dato["siete_annos"]["total"]);
+                                        }
+                                    }
+
+                                    echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo  "</tbody>";
+
+                                echo "</table>";
+                                echo "</div>";
+
+                                echo "<br><p>Última actualización: " . $concurso["fecha_actualizacion"] . "</p>";
+                            }
+
+                            echo "</div>";
+                            }
+                        }
+
+                        //back button.
+                        echo "<div class=\"card-action\">";
+                        echo "<a href=\"?c=Prueba&a=ListadoResultado&id=" . $id . "\" aria-label=\"Volver a resultados\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
+                        echo "</div>";
+
+                        echo "<p class=\"show-on-small hide-on-med-and-up\">Ponga el dispositivo en horizontal para ver más detalles</p>";
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

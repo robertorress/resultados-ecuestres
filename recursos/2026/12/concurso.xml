@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>I TROFEO CIUDAD DE ALBACETE (CDT)</concurso>
+    <fecha>17/05/2026</fecha>
+    <logo>recursos/imagenes/logo_agustin_moreno.jpg</logo>
+    <ubicacion>
+        <nombre>Hípica Agustín Moreno (Albacete)</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/12/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <ordensalida>recursos/2026/12/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/12/resultados/01-NIVEL_2_PRELIMINAR_5_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 5 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/12/resultados/02-NIVEL_0_ASIENTO_POSICION_PRELIMINAR_CDT.json</link>
+            <titulo>ASIENTO Y POSICIÓN PRELIMINAR</titulo>
+        </prueba>
+        <prueba>
+            <id>3</id>
+            <link>recursos/2026/12/resultados/03-NIVEL_1_RIDER_1A_CDT.json</link>
+            <titulo>RIDER 1A</titulo>
+        </prueba>
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/12/resultados/04-NIVEL_2_RIDER_2A_CDT.json</link>
+            <titulo>RIDER 2A</titulo>
+        </prueba>
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/12/resultados/05-NIVEL_SAN_JORGE_PRELIMINAR_CABALLOS_JOVENES_7_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 7 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/12/resultados/06-NIVEL_1_ALEVINES_INDIVIDUAL_CDT.json</link>
+            <titulo>ALEVINES INDIVIDUAL</titulo>
+        </prueba>
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/12/resultados/07-NIVEL_3_JUVENILES_0E_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES 0* EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>8</id>
+            <link>recursos/2026/12/resultados/08-NIVEL_4_JUVENILES_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES EQUIPOS</titulo>
+        </prueba>
+    </pruebas>
+</root>
+

@@ -1,0 +1,1295 @@
+{
+   "concurso": {
+      "nombre": "CDT LAS CUADRAS DE LA SANTA CRUZ",
+      "fecha": "",
+      "prueba": "INFANTILES EQUIPOS",
+      "fecha_actualizacion": "04/07/2026 20:49:07",
+      "categoria": "CDT",
+      "potros": 0,
+      "infantiles": 1,
+      "siete_annos": 0,
+      "vaquera": 0
+   },
+   "delegado": {
+      "nombre": "C\u00E9sar Rodr\u00EDguez Fern\u00E1ndez",
+      "licencia": "CM16931"
+   },
+   "jueces": [
+      {
+         "nombre": "Carlos Ur\u00EDas Z\u00FA\u00F1iga",
+         "licencia": "CM516",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "Antonio Batres Mart\u00EDn",
+         "licencia": "CM428",
+         "puesto": "CALIDAD"
+      },
+      {
+         "nombre": "Antonio Batres Mart\u00EDn",
+         "licencia": "CM428",
+         "puesto": "CALIDAD"
+      }
+   ],
+   "resultados": {
+      "cabecera": [
+         {
+            "nombre": "PUESTO"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "JINETE"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "CABALLO"
+         },
+         {
+            "nombre": "POS."
+         },
+         {
+            "nombre": "AYU."
+         },
+         {
+            "nombre": "PREC."
+         },
+         {
+            "nombre": "IMPRE."
+         },
+         {
+            "nombre": "CALIDAD"
+         },
+         {
+            "nombre": "TECNICA"
+         }
+      ],
+      "datos": [
+         {
+            "puesto": "1",
+            "jinete_licencia": "CM13129",
+            "jinete_nombre": "D\u00F1a. Luc\u00EDa Cepeda S\u00E1nchez",
+            "caballo_licencia": "CM4853",
+            "caballo_nombre": "INCAUTO XII",
+            "total": 65,
+            "notas": [
+               {
+                  "juez": "POS.",
+                  "licencia": "CM516",
+                  "nota": 7.09999990463257,
+                  "pos": 2
+               },
+               {
+                  "juez": "AYU.",
+                  "licencia": "",
+                  "nota": 7,
+                  "pos": 1
+               },
+               {
+                  "juez": "PREC.",
+                  "licencia": "",
+                  "nota": 7.40000009536743,
+                  "pos": 1
+               },
+               {
+                  "juez": "IMPRE.",
+                  "licencia": "CM428",
+                  "nota": 7.19999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "CALIDAD",
+                  "licencia": "CM16931",
+                  "nota": 71.75,
+                  "pos": 1
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": 7.1,
+               "jinete_pos": 2,
+               "ayudas_nota": 7,
+               "ayudas_pos": 1,
+               "precision_nota": 7.4,
+               "precision_pos": 1,
+               "impresion_general_nota": 7.2,
+               "impresion_general_pos": 1,
+               "calidad_nota": 71.75,
+               "calidad_pos": 1,
+               "tecnica_nota": 65,
+               "tecnica_pos": 1,
+               "errores": 0,
+               "total": 68.375
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "MOVIMIENTO"
+                  },
+                  {
+                     "nombre": "JUEZ C"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al trote de trabajo.\nParada- Inmovilidad-Saludo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pista a la derecha\nTrote medio\nTrote de trabajo.",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y V\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m).\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medio c\u00EDrculo (20 m), ceder y retomar las riendas en 3-4 trancos\nTrote de trabajo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m)\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nMedio c\u00EDrculo (20 m)",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "[Paso medio]\nGiro sobre los posteriores. Continuar en paso medio",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al galope de trabajo\nGalope de trabajo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope medio.\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y F\nGalope reunido",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "En la diagonal corte\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope reunido\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar en la l\u00EDnea central\nParada \u2013 Inmovilidad y Saludo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC  1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Posici\u00F3n y Asiento del Jinete",
+                     "nota_juez_1": 7.1,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Correcta utilizaci\u00F3n de las ayudas",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": " NC  3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Precisi\u00F3n",
+                     "nota_juez_1": 7.4,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Impresi\u00F3n General",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "2",
+            "jinete_licencia": "CM14541",
+            "jinete_nombre": "D\u00F1a. Alma S\u00E1nchez Gonz\u00E1lez",
+            "caballo_licencia": "CM5862",
+            "caballo_nombre": "TICO V",
+            "total": 65,
+            "notas": [
+               {
+                  "juez": "POS.",
+                  "licencia": "CM516",
+                  "nota": 7.19999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "AYU.",
+                  "licencia": "",
+                  "nota": 7,
+                  "pos": 1
+               },
+               {
+                  "juez": "PREC.",
+                  "licencia": "",
+                  "nota": 7.19999980926514,
+                  "pos": 2
+               },
+               {
+                  "juez": "IMPRE.",
+                  "licencia": "CM428",
+                  "nota": 7.19999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "CALIDAD",
+                  "licencia": "CM16931",
+                  "nota": 71.5,
+                  "pos": 2
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": 7.2,
+               "jinete_pos": 1,
+               "ayudas_nota": 7,
+               "ayudas_pos": 1,
+               "precision_nota": 7.2,
+               "precision_pos": 2,
+               "impresion_general_nota": 7.2,
+               "impresion_general_pos": 1,
+               "calidad_nota": 71.5,
+               "calidad_pos": 2,
+               "tecnica_nota": 65,
+               "tecnica_pos": 1,
+               "errores": 0,
+               "total": 68.25
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "MOVIMIENTO"
+                  },
+                  {
+                     "nombre": "JUEZ C"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al trote de trabajo.\nParada- Inmovilidad-Saludo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pista a la derecha\nTrote medio\nTrote de trabajo.",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y V\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m).\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medio c\u00EDrculo (20 m), ceder y retomar las riendas en 3-4 trancos\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m)\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nMedio c\u00EDrculo (20 m)",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "[Paso medio]\nGiro sobre los posteriores. Continuar en paso medio",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al galope de trabajo\nGalope de trabajo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope medio.\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y F\nGalope reunido",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "En la diagonal corte\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope reunido\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar en la l\u00EDnea central\nParada \u2013 Inmovilidad y Saludo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC  1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Posici\u00F3n y Asiento del Jinete",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Correcta utilizaci\u00F3n de las ayudas",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": " NC  3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Precisi\u00F3n",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Impresi\u00F3n General",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "3",
+            "jinete_licencia": "CM15455",
+            "jinete_nombre": "D. Iker Mu\u00F1ano Martin",
+            "caballo_licencia": "CM5237",
+            "caballo_nombre": "NOSTALGICO XXIX",
+            "total": 55.6,
+            "notas": [
+               {
+                  "juez": "POS.",
+                  "licencia": "CM516",
+                  "nota": 6.59999990463257,
+                  "pos": 3
+               },
+               {
+                  "juez": "AYU.",
+                  "licencia": "",
+                  "nota": 6.69999980926514,
+                  "pos": 2
+               },
+               {
+                  "juez": "PREC.",
+                  "licencia": "",
+                  "nota": 6.80000019073486,
+                  "pos": 3
+               },
+               {
+                  "juez": "IMPRE.",
+                  "licencia": "CM428",
+                  "nota": 6.69999980926514,
+                  "pos": 2
+               },
+               {
+                  "juez": "CALIDAD",
+                  "licencia": "CM16931",
+                  "nota": 67,
+                  "pos": 3
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": 6.6,
+               "jinete_pos": 3,
+               "ayudas_nota": 6.7,
+               "ayudas_pos": 2,
+               "precision_nota": 6.8,
+               "precision_pos": 3,
+               "impresion_general_nota": 6.7,
+               "impresion_general_pos": 2,
+               "calidad_nota": 67,
+               "calidad_pos": 3,
+               "tecnica_nota": 55.6,
+               "tecnica_pos": 2,
+               "errores": 0,
+               "total": 61.3
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "MOVIMIENTO"
+                  },
+                  {
+                     "nombre": "JUEZ C"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al trote de trabajo.\nParada- Inmovilidad-Saludo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pista a la derecha\nTrote medio\nTrote de trabajo.",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y V\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m).\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medio c\u00EDrculo (20 m), ceder y retomar las riendas en 3-4 trancos\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Media vuelta (10m)\nCesi\u00F3n a la pierna\nTrote de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio\nMedio c\u00EDrculo (20 m)",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "[Paso medio]\nGiro sobre los posteriores. Continuar en paso medio",
+                     "nota_juez_1": 4,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso medio",
+                     "nota_juez_1": 5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir al galope de trabajo\nGalope de trabajo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope medio.\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y F\nGalope reunido",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "En la diagonal corte\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 2,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Bucle de 10 m\nGalope reunido",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope reunido\nCambio de pie simple\nGalope reunido",
+                     "nota_juez_1": 5.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote de trabajo\nTrote de trabajo",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar en la l\u00EDnea central\nParada \u2013 Inmovilidad y Saludo",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC  1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Posici\u00F3n y Asiento del Jinete",
+                     "nota_juez_1": 6.6,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Correcta utilizaci\u00F3n de las ayudas",
+                     "nota_juez_1": 6.7,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": " NC  3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Precisi\u00F3n",
+                     "nota_juez_1": 6.8,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Impresi\u00F3n General",
+                     "nota_juez_1": 6.7,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         }
+      ]
+   }
+}

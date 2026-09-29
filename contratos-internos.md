@@ -1,0 +1,70 @@
+# Contratos internos
+
+Este documento describe los formatos que comparten el catalogo, los datos, los modelos, los controladores y las vistas.
+
+## Catalogo XML
+
+`config.xml` contiene nodos de anio (`aAAAA`) con `concursos/concurso`. Cada concurso debe proporcionar:
+
+- `id`: entero positivo y unico.
+- `nombre`: nombre visible del concurso.
+- `fecha`: formato `dd/mm/aaaa`.
+- `datos`: ruta relativa al XML del concurso.
+- `tipo` y `visible`: metadatos del catalogo.
+
+El catalogo no se modifica desde la aplicacion. `CConcursosWrapper` valida el XML y permite buscar por anio o por ID.
+
+## XML de concurso
+
+El XML referenciado por `datos` debe contener el nodo `concurso`, la fecha, las pruebas y, cuando proceda, las ordenes de salida. Cada prueba incluye al menos un `id`, un titulo y un enlace relativo al JSON de resultados.
+
+## JSON de resultados
+
+`CResultadoJson::load()` devuelve un array con esta estructura minima:
+
+```text
+{
+  "concurso": { ... },
+  "resultados": {
+    "cabecera": [ ... ],
+    "datos": [ ... ]
+  }
+}
+```
+
+Los consumidores deben tratar `cabecera` y `datos` como arrays. Los campos adicionales dependen del tipo de prueba, por ejemplo `notas`, `puesto`, `total`, `jueces`, `errores` y `observaciones`.
+
+## Peticiones HTTP
+
+- `c`: controlador permitido por la lista blanca de `index.php`.
+- `a`: accion permitida por el controlador.
+- `id`: entero positivo de concurso.
+- `prueba`: identificador de prueba validado por el modelo correspondiente.
+- `jinete` y `caballo`: identificadores alfanumericos normalizados antes de crear enlaces.
+
+Los valores que se insertan en HTML pasan por `escape_html()`. Las rutas de recursos y datos se resuelven mediante `CProjectPath`.
+
+## Capas de aplicacion
+
+- `index.php` valida ruta y accion, y crea el controlador.
+- `controller/` coordina la peticion, el modelo y la vista.
+- `model/` prepara datos y no genera HTML.
+- `database/` valida y carga XML/JSON, resuelve rutas y registra errores.
+- `view/` presenta datos ya preparados y escapa cualquier valor dinamico.
+
+Los cambios de estos contratos deben reflejarse en `tools/validate-data.php`, `tools/automated-tests.php` y este documento.
+
+## Compatibilidad de URLs
+
+La lista blanca de `config/routes.php` conserva los nombres de controladores y acciones usados por las URLs existentes. Las pruebas automatizadas verifican las rutas publicas principales antes de publicar cambios.
+
+Las mejoras internas deben mantener estos parametros y combinaciones:
+
+- `Concursos/Index`
+- `Prueba/MostrarPrueba`
+- `Resultado/Resultado`
+- `ResultadoGeneral/ResultadoGeneral`
+- `ResultadoIndividual/ResultadoIndividual`
+- `OrdenSalida/Listado`
+
+El nombre del controlador se normaliza a minusculas para localizar la ruta, pero el nombre de la accion se conserva tal como esta definido para evitar aceptar acciones no previstas.

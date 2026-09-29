@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>CVT LAS CUADRAS DE LA SANTA CRUZ - COPA ANCCE</concurso>
+    <fecha>11/07/2026</fecha>
+    <logo>recursos/imagenes/logo_santa_cruz.png</logo>
+    <ubicacion>
+        <nombre>Cuadras la Santa Cruz</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/14/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/14/resultados/01-CABALLOS_JOVENES_4_AÑOS_CVT.json</link>
+            <titulo>CABALLOS JÓVENES 4 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/14/resultados/02-CABALLOS_JOVENES_5_AÑOS_CVT.json</link>
+            <titulo>CABALLOS JÓVENES 5 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>3</id>
+            <link>recursos/2026/14/resultados/03-ALEVINES_OPEN.json</link>
+            <titulo>ALEVINES OPEN</titulo>
+        </prueba>
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/14/resultados/04-INFANTILES_OPEN.json</link>
+            <titulo>INFANTILES OPEN</titulo>
+        </prueba>
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/14/resultados/04-INFANTILES_CVT.json</link>
+            <titulo>INFANTILES</titulo>
+        </prueba>
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/14/resultados/06-JUVENILES_0E_CVT.json</link>
+            <titulo>JUVENILES 0*</titulo>
+        </prueba>	
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/14/resultados/05-INTERMEDIA_CVT.json</link>
+            <titulo>INTERMEDIA</titulo>
+        </prueba>			
+    </pruebas>
+</root>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>CDT LAS CUADRAS DE LA SANTA CRUZ</concurso>
+    <fecha>04/07/2026</fecha>
+    <logo>recursos/imagenes/logo_santa_cruz.png</logo>
+    <ubicacion>
+        <nombre>Cuadras la Santa Cruz</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/6/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <ordensalida>recursos/2026/6/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
+		<ordensalida>recursos/2026/6/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/6/resultados/01-NIVEL_4_JUVENILES_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/6/resultados/02-NIVEL_2_INFANTILES_EQUIPOS_CDT.json</link>
+            <titulo>INFANTILES EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>3</id>
+            <link>recursos/2026/6/resultados/03-NIVEL_1_PRELIMINAR_4_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 4 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/6/resultados/04-NIVEL_SAN_JORGE_PRELIMINAR_CABALLOS_JOVENES_7_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 7 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/6/resultados/05-NIVEL_0_ASIENTO_POSICION_PRELIMINAR_CDT.json</link>
+            <titulo>AP PRELIMINAR</titulo>
+        </prueba>
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/6/resultados/06-NIVEL_1_ALEVINES_EQUIPOS_CDT.json</link>
+            <titulo>ALEVINES EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/6/resultados/07-NIVEL_1_RIDER_1A_CDT.json</link>
+            <titulo>RIDER 1A</titulo>
+        </prueba>
+        <prueba>
+            <id>8</id>
+            <link>recursos/2026/6/resultados/08-NIVEL_3_RIDER_3A_CDT.json</link>
+            <titulo>RIDER 3A</titulo>
+        </prueba>
+        <prueba>
+            <id>9</id>
+            <link>recursos/2026/6/resultados/09-NIVEL_2_RIDER_2A_CDT.json</link>
+            <titulo>RIDER 2A</titulo>
+        </prueba>
+        <prueba>
+            <id>10</id>
+            <link>recursos/2026/6/resultados/09-NIVEL_3_JUVENILES_0E_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES 0* EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>11</id>
+            <link>recursos/2026/6/resultados/10-NIVEL_4_CLASICA_1_CDT.json</link>
+            <titulo>CLÁSICA 1</titulo>
+        </prueba>
+    </pruebas>
+</root>
+

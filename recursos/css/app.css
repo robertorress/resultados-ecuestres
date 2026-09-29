@@ -1,0 +1,569 @@
+/* Paleta del modo normal: modificar estos valores para cambiar el tema completo. */
+:root {
+    --color-background: #f4f7fb;
+    --color-primary: #1e3a5f;
+    --color-secondary: #197c78;
+    --color-surface: #ffffff;
+    --color-panel: #e6f0f2;
+    --color-panel-header: #dce9ef;
+    --color-text: #1f2937;
+    --color-text-inverse: #ffffff;
+    --color-focus: #ffeb3b;
+    --color-muted: #9e9e9e;
+}
+
+/* Paleta del modo contraste: modificar estos valores para cambiar ese tema. */
+body.contrast-mode {
+    --color-background: #374151;
+    --color-primary: #4b5563;
+    --color-secondary: #facc15;
+    --color-surface: #4b5563;
+    --color-panel: #5b6573;
+    --color-panel-header: #6b7280;
+    --color-text: #ffffff;
+    --color-text-inverse: #374151;
+    --color-focus: #00ffff;
+    --color-muted: #ffffff;
+}
+
+/* Base de la página y desplazamiento suave. */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+body.site-shell {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Colores de navegación, footer y menú lateral móvil. */
+nav .nav-wrapper.blue.darken-4 {
+    background-color: var(--color-primary) !important;
+}
+
+.page-footer.blue.darken-4 {
+    background-color: var(--color-primary) !important;
+}
+
+.sidenav.blue.accent-1 {
+    background-color: var(--color-primary) !important;
+}
+
+.sidenav.blue.accent-1 a,
+.sidenav.blue.accent-1 .material-icons {
+    color: var(--color-text-inverse) !important;
+}
+
+/* Tarjetas, paneles y cabeceras de grupos. */
+.card.grey.darken-1 {
+    background-color: var(--color-surface) !important;
+    color: var(--color-text);
+}
+
+.card-panel.blue-grey.lighten-1 {
+    background-color: var(--color-panel) !important;
+    color: var(--color-text);
+}
+
+.collapsible-header.blue-grey.lighten-1 {
+    background-color: var(--color-panel-header) !important;
+    color: var(--color-primary);
+}
+
+.card-title.white-text,
+.detalle-seccion-titulo {
+    color: var(--color-primary) !important;
+}
+
+.card.grey.darken-1 .card-content.white-text {
+    color: var(--color-text) !important;
+}
+
+/* Fuerza texto claro en las tablas de notas y clasificación. */
+body.contrast-mode table,
+body.contrast-mode table th,
+body.contrast-mode table td,
+body.contrast-mode table p {
+    color: var(--color-text) !important;
+}
+
+/* Acciones, puntuaciones y estado de foco accesible. */
+.puntuacion-final.btn,
+.puntuacion-final.btn-small,
+.btn.blue.accent-1 {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-text-inverse) !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.sidenav-trigger:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.sidenav-trigger {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.icon-action {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puntuacion-final.btn,
+.puntuacion-final.btn-small {
+    box-sizing: border-box;
+    height: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    vertical-align: middle;
+}
+
+/* Tamaños táctiles y marca de navegación. */
+.sidenav a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+/* Mantiene visible y en mayúsculas la etiqueta del selector en ambos menús. */
+.contrast-menu-item {
+    text-transform: uppercase;
+}
+
+body.contrast-mode a,
+body.contrast-mode .brand-logo,
+body.contrast-mode .nav-wrapper .sidenav-trigger {
+    color: var(--color-text) !important;
+}
+
+body.contrast-mode .sidenav.blue.accent-1 a,
+body.contrast-mode .sidenav.blue.accent-1 .material-icons,
+body.contrast-mode .sidenav a,
+body.contrast-mode .sidenav .material-icons,
+body.contrast-mode .nav-wrapper a,
+body.contrast-mode .nav-wrapper .material-icons,
+body.contrast-mode .card-title.white-text,
+body.contrast-mode .detalle-seccion-titulo,
+body.contrast-mode .collapsible-header.blue-grey.lighten-1 {
+    color: var(--color-text) !important;
+}
+
+body.contrast-mode .sidenav {
+    background-color: var(--color-primary) !important;
+}
+
+/* Aísla los logos sobre una superficie clara en modo contraste. */
+body.contrast-mode .hipica-logo {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 2px solid #ffffff !important;
+    border-radius: 0.35rem;
+    background: #ffffff;
+    object-fit: contain;
+}
+
+.brand-logo {
+    padding-left: 1rem;
+    font-size: 1.35rem !important;
+}
+
+.titulo-inicio {
+    margin: 1.5rem 0 0.25rem;
+    font-size: 2rem;
+}
+
+.subtitulo-inicio {
+    margin-top: 0;
+}
+
+/* Buscador de la pantalla inicial. */
+.inicio-busqueda {
+    max-width: 42rem;
+    margin: 1.5rem auto;
+    text-align: left;
+}
+
+.inicio-busqueda label {
+    color: var(--color-muted);
+    left: 3rem;
+    top: 0.8rem;
+    transform: none;
+    transition: opacity 0.2s ease;
+}
+
+.inicio-busqueda input:focus + label {
+    opacity: 0;
+}
+
+.inicio-busqueda.has-value label {
+    opacity: 0;
+}
+
+.resultados-controles {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.status-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.35rem;
+    text-align: left;
+}
+
+.status-message.info {
+    background-color: var(--color-panel-header);
+    color: var(--color-text);
+}
+
+.status-message.error {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+/* Acciones de la vista de detalle. */
+.detalle-seccion-titulo {
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.detalle-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustes específicos para impresión. */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0.6cm;
+    }
+
+    html {
+        height: auto;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        zoom: 0.32;
+        width: 312%;
+    }
+
+    nav,
+    footer,
+    .sidenav,
+    .detalle-acciones,
+    .skip-link,
+    .contrast-toggle {
+        display: none !important;
+    }
+
+    .section,
+    .row,
+    .card,
+    .card-content,
+    .card-panel {
+        margin: 0 !important;
+        padding: 0.1rem !important;
+    }
+
+    .card,
+    .card-panel {
+        box-shadow: none !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    tr,
+    .detalle-seccion-titulo {
+        page-break-inside: avoid;
+    }
+
+    table {
+        font-size: 8px !important;
+    }
+
+    table th,
+    table td {
+        padding: 0.05rem !important;
+    }
+
+    .detalle-seccion-titulo {
+        margin: 0.35rem 0 !important;
+        font-size: 1rem !important;
+    }
+
+    .white-text,
+    .detalle-seccion-titulo {
+        color: #000 !important;
+    }
+}
+
+/* Buscador de resultados y enlace de salto al contenido. */
+.resultados-controles .input-field label {
+    color: var(--color-muted);
+    left: 3rem;
+    top: 0.8rem;
+    transform: none;
+    transition: opacity 0.2s ease;
+}
+
+.resultados-controles .input-field input:focus + label,
+.resultados-controles .input-field.has-value label {
+    opacity: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 0.5rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    color: var(--color-text-inverse);
+    background: var(--color-primary);
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+}
+
+main:focus {
+    outline: none;
+}
+
+/* Tablas en escritorio y comportamiento vertical en móviles. */
+table.tabla-movil {
+    width: 100%;
+}
+
+table.tabla-movil th,
+table.tabla-movil td {
+    vertical-align: middle;
+}
+
+.puntuacion-final.btn,
+.puntuacion-final.btn-small {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    height: 44px;
+    width: auto !important;
+    min-width: 88px !important;
+    min-height: 44px;
+    max-width: none !important;
+    flex: 0 0 auto;
+    overflow: visible;
+    white-space: nowrap;
+    text-indent: 0 !important;
+    letter-spacing: normal;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Materialize considera móvil/tableta los anchos inferiores a 993 px. */
+@media only screen and (max-width: 992px) {
+    nav .nav-wrapper > ul.hide-on-med-and-down {
+        display: none !important;
+    }
+
+    nav .nav-wrapper > .sidenav-trigger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block !important;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    nav .nav-wrapper > .brand-logo {
+        left: 0 !important;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+        transform: none !important;
+        padding: 0 3rem !important;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* Ajustes de tablas y navegación para pantallas pequeñas. */
+@media only screen and (max-width: 600px) {
+    /* Mantiene el disparador arriba y oculta el menú de escritorio en móvil. */
+    nav .nav-wrapper > ul.hide-on-med-and-down {
+        display: none !important;
+    }
+
+    nav .nav-wrapper > .sidenav-trigger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block !important;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    .brand-logo {
+        left: 50% !important;
+        transform: translateX(-50%);
+        padding-left: 0;
+        font-size: 1rem !important;
+        white-space: nowrap;
+    }
+
+    /* Centra el título respecto a toda la barra, no respecto al espacio restante. */
+    nav .nav-wrapper > .brand-logo {
+        left: 0 !important;
+        right: 0;
+        width: 100%;
+        transform: none !important;
+        padding: 0;
+        text-align: center;
+    }
+
+    .contrast-toggle {
+        right: 0.75rem;
+        bottom: 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .titulo-inicio {
+        font-size: 1.6rem;
+    }
+
+    .tabla-movil-wrapper {
+        overflow-x: visible !important;
+    }
+
+    table.tabla-movil.responsive-table {
+        display: table;
+        table-layout: fixed;
+        overflow: visible;
+    }
+
+    table.tabla-movil th,
+    table.tabla-movil td {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.2rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    table.tabla-notas-individual {
+        table-layout: auto;
+    }
+
+    table.tabla-notas-individual th,
+    table.tabla-notas-individual td {
+        vertical-align: top;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    table.tabla-notas-individual th:first-child,
+    table.tabla-notas-individual td:first-child {
+        width: 2.5rem;
+        white-space: nowrap;
+    }
+
+    table.tabla-notas-individual th:nth-child(n + 3),
+    table.tabla-notas-individual td:nth-child(n + 3) {
+        width: 3rem;
+        white-space: nowrap;
+    }
+
+    table.tabla-jueces-individual {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    table.tabla-jueces-individual col.juez-nombre-col {
+        width: 65%;
+    }
+
+    table.tabla-jueces-individual col.juez-nota-col {
+        width: 35%;
+    }
+
+    table.tabla-jueces-individual th,
+    table.tabla-jueces-individual td {
+        width: auto !important;
+        min-width: 0;
+        vertical-align: middle;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    table.tabla-jueces-individual th:first-child,
+    table.tabla-jueces-individual td:first-child {
+        width: 65% !important;
+        min-width: 0;
+    }
+
+    table.tabla-jueces-individual th:last-child,
+    table.tabla-jueces-individual td:last-child {
+        white-space: normal;
+    }
+
+    table.tabla-jueces-individual p {
+        margin: 0.25rem 0;
+    }
+}
+
+/* Contenido multimedia adaptable. */
+iframe {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reduce animaciones para usuarios que lo solicitan en su sistema. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

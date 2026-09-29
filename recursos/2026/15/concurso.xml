@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>CDT CLUB HIPICO LA MELGOSA (Cuenca)</concurso>
+    <fecha>01/08/2026</fecha>
+    <logo>recursos/imagenes/logo_club_hipico_la_melgosa.png</logo>
+    <ubicacion>
+        <nombre>Hípica la melgosa</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/15/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <ordensalida>recursos/2026/15/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
+		<ordensalida>recursos/2026/15/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/15/resultados/01-NIVEL_1_RIDER_1C_CDT.json</link>
+            <titulo>RIDER 1C</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/15/resultados/02-NIVEL_3_RIDER_3B_CDT.json</link>
+            <titulo>RIDER 3B</titulo>
+        </prueba>
+        <prueba>
+            <id>3</id>
+            <link>recursos/2026/15/resultados/03-NIVEL_2_RIDER_2B_CDT.json</link>
+            <titulo>RIDER 2B</titulo>
+        </prueba>
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/15/resultados/04-NIVEL_1_FINAL_4_AÑOS_CDT.json</link>
+            <titulo>FINAL 4 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/15/resultados/05-NIVEL_1_AMAZONAS_RIDER_1A_CDT.json</link>
+            <titulo>AMAZONAS RIDER 1A</titulo>
+        </prueba>
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/15/resultados/06-NIVEL_4_CLASICA_2_CDT.json</link>
+            <titulo>CLÁSICA 2</titulo>
+        </prueba>
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/15/resultados/07-NIVEL_1_ALEVINES_INDIVIDUAL_CDT.json</link>
+            <titulo>ALEVINES INDIVIDUAL</titulo>
+        </prueba>
+        <prueba>
+            <id>8</id>
+            <link>recursos/2026/15/resultados/08-NIVEL_2_AMAZONAS_RIDER_2A_CDT.json</link>
+            <titulo>AMAZONAS RIDER 2A</titulo>
+        </prueba>
+        <prueba>
+            <id>9</id>
+            <link>recursos/2026/15/resultados/09-NIVEL_3_JUVENILES_0E_INDIVIDUAL_CDT.json</link>
+            <titulo>JUVENILES 0* INDIVIDUAL</titulo>
+        </prueba>
+        <prueba>
+            <id>10</id>
+            <link>recursos/2026/15/resultados/10-NIVEL_4_JUVENILES_INDIVIDUAL_CDT.json</link>
+            <titulo>JUVENILES INDIVIDUAL</titulo>
+        </prueba>
+    </pruebas>
+</root>
+

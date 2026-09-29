@@ -1,0 +1,570 @@
+{
+   "concurso": {
+      "nombre": "XXXVI CDT CENTRO ECUESTRE ANTARES",
+      "fecha": "",
+      "prueba": "PRELIMINAR CABALLOS 7 A\u00D1OS",
+      "fecha_actualizacion": "31/05/2026 14:16:26",
+      "categoria": "CDT",
+      "potros": 0,
+      "infantiles": 0,
+      "siete_annos": 1,
+      "vaquera": 0
+   },
+   "delegado": {
+      "nombre": "Cesar Rodr\u00EDguez Fern\u00E1ndez",
+      "licencia": "CM-16931"
+   },
+   "jueces": [
+      {
+         "nombre": "Antonio Batres Mart\u00EDn",
+         "licencia": "CM-428",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "Victor Navarro Oca\u00F1a",
+         "licencia": "CM-7834",
+         "puesto": "CALIDAD"
+      },
+      {
+         "nombre": "Victor Navarro Oca\u00F1a",
+         "licencia": "CM-7834",
+         "puesto": "CALIDAD"
+      }
+   ],
+   "resultados": {
+      "cabecera": [
+         {
+            "nombre": "PUESTO"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "JINETE"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "CABALLO"
+         },
+         {
+            "nombre": "TROTE"
+         },
+         {
+            "nombre": "PASO"
+         },
+         {
+            "nombre": "GALOPE"
+         },
+         {
+            "nombre": "SUMISI\u00D3N"
+         },
+         {
+            "nombre": "EXP. FUTURO"
+         },
+         {
+            "nombre": "CALIDAD"
+         }
+      ],
+      "datos": [
+         {
+            "puesto": "1",
+            "jinete_licencia": "CM2194",
+            "jinete_nombre": "ANA MARTINEZ LOPEZ",
+            "caballo_licencia": "CM5287",
+            "caballo_nombre": "ORION",
+            "total": 81.2,
+            "notas": [
+               {
+                  "juez": "TROTE",
+                  "licencia": "CM-428",
+                  "nota": 8.19999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "PASO",
+                  "licencia": "",
+                  "nota": 7.90000009536743,
+                  "pos": 1
+               },
+               {
+                  "juez": "GALOPE",
+                  "licencia": "",
+                  "nota": 8.30000019073486,
+                  "pos": 1
+               },
+               {
+                  "juez": "SUMISI\u00D3N",
+                  "licencia": "CM-7834",
+                  "nota": 8,
+                  "pos": 1
+               },
+               {
+                  "juez": "EXP. FUTURO",
+                  "licencia": "CM-16931",
+                  "nota": 8.19999980926514,
+                  "pos": 1
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": 8.2,
+               "trote_pos": 1,
+               "paso_nota": 7.9,
+               "paso_pos": 1,
+               "galope_nota": 8.3,
+               "galope_pos": 1,
+               "sumision_nota": 8,
+               "sumision_pos": 1,
+               "expectativa_futuro_nota": 8.2,
+               "expectativa_futuro_pos": 1,
+               "calidad_nota": 81.2,
+               "calidad_pos": 1,
+               "tecnica_nota": 69.8214285714286,
+               "tecnica_pos": 1,
+               "errores": 0,
+               "total": 75.5107142857143
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "MOVIMIENTO"
+                  },
+                  {
+                     "nombre": "JUEZ C"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al galope reunido\nParada - inmovilidad - saludo\nPartir al trote reunido\nTrote reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pista a mano derecha\nTrote largo\nTrote reunido",
+                     "nota_juez_1": 7.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Transiciones en M y K\nEl trote reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar a lo largo\nApoyar a la izquierda",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Vuelta a la derecha (8 m \u00D8)",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Espalda adentro a la derecha\nTrote reunido",
+                     "nota_juez_1": 7.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Paso reunido\nDoblar a la derecha\nDoblar a la izquierda",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Paso largo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso reunido y partir al trote reunido\nTrote reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar a lo largo\nApoyar a la derecha",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Vuelta a la izquierda (8 m \u00D8)",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Espalda adentro a la izquierda\nTrote reunido",
+                     "nota_juez_1": 7.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Partir a galope reunido a la izquierda\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope medio\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Proceder hacia X a galope reunido\nMedia pirueta a la izquierda\n(Pirueta de trabajo, radio aprox.\npermitido de 1 a 3 m.)",
+                     "nota_juez_1": 6,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Cambio de pie en el aire\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyo a la derecha\nL\u00EDnea central\nCambio de pie en el aire\nPista a mano izquierda",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sobre la diagonal corta 3 cambios de pie cada 4 trancos.\nGalope reunido",
+                     "nota_juez_1": 6.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Avanzar hacia X a galope reunido\nMedia pirueta a la derecha. (Pirueta de trabajo, radio aprox. permitido de 1 a 3 m.)",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 20,
+                     "orden": "20",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Cambio de pie en el aire\nGalope reunido",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 21,
+                     "orden": "21",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyo a la izquierda\nL\u00EDnea central\nCambio de pie en el aire\nPista a mano derecha",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 22,
+                     "orden": "22",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope largo",
+                     "nota_juez_1": 7.5,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 23,
+                     "orden": "23",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope reunido y cambio de pie en el aire",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 24,
+                     "orden": "24",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Doblar a lo largo\nParada - inmovilidad - saludo",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 25,
+                     "orden": "25",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Impresi\u00F3n General",
+                     "nota_juez_1": 7,
+                     "nota_juez_2": -1,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC  1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote",
+                     "nota_juez_1": 8.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso",
+                     "nota_juez_1": 7.9,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": " NC  3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope",
+                     "nota_juez_1": 8.3,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sumi\u00F3n",
+                     "nota_juez_1": 8,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC  5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Expectativas de futuro",
+                     "nota_juez_1": 8.2,
+                     "nota_juez_2": "-1",
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         }
+      ]
+   }
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <a2026>
+        <concursos>
+            <concurso>
+                <id>1</id>
+                <nombre>CDT EL CARRIZAL (Pepino)</nombre>
+                <fecha>25/04/2026</fecha>
+                <datos>recursos/2026/1/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>2</id>
+                <nombre>CDT C.D. HIPICO EL PRADO (Cedillo Del Condado)</nombre>
+                <fecha>19/04/2026</fecha>
+                <datos>recursos/2026/2/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>no</visible>
+            </concurso>
+            <concurso>
+                <id>3</id>
+                <nombre>CDT C.D. CENTRO ECUESTRE ANTARES (Talavera De La Reina)</nombre>
+                <fecha>30/05/2026</fecha>
+                <datos>recursos/2026/3/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>4</id>
+                <nombre>CDT C.D. CENTRO ECUESTRE ANTARES (Talavera De La Reina)</nombre>
+                <fecha>31/05/2026</fecha>
+                <datos>recursos/2026/4/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>5</id>
+                <nombre>CDT C.D. HIPICA EL VENERO (Mentrida)</nombre>
+                <fecha>07/06/2026</fecha>
+                <datos>recursos/2026/5/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>6</id>
+                <nombre>CDT C.D. CUADRAS DE LA SANTA CRUZ (Pepino)</nombre>
+                <fecha>04/07/2026</fecha>
+                <datos>recursos/2026/6/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>7</id>
+                <nombre>CDT EL CARRIZAL (Pepino)</nombre>
+                <fecha>18/07/2026</fecha>
+                <datos>recursos/2026/7/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>no</visible>
+            </concurso>
+            <concurso>
+                <id>8</id>
+                <nombre>CDT CLUB HIPICO LA MELGOSA (Cuenca)</nombre>
+                <fecha>20/06/2026</fecha>
+                <datos>recursos/2026/8/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>9</id>
+                <nombre>CDT C.D. HIPICA EL VENERO (Mentrida)</nombre>
+                <fecha>13/09/2026</fecha>
+                <datos>recursos/2026/9/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>no</visible>
+            </concurso>
+            <concurso>
+                <id>10</id>
+                <nombre>CDT C.D.EQUIDEPOR VICTOR NAVARRO (Tarancón)</nombre>
+                <fecha>04/10/2026</fecha>
+                <datos>recursos/2026/10/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>no</visible>
+            </concurso>
+            <concurso>
+                <id>11</id>
+                <nombre>CVT C.D. LAS ESPUELAS (Yunquera De Henares)</nombre>
+                <fecha>09/05/2026</fecha>
+                <datos>recursos/2026/11/concurso.xml</datos>
+				<tipo>Doma Vaquera</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>12</id>
+                <nombre>I TROFEO CIUDAD DE ALBACETE (CDT)</nombre>
+                <fecha>17/05/2026</fecha>
+                <datos>recursos/2026/12/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>		
+            <concurso>
+                <id>13</id>
+                <nombre>II TROFEO CIUDAD DE ALBACETE (CDT)</nombre>
+                <fecha>27/06/2026</fecha>
+                <datos>recursos/2026/13/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>	
+            <concurso>
+                <id>14</id>
+                <nombre>CVT LAS CUADRAS DE LA SANTA CRUZ - COPA ANCCE</nombre>
+                <fecha>11/07/2026</fecha>
+                <datos>recursos/2026/14/concurso.xml</datos>
+				<tipo>Doma Vaquera</tipo>
+				<visible>si</visible>
+            </concurso>
+            <concurso>
+                <id>15</id>
+                <nombre>CDT CLUB HIPICO LA MELGOSA (Cuenca)</nombre>
+                <fecha>01/08/2026</fecha>
+                <datos>recursos/2026/15/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
+        </concursos>
+    </a2026>
+    <a2025>
+    </a2025>
+</root>

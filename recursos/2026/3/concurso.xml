@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>C.D. CENTRO ECUESTRE ANTARES</concurso>
+    <fecha>30/05/2026</fecha>
+    <logo>recursos/imagenes/logo_antares.png</logo>
+    <ubicacion>
+        <nombre>Centro Ecuestre Antares</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/3/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <ordensalida>recursos/2026/3/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
+		<ordensalida>recursos/2026/3/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
+		<ordensalida>recursos/2026/3/orden_salida/ORDEN_DE_SALIDA_004.png</ordensalida>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/3/resultados/01-NIVEL_2_PRELIMINAR_5_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 5 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/3/resultados/02-NIVEL_1_ALEVINES_EQUIPOS_CDT.json</link>
+            <titulo>ALEVINES EQUIPOS</titulo>
+        </prueba>
+        <prueba>
+            <id>3</id>
+            <link>recursos/2026/3/resultados/03-NIVEL_0_ASIENTO_POSICION_PRELIMINAR_CDT.json</link>
+            <titulo>AP PRELIMINAR</titulo>
+        </prueba>	
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/3/resultados/04-NIVEL_2_INFANTILES_EQUIPOS_CDT.json</link>
+            <titulo>INFATILES EQUIPOS</titulo>
+        </prueba>	
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/3/resultados/05-NIVEL_1_RIDER_1A_CDT.json</link>
+            <titulo>RIDER 1A</titulo>
+        </prueba>	
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/3/resultados/06-NIVEL_1_PRELIMINAR_4_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 4 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/3/resultados/07-NIVEL_2_RIDER_2A_CDT.json</link>
+            <titulo>RIDER 2A</titulo>
+        </prueba>		
+        <prueba>
+            <id>8</id>
+            <link>recursos/2026/3/resultados/08-NIVEL_3_RIDER_3A_CDT.json</link>
+            <titulo>RIDER 3A</titulo>
+        </prueba>
+        <prueba>
+            <id>9</id>
+            <link>recursos/2026/3/resultados/09-NIVEL_SAN_JORGE_SAN_JORGE_CDT.json</link>
+            <titulo>SAN JORGE</titulo>
+        </prueba>
+		<prueba>
+            <id>10</id>
+            <link>recursos/2026/3/resultados/10-NIVEL_3_JUVENILES_0E_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES 0* EQUIPOS</titulo>
+        </prueba>
+		<prueba>
+            <id>11</id>
+            <link>recursos/2026/3/resultados/11-NIVEL_4_JUVENILES_EQUIPOS_CDT.json</link>
+            <titulo>JUVENILES EQUIPOS</titulo>
+        </prueba>	
+		<prueba>
+            <id>12</id>
+            <link>recursos/2026/3/resultados/12-NIVEL_4_CLASICA_1_CDT.json</link>
+            <titulo>CLÁSICA 1</titulo>
+        </prueba>		
+		<prueba>
+            <id>13</id>
+            <link>recursos/2026/3/resultados/13-NIVEL_SAN_JORGE_PRELIMINAR_CABALLOS_JOVENES_7_AÑOS_CDT.json</link>
+            <titulo>PRELIMINAR 7 AÑOS JORGE</titulo>
+        </prueba>			
+    </pruebas>
+</root>
+

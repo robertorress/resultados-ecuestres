@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>I CVT HIPICA LAS ESPUELAS</concurso>
+    <fecha>09/05/2026</fecha>
+    <logo>recursos/imagenes/logo_las_espuelas.jpg</logo>
+    <ubicacion>
+        <nombre>Hípica Las Espuelas (Yunquera de Henares)</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+        <ordensalida>recursos/2026/11/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <sorteo>https://www.youtube.com/watch?v=dVhHU5IN4-A</sorteo>
+    </ordensalidas>
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/2026/11/resultados/01-ALEVINES_OPEN.json</link>
+            <titulo>ALEVINES OPEN</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/11/resultados/02-JUVENILES_0E_OPEN.json</link>
+            <titulo>JUVENILES 0* OPEN</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/2026/11/resultados/02-JUVENILES_0E_CVT.json</link>
+            <titulo>JUVENILES 0*</titulo>
+        </prueba>
+        <prueba>
+            <id>4</id>
+            <link>recursos/2026/11/resultados/03-INFANTILES_CVT.json</link>
+            <titulo>INFANTILES</titulo>
+        </prueba>
+        <prueba>
+            <id>5</id>
+            <link>recursos/2026/11/resultados/04-CABALLOS_JOVENES_6_AÑOS_CVT.json</link>
+            <titulo>CABALLOS JÓVENES 6 AÑOS</titulo>
+        </prueba>
+        <prueba>
+            <id>6</id>
+            <link>recursos/2026/11/resultados/05-INTERMEDIA_CVT.json</link>
+            <titulo>INTERMEDIA</titulo>
+        </prueba>
+        <prueba>
+            <id>7</id>
+            <link>recursos/2026/11/resultados/06-DOMADOS_CVT.json</link>
+            <titulo>DOMADOS</titulo>
+        </prueba>
+    </pruebas>
+</root>
+

@@ -1,0 +1,1975 @@
+{
+   "concurso": {
+      "nombre": "C.D. CUADRAS DE LA SANTA CRUZ - COPA ANCCE",
+      "fecha": "",
+      "prueba": "JUVENILES 1*",
+      "fecha_actualizacion": "09/07/2026 20:56:48",
+      "categoria": "CVT",
+      "potros": 0,
+      "infantiles": 0,
+      "siete_annos": 0,
+      "vaquera": 1
+   },
+   "delegado": {
+      "nombre": "CARLOS URIAS ZU\u00D1IGA",
+      "licencia": "CM516"
+   },
+   "jueces": [
+      {
+         "nombre": "CARLOS URIAS ZU\u00D1IGA",
+         "licencia": "CM516",
+         "puesto": "PRESIDENTE:"
+      },
+      {
+         "nombre": "TAMARA ANTON TAPIA",
+         "licencia": "MA82012",
+         "puesto": "VOCAL 1:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": ""
+      }
+   ],
+   "resultados": {
+      "cabecera": [
+         {
+            "nombre": "PUESTO"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "JINETE"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "CABALLO"
+         },
+         {
+            "nombre": "PRESIDENTE"
+         },
+         {
+            "nombre": "VOCAL 1"
+         },
+         {
+            "nombre": "-"
+         },
+         {
+            "nombre": "-"
+         },
+         {
+            "nombre": "-"
+         },
+         {
+            "nombre": "TOTAL"
+         }
+      ],
+      "datos": [
+         {
+            "puesto": "-",
+            "jinete_licencia": "CM17365",
+            "jinete_nombre": "D. Hugo Ruiz Gom\u00E9z",
+            "caballo_licencia": "CM5786",
+            "caballo_nombre": "RELAMPAGO II 25%",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "PRESIDENTE",
+                  "licencia": "CM516",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "VOCAL 1",
+                  "licencia": "MA82012",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "EJERCICIO"
+                  },
+                  {
+                     "nombre": "PRESIDENTE"
+                  },
+                  {
+                     "nombre": "VOCAL 1"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al galope.\nParada, inmovilidad y saludo.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "C\u00EDrculo o vuelta al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso de costado\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Piruetas directas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pirueta inversa al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas sobre las piernas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada al paso y paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 3,
+                     "texto": "Paso castellano y reunido general de toda la prueba\nPor derecho m\u00EDnimo 30 m.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope en c\u00EDrculos o vueltas de mayor a menor\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Serpentina de tres bucles al galope con cambio de pie en aire al pasar por la l\u00EDnea central",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope trocado en c\u00EDrculo o vuelta\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas y revolver sobre las piernas, al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear, templar y doblar consecutivamente\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear y parar a raya, salida al paso castellano por derecho (min 6 pasos) o al galope por derecho (min 4 trancos)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Parada, paso atr\u00E1s con salida en arremetida y finalmente paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope de trabajo y largo",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada, inmovilidad y saludo.\nSalida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC 01",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Presentaci\u00F3n al paso\nTraje, sombrero y colocaci\u00F3n, cabezada y crines; montura; cola y pelado.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 02",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n, impulsi\u00F3n y colocaci\u00F3n del caballo\nContacto, rectitud, obediencia, respuesta a las ayudas.\nDeseo de avanzar, elasticidad de los trancos y flexibilidad del dorso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 03",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Posici\u00F3n y asiento del jinete; correcci\u00F3n y efecto de las ayud\nEvitar el excesivo abuso de modificaci\u00F3n o ajuste de riendas.\nPosici\u00F3n del jinete, asiento y discreci\u00F3n en el empleo de las ayudas",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+               {
+                  "texto": "Vara, protectores, vendas, vestimenta o arn\u00E9s no autorizado durante la presentaci\u00F3n",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Entrar al cuadrilongo antes del toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Tardar m\u00E1s de 30\u2019\u2019 en entrar al cuadrilongo tras toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Realizaci\u00F3n de ejercicios no contemplados",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               }
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "-",
+            "jinete_licencia": "CM17264",
+            "jinete_nombre": "D. Aitor Bonillo Cifuentes",
+            "caballo_licencia": "CM5844",
+            "caballo_nombre": "KALY",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "PRESIDENTE",
+                  "licencia": "CM516",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "VOCAL 1",
+                  "licencia": "MA82012",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "EJERCICIO"
+                  },
+                  {
+                     "nombre": "PRESIDENTE"
+                  },
+                  {
+                     "nombre": "VOCAL 1"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al galope.\nParada, inmovilidad y saludo.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "C\u00EDrculo o vuelta al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso de costado\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Piruetas directas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pirueta inversa al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas sobre las piernas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada al paso y paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 3,
+                     "texto": "Paso castellano y reunido general de toda la prueba\nPor derecho m\u00EDnimo 30 m.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope en c\u00EDrculos o vueltas de mayor a menor\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Serpentina de tres bucles al galope con cambio de pie en aire al pasar por la l\u00EDnea central",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope trocado en c\u00EDrculo o vuelta\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas y revolver sobre las piernas, al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear, templar y doblar consecutivamente\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear y parar a raya, salida al paso castellano por derecho (min 6 pasos) o al galope por derecho (min 4 trancos)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Parada, paso atr\u00E1s con salida en arremetida y finalmente paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope de trabajo y largo",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada, inmovilidad y saludo.\nSalida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC 01",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Presentaci\u00F3n al paso\nTraje, sombrero y colocaci\u00F3n, cabezada y crines; montura; cola y pelado.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 02",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n, impulsi\u00F3n y colocaci\u00F3n del caballo\nContacto, rectitud, obediencia, respuesta a las ayudas.\nDeseo de avanzar, elasticidad de los trancos y flexibilidad del dorso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 03",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Posici\u00F3n y asiento del jinete; correcci\u00F3n y efecto de las ayud\nEvitar el excesivo abuso de modificaci\u00F3n o ajuste de riendas.\nPosici\u00F3n del jinete, asiento y discreci\u00F3n en el empleo de las ayudas",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+               {
+                  "texto": "Vara, protectores, vendas, vestimenta o arn\u00E9s no autorizado durante la presentaci\u00F3n",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Entrar al cuadrilongo antes del toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Tardar m\u00E1s de 30\u2019\u2019 en entrar al cuadrilongo tras toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Realizaci\u00F3n de ejercicios no contemplados",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               }
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "-",
+            "jinete_licencia": "MA95464",
+            "jinete_nombre": "D. Luis C\u00E9sar Valle P\u00E9rez",
+            "caballo_licencia": "MA27135",
+            "caballo_nombre": "GUADALQUIVIR VP",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "PRESIDENTE",
+                  "licencia": "CM516",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "VOCAL 1",
+                  "licencia": "MA82012",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "EJERCICIO"
+                  },
+                  {
+                     "nombre": "PRESIDENTE"
+                  },
+                  {
+                     "nombre": "VOCAL 1"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al galope.\nParada, inmovilidad y saludo.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "C\u00EDrculo o vuelta al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso de costado\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Piruetas directas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pirueta inversa al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas sobre las piernas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada al paso y paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 3,
+                     "texto": "Paso castellano y reunido general de toda la prueba\nPor derecho m\u00EDnimo 30 m.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope en c\u00EDrculos o vueltas de mayor a menor\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Serpentina de tres bucles al galope con cambio de pie en aire al pasar por la l\u00EDnea central",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope trocado en c\u00EDrculo o vuelta\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas y revolver sobre las piernas, al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear, templar y doblar consecutivamente\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear y parar a raya, salida al paso castellano por derecho (min 6 pasos) o al galope por derecho (min 4 trancos)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Parada, paso atr\u00E1s con salida en arremetida y finalmente paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope de trabajo y largo",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada, inmovilidad y saludo.\nSalida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC 01",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Presentaci\u00F3n al paso\nTraje, sombrero y colocaci\u00F3n, cabezada y crines; montura; cola y pelado.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 02",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n, impulsi\u00F3n y colocaci\u00F3n del caballo\nContacto, rectitud, obediencia, respuesta a las ayudas.\nDeseo de avanzar, elasticidad de los trancos y flexibilidad del dorso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 03",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Posici\u00F3n y asiento del jinete; correcci\u00F3n y efecto de las ayud\nEvitar el excesivo abuso de modificaci\u00F3n o ajuste de riendas.\nPosici\u00F3n del jinete, asiento y discreci\u00F3n en el empleo de las ayudas",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+               {
+                  "texto": "Vara, protectores, vendas, vestimenta o arn\u00E9s no autorizado durante la presentaci\u00F3n",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Entrar al cuadrilongo antes del toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Tardar m\u00E1s de 30\u2019\u2019 en entrar al cuadrilongo tras toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Realizaci\u00F3n de ejercicios no contemplados",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               }
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "-",
+            "jinete_licencia": "MA58486",
+            "jinete_nombre": "D\u00F1a. In\u00E9s Contreras Rivero",
+            "caballo_licencia": "MA27144",
+            "caballo_nombre": "DISTINGUIDO",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "PRESIDENTE",
+                  "licencia": "CM516",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "VOCAL 1",
+                  "licencia": "MA82012",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               }
+            ],
+            "potros": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "N\u00BA"
+                  },
+                  {
+                     "nombre": "EJERCICIO"
+                  },
+                  {
+                     "nombre": "PRESIDENTE"
+                  },
+                  {
+                     "nombre": "VOCAL 1"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  },
+                  {
+                     "nombre": "-"
+                  }
+               ],
+               "notas": [
+                  {
+                     "id": 1,
+                     "orden": "1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Entrada al galope.\nParada, inmovilidad y saludo.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 2,
+                     "orden": "2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "C\u00EDrculo o vuelta al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 3,
+                     "orden": "3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 4,
+                     "orden": "4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso de costado\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 5,
+                     "orden": "5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Piruetas directas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 6,
+                     "orden": "6",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Pirueta inversa al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 7,
+                     "orden": "7",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas sobre las piernas al paso\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 8,
+                     "orden": "8",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada al paso y paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 9,
+                     "orden": "9",
+                     "puntos": 10,
+                     "coeficiente": 3,
+                     "texto": "Paso castellano y reunido general de toda la prueba\nPor derecho m\u00EDnimo 30 m.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 10,
+                     "orden": "10",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope en c\u00EDrculos o vueltas de mayor a menor\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 11,
+                     "orden": "11",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Apoyos al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 12,
+                     "orden": "12",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Serpentina de tres bucles al galope con cambio de pie en aire al pasar por la l\u00EDnea central",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 13,
+                     "orden": "13",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope trocado en c\u00EDrculo o vuelta\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 14,
+                     "orden": "14",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Medias vueltas y revolver sobre las piernas, al galope\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 15,
+                     "orden": "15",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear, templar y doblar consecutivamente\nAmbas manos",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 16,
+                     "orden": "16",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Arrear y parar a raya, salida al paso castellano por derecho (min 6 pasos) o al galope por derecho (min 4 trancos)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 17,
+                     "orden": "17",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Parada, paso atr\u00E1s con salida en arremetida y finalmente paso atr\u00E1s con salida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 18,
+                     "orden": "18",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Galope de trabajo y largo",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  },
+                  {
+                     "id": 19,
+                     "orden": "19",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Parada, inmovilidad y saludo.\nSalida al paso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": -1,
+                     "nota_juez_4": -1,
+                     "nota_juez_5": -1
+                  }
+               ],
+               "notas_conjunto": [
+                  {
+                     "orden": "NC 01",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Presentaci\u00F3n al paso\nTraje, sombrero y colocaci\u00F3n, cabezada y crines; montura; cola y pelado.",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 02",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Sumisi\u00F3n, impulsi\u00F3n y colocaci\u00F3n del caballo\nContacto, rectitud, obediencia, respuesta a las ayudas.\nDeseo de avanzar, elasticidad de los trancos y flexibilidad del dorso",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  },
+                  {
+                     "orden": "NC 03",
+                     "puntos": 10,
+                     "coeficiente": 2,
+                     "texto": "Posici\u00F3n y asiento del jinete; correcci\u00F3n y efecto de las ayud\nEvitar el excesivo abuso de modificaci\u00F3n o ajuste de riendas.\nPosici\u00F3n del jinete, asiento y discreci\u00F3n en el empleo de las ayudas",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": "-1",
+                     "nota_juez_4": "-1",
+                     "nota_juez_5": "-1"
+                  }
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+               {
+                  "texto": "Vara, protectores, vendas, vestimenta o arn\u00E9s no autorizado durante la presentaci\u00F3n",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Entrar al cuadrilongo antes del toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Tardar m\u00E1s de 30\u2019\u2019 en entrar al cuadrilongo tras toque de campana",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "Realizaci\u00F3n de ejercicios no contemplados",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               },
+               {
+                  "texto": "",
+                  "error_juez_1": 0,
+                  "error_juez_2": 0,
+                  "error_juez_3": "-1",
+                  "error_juez_4": "-1",
+                  "error_juez_5": "-1"
+               }
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         }
+      ]
+   }
+}
