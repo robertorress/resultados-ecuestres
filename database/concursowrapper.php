@@ -65,6 +65,15 @@ class CConcursoWrapper
         return $this->xml->ordensalidas->sorteo;
     }
 
+    public function GetPlanos()
+    {
+        if (isset($this->xml->planos->plano)) {
+            return $this->xml->planos->plano;
+        }
+
+        return [];
+    }
+
     public function GetPruebas()
     {
         return $this->xml->pruebas->prueba;

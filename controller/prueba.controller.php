@@ -8,6 +8,7 @@ class CPruebaController extends CBaseController
     protected $actionViews = [
         'Index' => 'body.php',
         'MostrarPrueba' => 'body.php',
+        'Plano' => 'pruebaplano.php',
         'ListadoOrdenSalida' => 'pruebalistadoordensalida.php',
         'ListadoResultado' => 'pruebalistadoresultado.php',
     ];

@@ -45,6 +45,11 @@ abstract class CConcursoModel
         return $this->m_concurso->GetSorteoOrdenSalida();
     }
 
+    public function GetPlanos()
+    {
+        return $this->m_concurso->GetPlanos();
+    }
+
     public function GetPruebas()
     {
         return $this->m_concurso->GetPruebas();

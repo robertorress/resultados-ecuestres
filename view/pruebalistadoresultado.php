@@ -9,6 +9,11 @@
             <li><a href="index.php"><i class="left large material-icons notranslate">home</i>INICIO</a></li>
             <li>
                 <?php
+                echo "<a href=\"?c=Prueba&a=Plano&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">map</i>PLANO</a>";
+                ?>
+            </li>
+            <li>
+                <?php
                 echo "<a href=\"?c=Prueba&a=ListadoOrdenSalida&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">access_time</i>ORDEN DE SALIDA</a>";
                 ?>
             </li>
@@ -27,6 +32,11 @@
             <div class="user-view">
             </div>
             <li><a href="index.php"><i class="large material-icons notranslate">home</i>INICIO</a></li>
+            <li>
+                <?php
+                echo "<a href=\"?c=Prueba&a=Plano&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">map</i>PLANO</a>";
+                ?>
+            </li>
             <li>
                 <?php
                 echo "<a href=\"?c=Prueba&a=ListadoOrdenSalida&id=" . $this->m_model->GetConcursoId() . "\"><i class=\"left large material-icons notranslate\">access_time</i>ORDEN DE SALIDA</a>";

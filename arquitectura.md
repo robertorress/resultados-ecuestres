@@ -37,6 +37,7 @@ Ejemplos:
 
 ```text
 ?c=Concursos&a=Index
+?c=Prueba&a=Plano&id=15
 ?c=Prueba&a=ListadoResultado&id=15&prueba=1
 ?c=ResultadoIndividual&a=ResultadoIndividual&id=15&prueba=1&jinete=CM17341&caballo=CM5887
 ```
@@ -81,7 +82,7 @@ La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por 
 | Archivo | Función resumida |
 | --- | --- |
 | `controller/concursos.controller.php` | Lista y muestra los concursos disponibles |
-| `controller/prueba.controller.php` | Gestiona pruebas, órdenes de salida y listados de resultados |
+| `controller/prueba.controller.php` | Gestiona pruebas, plano de instalaciones, órdenes de salida y listados de resultados |
 | `controller/resultado.controller.php` | Gestiona resultados de una prueba |
 | `controller/resultadogeneral.controller.php` | Gestiona la clasificación o resultado general |
 | `controller/resultadoequipos.controller.php` | Gestiona la clasificación de resultados por equipos |
@@ -343,9 +344,11 @@ Las tablas principales se han mantenido en formato clásico vertical. En móvil 
 - Ajustar tablas de notas y jueces.
 - Mantener las puntuaciones completas con tres decimales.
 
-La navegación incluye un enlace permanente a `INICIO`, menú lateral para móvil y una marca de página consistente. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
+La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú lateral para móvil y una marca de página consistente. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
 
 Los listados de resultados incorporan búsqueda por atleta o caballo y un aviso cuando no existen coincidencias.
+
+La sección `PLANO` replica la estructura visual de `ORDEN DE SALIDA`: una tarjeta por cada imagen configurada. Cuando no hay imágenes válidas en `concurso.xml`, muestra una tarjeta vacía con el mensaje `NO HAY PLANOS DISPONIBLES` y un botón para volver al detalle del concurso.
 
 El detalle individual incorpora títulos de sección y estilos de impresión preparados para futuras necesidades. Actualmente solo muestra la flecha centrada para regresar al listado; no incluye exportación PDF. El formato de impresión existente usa A4 vertical, escala el contenido al 32 %, reduce tipografía y espaciado, permite saltos entre filas y oculta el menú superior para forzar una sola hoja.
 

@@ -88,6 +88,15 @@ function validateContestXml($relativePath)
                 reportError("$relativePath: no existe orden de salida $link");
             }
         }
+
+        if (isset($xml->planos->plano)) {
+            foreach ($xml->planos->plano as $plano) {
+                $link = trim((string)$plano);
+                if ($link !== '' && !is_file(CProjectPath::resolveData($link))) {
+                    reportError("$relativePath: no existe plano $link");
+                }
+            }
+        }
     } catch (Throwable $exception) {
         reportError("$relativePath: " . $exception->getMessage());
     }

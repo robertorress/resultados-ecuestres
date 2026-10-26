@@ -20,6 +20,12 @@ El XML referenciado por `datos` debe contener el nodo `concurso`, la fecha, las 
 
 Para resultados por equipos, el XML del concurso admite `equipos` (y por compatibilidad `equipo`) con valor `si/yes` o `no`. Si está habilitado, debe existir `equipos.xml` en la misma carpeta.
 
+Para la pantalla **PLANO**, el XML del concurso admite el bloque opcional:
+
+- `<planos><plano>ruta/relativa/al/plano_1.png</plano><plano>ruta/relativa/al/plano_2.png</plano></planos>`
+
+El bloque puede contener uno o varios `plano`. Si no existe el bloque o ningún archivo es válido, la vista muestra una tarjeta vacía con el texto `NO HAY PLANOS DISPONIBLES` y un enlace de regreso al detalle del concurso.
+
 ## XML de equipos
 
 `equipos.xml` define `equipos/equipo` con esta estructura mínima:
@@ -79,6 +85,7 @@ Las mejoras internas deben mantener estos parametros y combinaciones:
 
 - `Concursos/Index`
 - `Prueba/MostrarPrueba`
+- `Prueba/Plano`
 - `Resultado/Resultado`
 - `ResultadoGeneral/ResultadoGeneral`
 - `ResultadoEquipos/ResultadoEquipos`

@@ -74,6 +74,7 @@ testCondition(youtube_video_id('https://example.com/video') === null, 'Rechaza u
 $legacyRoutes = [
     ['c' => 'Concursos', 'a' => 'Index'],
     ['c' => 'Prueba', 'a' => 'MostrarPrueba'],
+    ['c' => 'Prueba', 'a' => 'Plano'],
     ['c' => 'Resultado', 'a' => 'Resultado'],
     ['c' => 'ResultadoGeneral', 'a' => 'ResultadoGeneral'],
     ['c' => 'ResultadoEquipos', 'a' => 'ResultadoEquipos'],

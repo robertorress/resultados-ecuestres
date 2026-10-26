@@ -9,7 +9,7 @@ return [
     'prueba' => [
         'file' => 'controller/prueba.controller.php',
         'class' => 'CPruebaController',
-        'actions' => ['Index', 'MostrarPrueba', 'ListadoOrdenSalida', 'ListadoResultado'],
+        'actions' => ['Index', 'MostrarPrueba', 'Plano', 'ListadoOrdenSalida', 'ListadoResultado'],
     ],
     'resultado' => [
         'file' => 'controller/resultado.controller.php',

@@ -8,6 +8,11 @@ $concursoId = escape_html($this->m_model->GetConcursoId());
             <li class="<?php echo $activeSection === 'inicio' ? 'active' : ''; ?>">
                 <a href="index.php"><i class="left large material-icons notranslate">home</i>INICIO</a>
             </li>
+            <li class="<?php echo $activeSection === 'plano' ? 'active' : ''; ?>">
+                <a href="?c=Prueba&a=Plano&id=<?php echo $concursoId; ?>">
+                    <i class="left large material-icons notranslate">map</i>PLANO
+                </a>
+            </li>
             <li class="<?php echo $activeSection === 'orden' ? 'active' : ''; ?>">
                 <a href="?c=Prueba&a=ListadoOrdenSalida&id=<?php echo $concursoId; ?>">
                     <i class="left large material-icons notranslate">access_time</i>ORDEN DE SALIDA
@@ -23,6 +28,11 @@ $concursoId = escape_html($this->m_model->GetConcursoId());
             <div class="user-view"></div>
             <li class="<?php echo $activeSection === 'inicio' ? 'active' : ''; ?>">
                 <a href="index.php"><i class="large material-icons notranslate">home</i>INICIO</a>
+            </li>
+            <li class="<?php echo $activeSection === 'plano' ? 'active' : ''; ?>">
+                <a href="?c=Prueba&a=Plano&id=<?php echo $concursoId; ?>">
+                    <i class="left large material-icons notranslate">map</i>PLANO
+                </a>
             </li>
             <li class="<?php echo $activeSection === 'orden' ? 'active' : ''; ?>">
                 <a href="?c=Prueba&a=ListadoOrdenSalida&id=<?php echo $concursoId; ?>">

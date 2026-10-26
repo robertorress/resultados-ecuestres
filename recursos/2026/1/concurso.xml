@@ -16,6 +16,9 @@
         <ordensalida>recursos/2026/1/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
         <ordensalida>recursos/2026/1/orden_salida/ORDEN_DE_SALIDA_004.png</ordensalida>
     </ordensalidas>
+    <planos>
+        <plano></plano>
+    </planos>
     <pruebas>
         <prueba>
             <id>1</id>
@@ -89,4 +92,3 @@
         </prueba>
     </pruebas>
 </root>
-

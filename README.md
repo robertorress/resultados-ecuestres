@@ -85,6 +85,18 @@ powershell -ExecutionPolicy Bypass -File tools\restore-project.ps1 -Archive C:\P
 - `recursos\AAAA\N\equipos.xml`: definición de equipos (cuando `concurso.xml` habilita resultados por equipos).
 - `recursos\AAAA\N\resultados\*.json`: resultados de cada prueba.
 - `recursos\AAAA\N\orden_salida\`: imágenes de órdenes de salida.
+- `recursos\AAAA\N\plano\` (opcional): imágenes del plano de instalaciones referenciadas desde `concurso.xml`.
+
+Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `planos` con una o varias entradas `plano`:
+
+```xml
+<planos>
+  <plano>recursos/AAAA/N/plano/plano_instalaciones_01.png</plano>
+  <plano>recursos/AAAA/N/plano/plano_instalaciones_02.png</plano>
+</planos>
+```
+
+Si no hay planos válidos o no se define el bloque, la sección **PLANO** muestra una tarjeta vacía con el texto **NO HAY PLANOS DISPONIBLES** y un botón de regreso al detalle del concurso.
 
 ## Resultados por equipos
 
