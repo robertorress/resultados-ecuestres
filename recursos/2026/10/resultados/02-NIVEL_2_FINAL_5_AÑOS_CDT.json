@@ -1,0 +1,831 @@
+{
+   "concurso": {
+      "nombre": "XII CDT EQUIDEPOR VICTOR NAVARRO",
+      "fecha": "",
+      "prueba": "FINAL CABALLOS 5 A\u00D1OS",
+      "fecha_actualizacion": "25/10/2026 10:23:33",
+      "categoria": "CDT",
+      "potros": "1",
+      "infantiles": 0,
+      "siete_annos": 0,
+      "vaquera": 0
+   },
+   "delegado": {
+      "nombre": "Luis Manuel Villena Ballesteros",
+      "licencia": "CM-577"
+   },
+   "jueces": [
+      {
+         "nombre": "Antonio Batres Mart\u00EDn",
+         "licencia": "CM-428",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "Cesar Rodr\u00EDguez Fern\u00E1ndez",
+         "licencia": "CM-16931",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "Luis Manuel Villena Ballesteros",
+         "licencia": "CM-577",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": "JUEZ C:"
+      },
+      {
+         "nombre": "",
+         "licencia": "",
+         "puesto": "JUEZ C:"
+      }
+   ],
+   "resultados": {
+      "cabecera": [
+         {
+            "nombre": "PUESTO"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "JINETE"
+         },
+         {
+            "nombre": "LICENCIA"
+         },
+         {
+            "nombre": "CABALLO"
+         },
+         {
+            "nombre": "TROTE"
+         },
+         {
+            "nombre": "PASO"
+         },
+         {
+            "nombre": "GALOPE"
+         },
+         {
+            "nombre": "SUMISION"
+         },
+         {
+            "nombre": "EXP. FUTURO"
+         },
+         {
+            "nombre": "P."
+         }
+      ],
+      "datos": [
+         {
+            "puesto": "1",
+            "jinete_licencia": "CM14432",
+            "jinete_nombre": "D. David Manzanero Rubio",
+            "caballo_licencia": "CM5933",
+            "caballo_nombre": "ROBALO DE LA GESSE",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "TROTE",
+                  "licencia": "CM-428",
+                  "nota": 7.19999980926514,
+                  "pos": 2
+               },
+               {
+                  "juez": "PASO",
+                  "licencia": "CM-16931",
+                  "nota": 7.59999990463257,
+                  "pos": 2
+               },
+               {
+                  "juez": "GALOPE",
+                  "licencia": "CM-577",
+                  "nota": 7.40000009536743,
+                  "pos": 1
+               },
+               {
+                  "juez": "SUMISION",
+                  "licencia": "",
+                  "nota": 7.19999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "EXP. FUTURO",
+                  "licencia": "",
+                  "nota": 7.30000019073486,
+                  "pos": 1
+               }
+            ],
+            "potros": {
+               "trote_nota": 7.2,
+               "trote_pos": 2,
+               "paso_nota": 7.6,
+               "paso_pos": 2,
+               "galope_nota": 7.4,
+               "galope_pos": 1,
+               "sumision_nota": 7.2,
+               "sumision_pos": 1,
+               "expectativa_futuro_nota": 7.3,
+               "expectativa_futuro_pos": 1,
+               "errores": 0,
+               "total": 73.4
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "1"
+                  },
+                  {
+                     "nombre": "Entrada al trote de trabajo\nParada - saludo, partir al trote de trabajo\nPista a mano izquierda\nSerpentina de 3 bucles (tocando el lado mayor)\nTrote medio\nTrote reunido\nPaso medio\nGirar sobre los posteriores al paso, partir al trote reunido\nC\u00EDrculo de 10 m\nDoblar a la izquierda\nDoblar a la derecha\nC\u00EDrculo de 10 m\nTrote medio\nTrote reunido\nPaso medio\nPaso medio, dejando al caballo estirarse en riendas largas\nVolver a tomar las riendas\nPaso medio\nPartir a galope de trabajo a mano derecha\nGalope de trabajo\nGalope medio\nGalope reunido\nSemic\u00EDrculo de 10 m, volviendo a la pista en E\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nGalope medio\nGalope reunido\nCambio de mano\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nTrote de trabajo\nSemic\u00EDrculo de 20 m, permitiendo al caballo gradualmente estirarse en riendas largas, al trote sentado\nVolver a tomar las riendas\nDoblar a lo largo\nParada - inmovilidad - saludo"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "orden": "N1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote \nRitmo, soltura, elasticidad,\nimpulsi\u00F3n, dorso flexible, aptitud\npara avanzar y voluntad para la\nreuni\u00F3n",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso\nRitmo, relajaci\u00F3n, actividad, aptitud para avanzar",
+                     "nota_juez_1": 7.6,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope\nRitmo, soltura, elasticidad,\nequilibrio natural, impulsi\u00F3n,\nvoluntad para la reuni\u00F3n, aptitud\npara avanzar y tendencia cuesta\narriba (elevaci\u00F3n de la cruz)",
+                     "nota_juez_1": 7.4,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sumisi\u00F3n, elasticidad, flexibilidad,\ncontacto, rectitud, obediencia,\naptitud para sostenerse por s\u00ED\nmismo",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Expectativas de futuro\nPotencial como caballo de doma\nStandard de entrenamiento (seg\u00FAn\nla \u201Cescala de entrenamiento\u201D)",
+                     "nota_juez_1": 7.3,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  }
+               ],
+               "notas_conjunto": [
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "2",
+            "jinete_licencia": "CM12241",
+            "jinete_nombre": "D. Guillermo Carrizo Viso",
+            "caballo_licencia": "CM5689",
+            "caballo_nombre": "DONNA DE GOSS",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "TROTE",
+                  "licencia": "CM-428",
+                  "nota": 7.30000019073486,
+                  "pos": 1
+               },
+               {
+                  "juez": "PASO",
+                  "licencia": "CM-16931",
+                  "nota": 7.69999980926514,
+                  "pos": 1
+               },
+               {
+                  "juez": "GALOPE",
+                  "licencia": "CM-577",
+                  "nota": 7.19999980926514,
+                  "pos": 2
+               },
+               {
+                  "juez": "SUMISION",
+                  "licencia": "",
+                  "nota": 7.09999990463257,
+                  "pos": 2
+               },
+               {
+                  "juez": "EXP. FUTURO",
+                  "licencia": "",
+                  "nota": 7.30000019073486,
+                  "pos": 1
+               }
+            ],
+            "potros": {
+               "trote_nota": 7.3,
+               "trote_pos": 1,
+               "paso_nota": 7.7,
+               "paso_pos": 1,
+               "galope_nota": 7.2,
+               "galope_pos": 2,
+               "sumision_nota": 7.1,
+               "sumision_pos": 2,
+               "expectativa_futuro_nota": 7.3,
+               "expectativa_futuro_pos": 1,
+               "errores": 0,
+               "total": 73.2
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "1"
+                  },
+                  {
+                     "nombre": "Entrada al trote de trabajo\nParada - saludo, partir al trote de trabajo\nPista a mano izquierda\nSerpentina de 3 bucles (tocando el lado mayor)\nTrote medio\nTrote reunido\nPaso medio\nGirar sobre los posteriores al paso, partir al trote reunido\nC\u00EDrculo de 10 m\nDoblar a la izquierda\nDoblar a la derecha\nC\u00EDrculo de 10 m\nTrote medio\nTrote reunido\nPaso medio\nPaso medio, dejando al caballo estirarse en riendas largas\nVolver a tomar las riendas\nPaso medio\nPartir a galope de trabajo a mano derecha\nGalope de trabajo\nGalope medio\nGalope reunido\nSemic\u00EDrculo de 10 m, volviendo a la pista en E\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nGalope medio\nGalope reunido\nCambio de mano\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nTrote de trabajo\nSemic\u00EDrculo de 20 m, permitiendo al caballo gradualmente estirarse en riendas largas, al trote sentado\nVolver a tomar las riendas\nDoblar a lo largo\nParada - inmovilidad - saludo"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "orden": "N1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote \nRitmo, soltura, elasticidad,\nimpulsi\u00F3n, dorso flexible, aptitud\npara avanzar y voluntad para la\nreuni\u00F3n",
+                     "nota_juez_1": 7.3,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso\nRitmo, relajaci\u00F3n, actividad, aptitud para avanzar",
+                     "nota_juez_1": 7.7,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope\nRitmo, soltura, elasticidad,\nequilibrio natural, impulsi\u00F3n,\nvoluntad para la reuni\u00F3n, aptitud\npara avanzar y tendencia cuesta\narriba (elevaci\u00F3n de la cruz)",
+                     "nota_juez_1": 7.2,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sumisi\u00F3n, elasticidad, flexibilidad,\ncontacto, rectitud, obediencia,\naptitud para sostenerse por s\u00ED\nmismo",
+                     "nota_juez_1": 7.1,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Expectativas de futuro\nPotencial como caballo de doma\nStandard de entrenamiento (seg\u00FAn\nla \u201Cescala de entrenamiento\u201D)",
+                     "nota_juez_1": 7.3,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  }
+               ],
+               "notas_conjunto": [
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "3",
+            "jinete_licencia": "CM8348",
+            "jinete_nombre": "D. Daniel Medina Guti\u00E9rrez",
+            "caballo_licencia": "CM5641",
+            "caballo_nombre": "BIZARRO DE SANZ",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "TROTE",
+                  "licencia": "CM-428",
+                  "nota": 6.59999990463257,
+                  "pos": 3
+               },
+               {
+                  "juez": "PASO",
+                  "licencia": "CM-16931",
+                  "nota": 7.09999990463257,
+                  "pos": 3
+               },
+               {
+                  "juez": "GALOPE",
+                  "licencia": "CM-577",
+                  "nota": 6.80000019073486,
+                  "pos": 3
+               },
+               {
+                  "juez": "SUMISION",
+                  "licencia": "",
+                  "nota": 6.90000009536743,
+                  "pos": 3
+               },
+               {
+                  "juez": "EXP. FUTURO",
+                  "licencia": "",
+                  "nota": 6.90000009536743,
+                  "pos": 2
+               }
+            ],
+            "potros": {
+               "trote_nota": 6.6,
+               "trote_pos": 3,
+               "paso_nota": 7.1,
+               "paso_pos": 3,
+               "galope_nota": 6.8,
+               "galope_pos": 3,
+               "sumision_nota": 6.9,
+               "sumision_pos": 3,
+               "expectativa_futuro_nota": 6.9,
+               "expectativa_futuro_pos": 2,
+               "errores": 0,
+               "total": 68.6
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "1"
+                  },
+                  {
+                     "nombre": "Entrada al trote de trabajo\nParada - saludo, partir al trote de trabajo\nPista a mano izquierda\nSerpentina de 3 bucles (tocando el lado mayor)\nTrote medio\nTrote reunido\nPaso medio\nGirar sobre los posteriores al paso, partir al trote reunido\nC\u00EDrculo de 10 m\nDoblar a la izquierda\nDoblar a la derecha\nC\u00EDrculo de 10 m\nTrote medio\nTrote reunido\nPaso medio\nPaso medio, dejando al caballo estirarse en riendas largas\nVolver a tomar las riendas\nPaso medio\nPartir a galope de trabajo a mano derecha\nGalope de trabajo\nGalope medio\nGalope reunido\nSemic\u00EDrculo de 10 m, volviendo a la pista en E\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nGalope medio\nGalope reunido\nCambio de mano\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nTrote de trabajo\nSemic\u00EDrculo de 20 m, permitiendo al caballo gradualmente estirarse en riendas largas, al trote sentado\nVolver a tomar las riendas\nDoblar a lo largo\nParada - inmovilidad - saludo"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "orden": "N1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote \nRitmo, soltura, elasticidad,\nimpulsi\u00F3n, dorso flexible, aptitud\npara avanzar y voluntad para la\nreuni\u00F3n",
+                     "nota_juez_1": 6.6,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso\nRitmo, relajaci\u00F3n, actividad, aptitud para avanzar",
+                     "nota_juez_1": 7.1,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope\nRitmo, soltura, elasticidad,\nequilibrio natural, impulsi\u00F3n,\nvoluntad para la reuni\u00F3n, aptitud\npara avanzar y tendencia cuesta\narriba (elevaci\u00F3n de la cruz)",
+                     "nota_juez_1": 6.8,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sumisi\u00F3n, elasticidad, flexibilidad,\ncontacto, rectitud, obediencia,\naptitud para sostenerse por s\u00ED\nmismo",
+                     "nota_juez_1": 6.9,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Expectativas de futuro\nPotencial como caballo de doma\nStandard de entrenamiento (seg\u00FAn\nla \u201Cescala de entrenamiento\u201D)",
+                     "nota_juez_1": 6.9,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  }
+               ],
+               "notas_conjunto": [
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 0,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         },
+         {
+            "puesto": "NOP",
+            "jinete_licencia": "CM5808",
+            "jinete_nombre": "D. Rub\u00E9n Soto Gonz\u00E1lez",
+            "caballo_licencia": "CM5646",
+            "caballo_nombre": "RAMSES",
+            "total": 0,
+            "notas": [
+               {
+                  "juez": "TROTE",
+                  "licencia": "CM-428",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "PASO",
+                  "licencia": "CM-16931",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "GALOPE",
+                  "licencia": "CM-577",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "SUMISION",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               },
+               {
+                  "juez": "EXP. FUTURO",
+                  "licencia": "",
+                  "nota": 0,
+                  "pos": 0
+               }
+            ],
+            "potros": {
+               "trote_nota": 0,
+               "trote_pos": 0,
+               "paso_nota": 0,
+               "paso_pos": 0,
+               "galope_nota": 0,
+               "galope_pos": 0,
+               "sumision_nota": 0,
+               "sumision_pos": 0,
+               "expectativa_futuro_nota": 0,
+               "expectativa_futuro_pos": 0,
+               "errores": 0,
+               "total": 0
+            },
+            "infantiles": {
+               "jinete_nota": "",
+               "jinete_pos": "",
+               "ayudas_nota": "",
+               "ayudas_pos": "",
+               "precision_nota": "",
+               "precision_pos": "",
+               "impresion_general_nota": "",
+               "impresion_general_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "errores": "",
+               "total": ""
+            },
+            "siete_annos": {
+               "trote_nota": "",
+               "trote_pos": "",
+               "paso_nota": "",
+               "paso_pos": "",
+               "galope_nota": "",
+               "galope_pos": "",
+               "sumision_nota": "",
+               "sumision_pos": "",
+               "expectativa_futuro_nota": "",
+               "expectativa_futuro_pos": "",
+               "calidad_nota": "",
+               "calidad_pos": "",
+               "tecnica_nota": "",
+               "tecnica_pos": "",
+               "erores": "",
+               "total": ""
+            },
+            "movimientos": {
+               "cabecera": [
+                  {
+                     "nombre": "1"
+                  },
+                  {
+                     "nombre": "Entrada al trote de trabajo\nParada - saludo, partir al trote de trabajo\nPista a mano izquierda\nSerpentina de 3 bucles (tocando el lado mayor)\nTrote medio\nTrote reunido\nPaso medio\nGirar sobre los posteriores al paso, partir al trote reunido\nC\u00EDrculo de 10 m\nDoblar a la izquierda\nDoblar a la derecha\nC\u00EDrculo de 10 m\nTrote medio\nTrote reunido\nPaso medio\nPaso medio, dejando al caballo estirarse en riendas largas\nVolver a tomar las riendas\nPaso medio\nPartir a galope de trabajo a mano derecha\nGalope de trabajo\nGalope medio\nGalope reunido\nSemic\u00EDrculo de 10 m, volviendo a la pista en E\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nGalope medio\nGalope reunido\nCambio de mano\nSemic\u00EDrculo de 20 m, galope en trocado\nGalope en trocado\nCambio de pie simple\nGalope reunido\nTrote de trabajo\nSemic\u00EDrculo de 20 m, permitiendo al caballo gradualmente estirarse en riendas largas, al trote sentado\nVolver a tomar las riendas\nDoblar a lo largo\nParada - inmovilidad - saludo"
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  },
+                  {
+                     "nombre": ""
+                  }
+               ],
+               "notas": [
+                  {
+                     "orden": "N1",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Trote \nRitmo, soltura, elasticidad,\nimpulsi\u00F3n, dorso flexible, aptitud\npara avanzar y voluntad para la\nreuni\u00F3n",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N2",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Paso\nRitmo, relajaci\u00F3n, actividad, aptitud para avanzar",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N3",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Galope\nRitmo, soltura, elasticidad,\nequilibrio natural, impulsi\u00F3n,\nvoluntad para la reuni\u00F3n, aptitud\npara avanzar y tendencia cuesta\narriba (elevaci\u00F3n de la cruz)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N4",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Sumisi\u00F3n, elasticidad, flexibilidad,\ncontacto, rectitud, obediencia,\naptitud para sostenerse por s\u00ED\nmismo",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  },
+                  {
+                     "orden": "N5",
+                     "puntos": 10,
+                     "coeficiente": 1,
+                     "texto": "Expectativas de futuro\nPotencial como caballo de doma\nStandard de entrenamiento (seg\u00FAn\nla \u201Cescala de entrenamiento\u201D)",
+                     "nota_juez_1": 0,
+                     "nota_juez_2": 0,
+                     "nota_juez_3": 0,
+                     "nota_juez_4": 0,
+                     "nota_juez_5": 0
+                  }
+               ],
+               "notas_conjunto": [
+               ]
+            },
+            "errores": {
+               "error_recorrido_1": 0,
+               "error_recorrido_2": 0,
+               "error_recorrido_3": 0,
+               "otros_errores": 0
+            },
+            "errores_vaquera": [
+            ],
+            "observaciones": {
+               "eliminado": 0,
+               "retirado": 0,
+               "no_presentado": 1,
+               "fuera_de_premio": 0,
+               "descalificado": 0
+            }
+         }
+      ]
+   }
+}

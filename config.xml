@@ -72,15 +72,15 @@
                 <fecha>13/09/2026</fecha>
                 <datos>recursos/2026/9/concurso.xml</datos>
 				<tipo>Doma Clásica</tipo>
-				<visible>no</visible>
+				<visible>si</visible>
             </concurso>
             <concurso>
                 <id>10</id>
                 <nombre>CDT C.D.EQUIDEPOR VICTOR NAVARRO (Tarancón)</nombre>
-                <fecha>04/10/2026</fecha>
+                <fecha>25/10/2026</fecha>
                 <datos>recursos/2026/10/concurso.xml</datos>
 				<tipo>Doma Clásica</tipo>
-				<visible>no</visible>
+				<visible>si</visible>
             </concurso>
             <concurso>
                 <id>11</id>

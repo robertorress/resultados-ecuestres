@@ -2,9 +2,9 @@
     <div class="nav-wrapper blue darken-4">
 
         <ul class="brand-logo center hide-on-med-and-down">
-            <li><?php echo escape_html($this->m_model->GetConcurso()) ?></li>
+            <li><?php /*echo escape_html($this->m_model->GetConcurso())*/ ?></li>
         </ul>
-
+		
         <ul class="right hide-on-med-and-down">
             <li><a href="index.php"><i class="left large material-icons notranslate">home</i>INICIO</a></li>
             <li class="active">
