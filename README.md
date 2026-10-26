@@ -98,6 +98,25 @@ Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `plano
 
 Si no hay planos válidos o no se define el bloque, la sección **PLANO** muestra una tarjeta vacía con el texto **NO HAY PLANOS DISPONIBLES** y un botón de regreso al detalle del concurso.
 
+## Navegación y mantenimiento
+
+La navegación interna del concurso está centralizada en `view/partials/navigation-concurso.php`. Este partial renderiza tanto el menú de escritorio como el menú móvil (`sidenav`) y evita duplicar HTML entre vistas.
+
+Las vistas de concurso únicamente deben declarar la sección activa antes de incluir el partial:
+
+```php
+<?php $activeSection = 'inicio'; require __DIR__ . '/partials/navigation-concurso.php'; ?>
+```
+
+Valores admitidos para `activeSection`:
+
+- `inicio`
+- `plano`
+- `orden`
+- `resultados`
+
+Para añadir o modificar una opción de menú, se debe actualizar una sola vez la estructura de navegación en `view/partials/navigation-concurso.php`.
+
 ## Resultados por equipos
 
 La opción **RESULTADOS EQUIPOS** aparece en la pantalla de resultados cuando en `concurso.xml` existe:

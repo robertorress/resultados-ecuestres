@@ -75,6 +75,8 @@ La preparación de la pantalla inicial también está separada: `model/concursos
 
 La navegación de la pantalla inicial está centralizada en `view/partials/navigation-home.php`, evitando duplicar su estructura HTML en la vista principal.
 
+La navegación interna de concurso (Inicio, Plano, Orden de salida y Resultados) está centralizada en `view/partials/navigation-concurso.php`. Las vistas de detalle solo definen `activeSection` y reutilizan ese partial para escritorio y móvil, reduciendo duplicación y simplificando cambios futuros.
+
 La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por `escape_html()` antes de insertarse en HTML. Los identificadores de petición se validan con `request_positive_int()` y los identificadores de jinete/caballo se normalizan mediante una lista de caracteres permitidos antes de usarse en enlaces.
 
 ### Archivos PHP principales
@@ -344,7 +346,7 @@ Las tablas principales se han mantenido en formato clásico vertical. En móvil 
 - Ajustar tablas de notas y jueces.
 - Mantener las puntuaciones completas con tres decimales.
 
-La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú lateral para móvil y una marca de página consistente. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
+La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú lateral para móvil y una marca de página consistente. El bloque de navegación de concurso se genera desde un único partial (`navigation-concurso.php`) con sección activa configurable, de forma que todas las vistas mantienen el mismo comportamiento. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
 
 Los listados de resultados incorporan búsqueda por atleta o caballo y un aviso cuando no existen coincidencias.
 

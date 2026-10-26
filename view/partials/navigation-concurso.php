@@ -1,49 +1,56 @@
 <?php
 $activeSection = $activeSection ?? '';
 $concursoId = escape_html($this->m_model->GetConcursoId());
+$navigationItems = [
+    [
+        'section' => 'inicio',
+        'href' => 'index.php',
+        'icon' => 'home',
+        'label' => 'INICIO',
+    ],
+    [
+        'section' => 'plano',
+        'href' => '?c=Prueba&a=Plano&id=' . $concursoId,
+        'icon' => 'map',
+        'label' => 'PLANO',
+    ],
+    [
+        'section' => 'orden',
+        'href' => '?c=Prueba&a=ListadoOrdenSalida&id=' . $concursoId,
+        'icon' => 'access_time',
+        'label' => 'ORDEN DE SALIDA',
+    ],
+    [
+        'section' => 'resultados',
+        'href' => '?c=Prueba&a=ListadoResultado&id=' . $concursoId,
+        'icon' => 'visibility',
+        'label' => 'RESULTADOS',
+    ],
+];
+$renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
+    foreach ($items as $item) {
+        $isActive = $activeSection === $item['section'];
+        $iconClasses = $isMobile && $item['section'] === 'inicio'
+            ? 'large material-icons notranslate'
+            : 'left large material-icons notranslate';
+        ?>
+        <li class="<?php echo $isActive ? 'active' : ''; ?>">
+            <a href="<?php echo $item['href']; ?>">
+                <i class="<?php echo $iconClasses; ?>"><?php echo $item['icon']; ?></i><?php echo $item['label']; ?>
+            </a>
+        </li>
+        <?php
+    }
+};
 ?>
 <nav aria-label="Navegación del concurso">
     <div class="nav-wrapper blue darken-4">
         <ul class="right hide-on-med-and-down">
-            <li class="<?php echo $activeSection === 'inicio' ? 'active' : ''; ?>">
-                <a href="index.php"><i class="left large material-icons notranslate">home</i>INICIO</a>
-            </li>
-            <li class="<?php echo $activeSection === 'plano' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=Plano&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">map</i>PLANO
-                </a>
-            </li>
-            <li class="<?php echo $activeSection === 'orden' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=ListadoOrdenSalida&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">access_time</i>ORDEN DE SALIDA
-                </a>
-            </li>
-            <li class="<?php echo $activeSection === 'resultados' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=ListadoResultado&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">visibility</i>RESULTADOS
-                </a>
-            </li>
+            <?php $renderNavigationItems($navigationItems, $activeSection); ?>
         </ul>
         <ul id="nav-mobile" class="sidenav blue accent-1">
             <div class="user-view"></div>
-            <li class="<?php echo $activeSection === 'inicio' ? 'active' : ''; ?>">
-                <a href="index.php"><i class="large material-icons notranslate">home</i>INICIO</a>
-            </li>
-            <li class="<?php echo $activeSection === 'plano' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=Plano&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">map</i>PLANO
-                </a>
-            </li>
-            <li class="<?php echo $activeSection === 'orden' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=ListadoOrdenSalida&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">access_time</i>ORDEN DE SALIDA
-                </a>
-            </li>
-            <li class="<?php echo $activeSection === 'resultados' ? 'active' : ''; ?>">
-                <a href="?c=Prueba&a=ListadoResultado&id=<?php echo $concursoId; ?>">
-                    <i class="left large material-icons notranslate">visibility</i>RESULTADOS
-                </a>
-            </li>
+            <?php $renderNavigationItems($navigationItems, $activeSection, true); ?>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger" aria-label="Abrir menú de navegación">
             <i class="material-icons notranslate">&#xE5D2;</i>

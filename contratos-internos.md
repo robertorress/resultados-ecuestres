@@ -75,6 +75,17 @@ Los valores que se insertan en HTML pasan por `escape_html()`. Las rutas de recu
 - `database/` valida y carga XML/JSON, resuelve rutas y registra errores.
 - `view/` presenta datos ya preparados y escapa cualquier valor dinamico.
 
+### Contrato de navegacion de vistas
+
+Las vistas internas de concurso reutilizan `view/partials/navigation-concurso.php` para renderizar navegacion de escritorio y movil.
+
+Contrato de uso:
+
+- La vista define `$activeSection` antes del `require`.
+- Valores permitidos: `inicio`, `plano`, `orden`, `resultados`.
+- El partial resuelve los enlaces con `GetConcursoId()` y aplica la clase `active` en la seccion correspondiente.
+- Cualquier cambio de opciones o etiquetas del menu se hace en ese partial, no en cada vista.
+
 Los cambios de estos contratos deben reflejarse en `tools/validate-data.php`, `tools/automated-tests.php` y este documento.
 
 ## Compatibilidad de URLs
