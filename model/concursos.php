@@ -78,7 +78,7 @@ class CConcursos
     public function getDisplayConcursos(int $year): array
     {
         $concursos = $this->GetConcursosByYearSorted($year);
-        $upcomingIds = $this->GetUpcomingConcursoIds($concursos);
+        $upcomingIdSet = array_fill_keys($this->GetUpcomingConcursoIds($concursos), true);
         $display = [];
 
         foreach ($concursos as $concurso) {
@@ -86,7 +86,7 @@ class CConcursos
                 continue;
             }
 
-            $isUpcoming = in_array((string)$concurso->id, $upcomingIds, true);
+            $isUpcoming = isset($upcomingIdSet[(string)$concurso->id]);
             $type = (string)$concurso->tipo;
             $typeImage = null;
             $typeAlt = null;

@@ -117,6 +117,8 @@ Valores admitidos para `activeSection`:
 
 Para añadir o modificar una opción de menú, se debe actualizar una sola vez la estructura de navegación en `view/partials/navigation-concurso.php`.
 
+Los controladores de concurso (`prueba`, `resultado`, `resultadoindividual`, `resultadogeneral`, `resultadoequipos`, `ordensalida`) comparten inicialización común en `controller/base.controller.php`: basta declarar `modelClass` y `actionViews` para mantener la lógica de enrutado sin duplicación.
+
 ## Resultados por equipos
 
 La opción **RESULTADOS EQUIPOS** aparece en la pantalla de resultados cuando en `concurso.xml` existe:
@@ -162,3 +164,9 @@ Ejemplo de `equipos.xml`:
 ## Errores y logs
 
 Los errores se registran mediante la configuración de logs de PHP/Apache. En producción no se muestran detalles técnicos al usuario.
+
+## Mejoras propuestas (sin cambios funcionales)
+
+- Añadir caché en memoria por petición para lecturas repetidas de JSON de resultados cuando se encadenan varias vistas del mismo concurso.
+- Extraer renderizado HTML de tablas grandes de resultados a helpers/partials dedicados para reducir complejidad en `view/pruebaresultado.php`.
+- Incorporar una batería de pruebas de rutas (smoke de `config/routes.php`) en CI para detectar rápido desajustes entre rutas y controladores.

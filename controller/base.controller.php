@@ -6,6 +6,14 @@ abstract class CBaseController
 {
     protected $m_model;
     protected $actionViews = [];
+    protected $modelClass = null;
+
+    public function __construct()
+    {
+        if (is_string($this->modelClass) && $this->modelClass !== '') {
+            $this->initializeConcursoModel($this->modelClass);
+        }
+    }
 
     protected function initializeConcursoModel($modelClass)
     {
