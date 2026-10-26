@@ -82,8 +82,51 @@ powershell -ExecutionPolicy Bypass -File tools\restore-project.ps1 -Archive C:\P
 
 - `config.xml`: catálogo general de concursos.
 - `recursos\AAAA\N\concurso.xml`: metadatos de un concurso.
+- `recursos\AAAA\N\equipos.xml`: definición de equipos (cuando `concurso.xml` habilita resultados por equipos).
 - `recursos\AAAA\N\resultados\*.json`: resultados de cada prueba.
 - `recursos\AAAA\N\orden_salida\`: imágenes de órdenes de salida.
+
+## Resultados por equipos
+
+La opción **RESULTADOS EQUIPOS** aparece en la pantalla de resultados cuando en `concurso.xml` existe:
+
+```xml
+<equipos>si</equipos>
+```
+
+También se acepta el formato legado `<equipo>si</equipo>`, además de variantes `si/yes` sin distinguir mayúsculas.
+
+Cuando está habilitado, la aplicación lee `equipos.xml` en la misma carpeta del `concurso.xml`. Reglas principales:
+
+- Cada equipo debe tener **3 o 4 binomios**.
+- Un binomio no puede repetirse dentro del mismo equipo.
+- Para localizar cada binomio en resultados:
+  - se intenta primero por licencia de jinete/caballo;
+  - si la licencia no existe en resultados, se usa nombre normalizado.
+- La puntuación de cada binomio es su **mejor nota** entre todas las pruebas.
+- Si el equipo tiene 4 binomios, solo suman los 3 mejores; el no sumado se muestra tachado.
+
+Ejemplo de `equipos.xml`:
+
+```xml
+<equipos>
+  <equipo>
+    <nombre>Equipo A</nombre>
+    <binomios>
+      <binomio>
+        <jinete>
+          <licencia>CM12345</licencia>
+          <nombre>Dña. Ana Pérez</nombre>
+        </jinete>
+        <caballo>
+          <licencia>CM67890</licencia>
+          <nombre>TRUENO</nombre>
+        </caballo>
+      </binomio>
+    </binomios>
+  </equipo>
+</equipos>
+```
 
 ## Errores y logs
 

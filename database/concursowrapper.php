@@ -70,6 +70,15 @@ class CConcursoWrapper
         return $this->xml->pruebas->prueba;
     }
 
+    public function GetEquipo()
+    {
+        if (isset($this->xml->equipos)) {
+            return $this->xml->equipos[0];
+        }
+
+        return $this->xml->equipo[0] ?? null;
+    }
+
     public function GetFecha()
     {
         return $this->xml->fecha[0];

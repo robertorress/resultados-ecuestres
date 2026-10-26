@@ -84,6 +84,7 @@ La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por 
 | `controller/prueba.controller.php` | Gestiona pruebas, órdenes de salida y listados de resultados |
 | `controller/resultado.controller.php` | Gestiona resultados de una prueba |
 | `controller/resultadogeneral.controller.php` | Gestiona la clasificación o resultado general |
+| `controller/resultadoequipos.controller.php` | Gestiona la clasificación de resultados por equipos |
 | `controller/resultadoindividual.controller.php` | Muestra el detalle de un jinete y caballo |
 | `controller/ordensalida.controller.php` | Gestiona la consulta de órdenes de salida |
 | `controller/base.controller.php` | Comparte la carga del concurso y el renderizado común |
@@ -93,6 +94,7 @@ La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por 
 | `model/prueba.php` | Consulta la información de las pruebas |
 | `model/resultado.php` | Consulta los resultados de una prueba |
 | `model/resultadogeneral.php` | Prepara los resultados generales |
+| `model/resultadoequipos.php` | Calcula la clasificación por equipos con reglas de validación |
 | `model/resultadoindividual.php` | Prepara el detalle individual y las notas de jueces |
 | `model/ordensalida.php` | Consulta las imágenes o datos de orden de salida |
 | `database/projectpath.php` | Centraliza las rutas físicas del proyecto |
@@ -114,8 +116,23 @@ La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por 
 | `view/pruebalistadoresultado.php` | Listado de resultados de una prueba |
 | `view/pruebaresultado.php` | Resultados con acceso al detalle individual |
 | `view/pruebaresultadogeneral.php` | Clasificación general |
+| `view/pruebaresultadoequipos.php` | Clasificación por equipos y detalle de binomios/puntuaciones |
 | `view/pruebaresultadoindividual.php` | Detalle individual, jueces, notas y observaciones |
 | `view/tools.php` | Utilidades compartidas de presentación |
+
+### Reglas funcionales de resultados por equipos
+
+- El botón **RESULTADOS EQUIPOS** se muestra cuando `<equipos>` (o legado `<equipo>`) del `concurso.xml` vale `si/yes` (sin distinguir mayúsculas).
+- La definición de equipos se carga desde `equipos.xml` en la misma carpeta del `concurso.xml`.
+- Cada equipo debe tener **3 o 4 binomios**; si no, se marca como inválido y se muestra aviso al final.
+- Un mismo binomio no puede repetirse dentro del mismo equipo.
+- Búsqueda de resultados de binomio:
+  - Para **jinete** y **caballo**, se intenta primero por licencia.
+  - Si no existe esa licencia en resultados, se busca por nombre normalizado (ignorando tratamientos como `D.`, `Dña.`, `Don`, `Doña`, `Sr.`, `Sra.`).
+- Si un binomio no se encuentra, se informa con un aviso explícito.
+- Puntuación:
+  - Se toma la **mejor nota** del binomio entre todas las pruebas del concurso.
+  - En equipos de 4, suman solo los **3 mejores**; el no sumado se muestra tachado en el detalle.
 
 ### Recursos de interfaz
 
@@ -134,7 +151,7 @@ La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por 
 | --- | --- |
 | `tools/validate-data.php` | Valida catálogo, XML, fechas, enlaces y estructura JSON |
 | `tools/smoke-test.php` | Comprueba extensiones PHP y el flujo básico de lectura |
-| `tools/run-checks.bat` | Ejecuta lint de vistas, prueba de humo y validación de datos |
+| `tools/run-checks.bat` | Ejecuta lint de vistas, prueba de humo, pruebas automatizadas y validación de datos |
 | `tools/maintenance-check.bat` | Comprueba archivos esenciales y ejecuta la rutina operativa completa |
 | `tools/health-check.php` | Devuelve el estado técnico básico en JSON para monitorización |
 | `tools/backup-project.ps1` | Crea una copia comprimida del proyecto, excluyendo `config.xml` |

@@ -10,3 +10,10 @@
         RESULTADOS GENERALES
     </a>
 </li></ul></p>
+<?php if ($this->m_model->ShouldShowResultadosEquipos()): ?>
+<p><ul><li>
+    <a class="waves-effect waves-light btn purple accent-1" href="?c=ResultadoEquipos&a=ResultadoEquipos&id=<?php echo escape_html($concursoId); ?>">
+        RESULTADOS EQUIPOS
+    </a>
+</li></ul></p>
+<?php endif; ?>

@@ -18,6 +18,23 @@ El catalogo no se modifica desde la aplicacion. `CConcursosWrapper` valida el XM
 
 El XML referenciado por `datos` debe contener el nodo `concurso`, la fecha, las pruebas y, cuando proceda, las ordenes de salida. Cada prueba incluye al menos un `id`, un titulo y un enlace relativo al JSON de resultados.
 
+Para resultados por equipos, el XML del concurso admite `equipos` (y por compatibilidad `equipo`) con valor `si/yes` o `no`. Si está habilitado, debe existir `equipos.xml` en la misma carpeta.
+
+## XML de equipos
+
+`equipos.xml` define `equipos/equipo` con esta estructura mínima:
+
+- `equipo/nombre`
+- `equipo/binomios/binomio`
+- `binomio/jinete/(licencia y/o nombre)`
+- `binomio/caballo/(licencia y/o nombre)`
+
+Reglas de negocio:
+
+- El equipo debe tener 3 o 4 binomios.
+- No se permite repetir binomios dentro del mismo equipo.
+- Si hay 4 binomios, en la suma final del equipo solo cuentan 3 (los de mayor puntuación).
+
 ## JSON de resultados
 
 `CResultadoJson::load()` devuelve un array con esta estructura minima:
@@ -64,6 +81,7 @@ Las mejoras internas deben mantener estos parametros y combinaciones:
 - `Prueba/MostrarPrueba`
 - `Resultado/Resultado`
 - `ResultadoGeneral/ResultadoGeneral`
+- `ResultadoEquipos/ResultadoEquipos`
 - `ResultadoIndividual/ResultadoIndividual`
 - `OrdenSalida/Listado`
 

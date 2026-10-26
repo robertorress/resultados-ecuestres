@@ -6,10 +6,12 @@ abstract class CConcursoModel
 {
     protected $m_concurso;
     protected $m_id = -1;
+    protected $m_path = '';
 
     public function __construct($id, $path)
     {
         $this->m_id = $id;
+        $this->m_path = (string)$path;
         $this->m_concurso = CConcursoWrapper::getInstance($path);
     }
 
@@ -62,6 +64,48 @@ abstract class CConcursoModel
     public function GetFecha()
     {
         return $this->m_concurso->GetFecha();
+    }
+
+    public function GetConcursoDataPath()
+    {
+        return $this->m_path;
+    }
+
+    public function GetEquiposDataPath()
+    {
+        if (trim($this->m_path) === '') {
+            return null;
+        }
+
+        $normalizedPath = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $this->m_path);
+        return dirname($normalizedPath) . DIRECTORY_SEPARATOR . 'equipos.xml';
+    }
+
+    public function ShouldShowResultadosEquipos()
+    {
+        $equipoValue = (string)($this->m_concurso->GetEquipo() ?? '');
+        $normalized = mb_strtolower(trim($equipoValue), 'UTF-8');
+        $normalized = strtr($normalized, [
+            'á' => 'a',
+            'é' => 'e',
+            'í' => 'i',
+            'ó' => 'o',
+            'ú' => 'u',
+        ]);
+
+        if ($normalized === '') {
+            return false;
+        }
+
+        if (in_array($normalized, ['si', 'yes'], true)) {
+            return true;
+        }
+
+        if (in_array($normalized, ['no'], true)) {
+            return false;
+        }
+
+        return false;
     }
 
     public function GetUbicacionNombre()

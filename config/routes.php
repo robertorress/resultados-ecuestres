@@ -21,6 +21,11 @@ return [
         'class' => 'CResultadoGeneralController',
         'actions' => ['Index', 'Listado', 'ResultadoGeneral'],
     ],
+    'resultadoequipos' => [
+        'file' => 'controller/resultadoequipos.controller.php',
+        'class' => 'CResultadoEquiposController',
+        'actions' => ['Index', 'Listado', 'ResultadoEquipos'],
+    ],
     'resultadoindividual' => [
         'file' => 'controller/resultadoindividual.controller.php',
         'class' => 'CResultadoIndividualController',

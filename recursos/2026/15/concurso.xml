@@ -2,6 +2,7 @@
 <root>
     <concurso>CDT CLUB HIPICO LA MELGOSA (Cuenca)</concurso>
     <fecha>01/08/2026</fecha>
+    <equipos>si</equipos>
     <logo>recursos/imagenes/logo_club_hipico_la_melgosa.png</logo>
     <ubicacion>
         <nombre>Hípica la melgosa</nombre>
@@ -68,4 +69,3 @@
         </prueba>
     </pruebas>
 </root>
-

@@ -1,0 +1,177 @@
+<equipos>
+	<equipo>
+		<nombre>LOS ROMPEDORES</nombre>
+		<binomios>
+			<binomio>
+				<jinete>
+					<licencia>CM17341</licencia>
+					<nombre>Blanca Carretero Pérez</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5887</licencia>
+					<nombre>AFRICA</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM10991</licencia>
+					<nombre>Victoria Estefania Holom Holom</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4214</licencia>
+					<nombre>TRILLA</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM16347</licencia>
+					<nombre>Daniel Fernández Fernández</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5656</licencia>
+					<nombre>ORUJO XV</nombre>
+				</caballo>
+			</binomio>
+		</binomios>
+	</equipo>
+	<equipo>
+		<nombre>LOS GUAPOS</nombre>
+		<binomios>
+			<binomio>
+				<jinete>
+					<licencia>CM10991</licencia>
+					<nombre>Victoria Estefania Holom Holom</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4214</licencia>
+					<nombre>TRILLA</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM12548</licencia>
+					<nombre>Tania García García</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5318</licencia>
+					<nombre>FAIRY TAIL</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM15678</licencia>
+					<nombre>Darío Sanabria López</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5758</licencia>
+					<nombre>HIGHFIVE</nombre>
+				</caballo>
+			</binomio>
+		</binomios>
+	</equipo>
+	<equipo>
+		<nombre>LOS FEOS</nombre>
+		<binomios>
+			<binomio>
+				<jinete>
+					<licencia>CM11268</licencia>
+					<nombre>Alejandra Navarro García</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5814</licencia>
+					<nombre>DONATELLA BM</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM15290</licencia>
+					<nombre>Sira Palomar Sáez</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4051</licencia>
+					<nombre>GIRALDILLO XLIV</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM11249</licencia>
+					<nombre>Alba Sáez González</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5747</licencia>
+					<nombre>GOLDEN</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM10991</licencia>
+					<nombre>Victoria Estefania Holom Holom</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4214</licencia>
+					<nombre>TRILLA</nombre>
+				</caballo>
+			</binomio>			
+		</binomios>
+	</equipo>
+	<equipo>
+		<nombre>LOS FALSOS</nombre>
+		<binomios>
+			<binomio>
+				<jinete>
+					<licencia>CM11268</licencia>
+					<nombre>Alejandra Navarro García</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5814</licencia>
+					<nombre>DONATELLA BM</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM15290</licencia>
+					<nombre>Sira Palomar Sáez</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4051</licencia>
+					<nombre>GIRALDILLO XLIV</nombre>
+				</caballo>
+			</binomio>
+		</binomios>
+	</equipo>
+	<equipo>
+		<nombre>LOS OTROS ERRORES</nombre>
+		<binomios>
+			<binomio>
+				<jinete>
+					<licencia>CM11268</licencia>
+					<nombre>Alejandra Navarro García</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5814</licencia>
+					<nombre>DONATELLA BM</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM11249</licencia>
+					<nombre>Alba Sáez González</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM5747</licencia>
+					<nombre>GOLDEN</nombre>
+				</caballo>
+			</binomio>
+			<binomio>
+				<jinete>
+					<licencia>CM15290</licencia>
+					<nombre>Sira Palomar Sáez</nombre>
+				</jinete>
+				<caballo>
+					<licencia>CM4051</licencia>
+					<nombre>GIRALDILLO XLIV</nombre>
+				</caballo>
+			</binomio>
+		</binomios>
+	</equipo>
+</equipos>
