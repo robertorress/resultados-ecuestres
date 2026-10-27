@@ -5,6 +5,8 @@
         <div class="card grey darken-1">
             <div class="card-content white-text">
                 <span class="card-title white-text">ORDEN DE SALIDA</span>
+                <?php $concursoId = $this->m_model->GetConcursoId(); ?>
+                <p class="detalle-seccion-titulo"><?php echo escape_html($this->m_model->GetFecha()); ?></p>
                 <p>
                 <div class="row">
                     <div class="col s12 center">
@@ -62,6 +64,9 @@
                     </div>
                 </div>
                 </p>
+            </div>
+            <div class="card-action">
+                <?php echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . escape_html($concursoId) . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>"; ?>
             </div>
         </div>
     </div>

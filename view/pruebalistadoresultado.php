@@ -5,6 +5,7 @@
         <div class="card grey darken-1">
             <div class="card-content">
                 <span class="card-title white-text">RESULTADOS PROVISIONALES</span>
+                <p class="detalle-seccion-titulo"><?php echo escape_html($this->m_model->GetFecha()); ?></p>
 
                 <div class="row">
                     <div class="col s12 center">
@@ -20,6 +21,9 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="card-action">
+                <a href="?c=Prueba&a=MostrarPrueba&id=<?php echo escape_html($concursoId); ?>" aria-label="Volver al concurso"><i class="large material-icons" aria-hidden="true">arrow_back</i></a>
             </div>
         </div>
     </div>
