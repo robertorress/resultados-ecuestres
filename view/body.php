@@ -16,7 +16,7 @@
         border: 0;
     }
 
-    /* Estilo para hacer el mapa el mapa responsivo de ChatGPT */
+    /* Estilo para hacer el mapa responsivo */
     .map-responsive {
         position: relative;
         overflow: hidden;
@@ -170,22 +170,28 @@
         <?php
         $lugar = $this->m_model->GetUbicacionNombre();
         if ($this->m_model->GetUbicacionVisible() && $lugar != null) {
-            /**
-             * OPCIÓN A: Usar directamente el nombre del sitio
-             * Es la forma más limpia si la base de datos almacena el texto.
-             */
             $url_embed_por_nombre = "https://maps.google.com/maps?q=" . urlencode($lugar) . "&output=embed";
-
-            echo "<div class=\"card grey darken-1\">";
-            echo "<div class=\"card-content white-text\">";
-            echo "<span class=\"card-title white-text\">UBICACIÓN</span>";
-            echo "<div class=\"card-panel blue-grey lighten-1\">";
-            echo "<div class=\"map-responsive\">";
-            echo "<iframe title=\"Ubicación del concurso\" src=\"" . escape_html($url_embed_por_nombre) . "\" allowfullscreen loading=\"lazy\"></iframe>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
+            ?>
+            <ul class="collapsible ubicacion-concurso">
+                <li>
+                    <div class="collapsible-header blue-grey lighten-1">
+                        <i class="material-icons" aria-hidden="true">location_on</i>
+                        <span>UBICACIÓN</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="card-panel blue-grey lighten-1">
+                            <div class="map-responsive">
+                                <iframe
+                                    title="Ubicación del concurso"
+                                    src="<?php echo escape_html($url_embed_por_nombre); ?>"
+                                    allowfullscreen
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <?php
         }
         ?>
         <h5>

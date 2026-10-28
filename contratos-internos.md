@@ -26,6 +26,10 @@ Para la pantalla **PLANO**, el XML del concurso admite el bloque opcional:
 
 El bloque puede contener uno o varios `plano`. Si no existe el bloque o ningún archivo es válido, la vista muestra una tarjeta vacía con el texto `NO HAY PLANOS DISPONIBLES` y un enlace de regreso al detalle del concurso.
 
+## Ubicación del concurso
+
+El bloque opcional `<ubicacion>` puede contener `<nombre>` y `<visible>`. Si `<visible>` vale `si`, `sí` o `yes` (sin distinguir mayúsculas), la vista `view/body.php` muestra un bloque desplegable con el icono `location_on`. El mapa se carga dentro del bloque y puede mostrarse u ocultarse al pulsar el encabezado; el contenido desplegado no añade texto adicional al mapa. Si `<visible>` vale `no`, la sección no se renderiza. Cuando se omite `<visible>`, se mantiene visible por compatibilidad.
+
 ## XML de equipos
 
 `equipos.xml` define `equipos/equipo` con esta estructura mínima:

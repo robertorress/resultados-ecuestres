@@ -99,7 +99,7 @@ La ubicación del concurso admite el campo opcional `<visible>`:
 </ubicacion>
 ```
 
-La tarjeta del mapa se muestra cuando el valor es `si`, `sí` o `yes`, sin distinguir mayúsculas (`SI`, `Sí`, `YES`, etc.). Para ocultarla se puede utilizar `no` en cualquier combinación de mayúsculas. Si se omite `<visible>`, la ubicación se considera visible por compatibilidad con concursos existentes.
+La ubicación se muestra cuando el valor es `si`, `sí` o `yes`, sin distinguir mayúsculas (`SI`, `Sí`, `YES`, etc.). En el detalle del concurso aparece como un bloque desplegable con el icono de ubicación; al pulsarlo se muestra u oculta únicamente el mapa. Para ocultar toda la sección se puede utilizar `no` en cualquier combinación de mayúsculas. Si se omite `<visible>`, la ubicación se considera visible por compatibilidad con concursos existentes.
 
 Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `planos` con una o varias entradas `plano`:
 
