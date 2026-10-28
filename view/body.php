@@ -310,8 +310,8 @@
                     </div>
                     <div class="collapsible-body">
                         <div class="card-panel blue-grey lighten-1">
-                            <div class="table-responsive">
-                                <table class="highlight responsive-table participantes-tabla">
+                            <div class="participantes-tabla-contenedor">
+                                <table class="highlight participantes-tabla">
                                     <thead>
                                         <tr>
                                             <th>JINETE / AMAZONA</th>
@@ -325,11 +325,11 @@
                                     <tbody>
                                         <?php foreach ($participantes as $participante): ?>
                                             <tr>
-                                                <td><?php echo escape_html($participante['jinete']); ?></td>
-                                                <td><?php echo escape_html($participante['caballo']); ?></td>
-                                                <td><?php echo escape_html($participante['prueba']); ?></td>
+                                                <td data-label="JINETE / AMAZONA"><?php echo escape_html($participante['jinete']); ?></td>
+                                                <td data-label="CABALLO"><?php echo escape_html($participante['caballo']); ?></td>
+                                                <td data-label="PRUEBA"><?php echo escape_html($participante['prueba']); ?></td>
                                                 <?php if ($this->m_model->HasJornadas()): ?>
-                                                    <td><?php echo escape_html($participante['jornada']); ?></td>
+                                                    <td data-label="JORNADA"><?php echo escape_html($participante['jornada']); ?></td>
                                                 <?php endif; ?>
                                             </tr>
                                         <?php endforeach; ?>

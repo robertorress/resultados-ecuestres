@@ -292,6 +292,22 @@ body.contrast-mode .hipica-logo {
     background: #64748b;
 }
 
+.participantes-tabla-contenedor {
+    width: 100%;
+    overflow: visible;
+}
+
+.participantes-tabla {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.participantes-tabla th,
+.participantes-tabla td {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 @media only screen and (max-width: 600px) {
     .concurso-portada-contenido {
         align-items: stretch;
@@ -307,6 +323,62 @@ body.contrast-mode .hipica-logo {
 
     .concurso-portada-logo .hipica-logo {
         height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    /*
+     * En vertical no mantenemos cuatro columnas: cada fila se convierte en una
+     * tarjeta con sus etiquetas para que ningún contenido fuerce scroll lateral.
+     */
+    table.participantes-tabla {
+        display: block;
+    }
+
+    table.participantes-tabla thead {
+        display: none;
+    }
+
+    table.participantes-tabla tbody,
+    table.participantes-tabla tr,
+    table.participantes-tabla td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    table.participantes-tabla tr {
+        margin-bottom: 0.75rem;
+        border: 1px solid var(--color-panel-header);
+        border-radius: 0.5rem;
+        background: var(--color-surface);
+    }
+
+    table.participantes-tabla td {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.55rem 0.65rem;
+        text-align: right;
+    }
+
+    table.participantes-tabla td::before {
+        flex: 0 0 42%;
+        color: var(--color-primary);
+        content: attr(data-label);
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    /* En horizontal hay espacio suficiente para conservar el formato de tabla. */
+    table.participantes-tabla th,
+    table.participantes-tabla td {
+        font-size: 0.78rem;
+        padding: 0.4rem;
     }
 }
 

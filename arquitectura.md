@@ -365,7 +365,7 @@ La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú 
 
 Los listados de resultados incorporan búsqueda por atleta o caballo y un aviso cuando no existen coincidencias.
 
-La portada del concurso incluye una cabecera visual con el logo, título, fechas, ubicación y estado calculado mediante `GetEstadoConcurso()`. Debajo muestra la sección desplegable `PARTICIPANTES`, que presenta cada binomio y la prueba correspondiente ordenados por jinete. En concursos con jornadas añade la jornada para evitar ambigüedades entre pruebas con el mismo título.
+La portada del concurso incluye una cabecera visual con el logo, título, fechas, ubicación y estado calculado mediante `GetEstadoConcurso()`. Debajo muestra la sección desplegable `PARTICIPANTES`, que presenta cada binomio y la prueba correspondiente ordenados por jinete. En concursos con jornadas añade la jornada para evitar ambigüedades entre pruebas con el mismo título. La vista usa `data-label` y reglas CSS específicas para transformar cada fila en una tarjeta vertical en móviles en orientación vertical; en horizontal conserva una tabla compacta sin scroll lateral.
 
 La sección `PLANO` replica la estructura visual de `ORDEN DE SALIDA`: una tarjeta por cada imagen configurada. Cuando no hay imágenes válidas en `concurso.xml`, muestra una tarjeta vacía con el mensaje `NO HAY PLANOS DISPONIBLES` y un botón para volver al detalle del concurso.
 

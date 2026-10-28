@@ -139,6 +139,8 @@ La entrada correspondiente de `config.xml` debe representar el concurso completo
 
 En la portada del concurso, los bloques se muestran en este orden: `ANUNCIOS` (si existen), `RESULTADOS` (uno por cada jornada cuando corresponda), `PARTICIPANTES` y `UBICACIÓN`. La sección desplegable `PARTICIPANTES` se construye a partir del campo `resultados.datos` de cada JSON enlazado desde las pruebas y muestra el jinete o amazona, el caballo y la prueba en la que participa. En concursos con jornadas también muestra la jornada asociada. Las filas se ordenan alfabéticamente por jinete; caballo y prueba se utilizan como desempates.
 
+En pantallas móviles, la lista no utiliza scroll horizontal: en orientación vertical cada participante se presenta como una tarjeta con etiquetas, y en orientación horizontal se mantiene una tabla compacta que ocupa todo el ancho disponible.
+
 La cabecera del detalle presenta el logo de la hípica junto al título, las fechas, la ubicación y el estado calculado del concurso (`PRÓXIMO`, `EN CURSO` o `FINALIZADO`). El diseño se adapta a móvil apilando el logo y la información.
 
 La ubicación del concurso admite el campo opcional `<visible>`:

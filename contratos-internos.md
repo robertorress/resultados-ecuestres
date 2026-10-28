@@ -91,6 +91,12 @@ Las filas se ordenan por jinete y, para hacer el resultado determinista, por cab
 
 En la página principal del concurso, el orden de presentación es `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`.
 
+El contrato visual responsive de la tabla es el siguiente:
+
+- En móvil vertical, cada fila se transforma en una tarjeta vertical y cada celda utiliza `data-label` para mostrar el nombre del campo.
+- En móvil horizontal, se mantiene el formato tabular compacto.
+- Ninguna de las dos orientaciones debe crear scroll horizontal.
+
 ## Peticiones HTTP
 
 - `c`: controlador permitido por la lista blanca de `index.php`.
