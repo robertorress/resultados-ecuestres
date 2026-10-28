@@ -197,6 +197,23 @@ abstract class CConcursoModel
         return $this->m_concurso->GetFechaFin();
     }
 
+    public function GetEstadoConcurso()
+    {
+        $inicio = DateTimeImmutable::createFromFormat('!d/m/Y', trim((string)$this->GetFechaInicio()));
+        $fin = DateTimeImmutable::createFromFormat('!d/m/Y', trim((string)$this->GetFechaFin()));
+        $hoy = new DateTimeImmutable('today');
+
+        if ($fin instanceof DateTimeImmutable && $fin < $hoy) {
+            return 'finalizado';
+        }
+
+        if ($inicio instanceof DateTimeImmutable && $inicio > $hoy) {
+            return 'proximo';
+        }
+
+        return 'en-curso';
+    }
+
     public function GetJornadas()
     {
         return $this->m_concurso->GetJornadas();

@@ -196,6 +196,120 @@ body.contrast-mode .hipica-logo {
     margin-top: 0;
 }
 
+.concurso-portada {
+    position: relative;
+    overflow: hidden;
+    max-width: 62rem;
+    margin: 1.5rem auto 0;
+    border-radius: 1rem;
+    background: var(--color-surface);
+    box-shadow: 0 0.75rem 2rem rgba(30, 58, 95, 0.14);
+    text-align: left;
+}
+
+.concurso-portada-decoracion {
+    height: 0.65rem;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.concurso-portada-contenido {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+}
+
+.concurso-portada-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 5rem;
+    min-height: 4rem;
+    padding: 0.5rem;
+    border: 1px solid var(--color-panel-header);
+    border-radius: 0.75rem;
+    background: var(--color-background);
+}
+
+.concurso-portada-logo .hipica-logo {
+    width: 100%;
+    height: 3.75rem;
+    border: 0;
+    object-fit: contain;
+}
+
+.concurso-portada-datos {
+    min-width: 0;
+}
+
+.concurso-portada h1 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.concurso-portada-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin-top: 1rem;
+    color: var(--color-text);
+}
+
+.concurso-portada-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.concurso-portada-meta .material-icons {
+    color: var(--color-secondary);
+    font-size: 1.15rem;
+}
+
+.concurso-estado {
+    display: inline-block;
+    margin-top: 1.15rem;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.75rem;
+}
+
+.concurso-estado-proximo {
+    background: #197c78;
+}
+
+.concurso-estado-en-curso {
+    background: #2563eb;
+}
+
+.concurso-estado-finalizado {
+    background: #64748b;
+}
+
+@media only screen and (max-width: 600px) {
+    .concurso-portada-contenido {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem;
+    }
+
+    .concurso-portada-logo {
+        flex-basis: auto;
+        min-height: 3.5rem;
+    }
+
+    .concurso-portada-logo .hipica-logo {
+        height: 3rem;
+    }
+}
+
 /* Buscador de la pantalla inicial. */
 .inicio-busqueda {
     max-width: 42rem;

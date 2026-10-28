@@ -108,15 +108,54 @@
 <div class="row">
 
     <div class="col s12 center">
-        <p>
-        <h2>
-            <?php
-            echo escape_html($this->m_model->GetConcurso());
-            ?>
-        </h2>
-        <p>
-            <img class="hipica-logo" loading="lazy" decoding="async" style="border:0;width:auto;max-width:300px;height:150px" src="<?php echo escape_html($this->m_model->GetLogo()) ?>" alt="<?php echo escape_html($this->m_model->GetConcurso()) ?>" />
-        </p>
+        <?php
+        $fechaInicio = trim((string)$this->m_model->GetFechaInicio());
+        $fechaFin = trim((string)$this->m_model->GetFechaFin());
+        $fechaConcurso = $fechaInicio === $fechaFin || $fechaFin === ''
+            ? $fechaInicio
+            : $fechaInicio . ' - ' . $fechaFin;
+        $lugar = $this->m_model->GetUbicacionNombre();
+        $estadoConcurso = $this->m_model->GetEstadoConcurso();
+        $etiquetasEstado = [
+            'proximo' => 'PRÓXIMO',
+            'en-curso' => 'EN CURSO',
+            'finalizado' => 'FINALIZADO',
+        ];
+        ?>
+        <section class="concurso-portada" aria-labelledby="titulo-concurso">
+            <div class="concurso-portada-decoracion" aria-hidden="true"></div>
+            <div class="concurso-portada-contenido">
+                <div class="concurso-portada-logo">
+                    <img
+                        class="hipica-logo"
+                        loading="lazy"
+                        decoding="async"
+                        src="<?php echo escape_html($this->m_model->GetLogo()); ?>"
+                        alt="Logo de <?php echo escape_html($this->m_model->GetConcurso()); ?>"
+                    />
+                </div>
+                <div class="concurso-portada-datos">
+                    <h1 id="titulo-concurso"><?php echo escape_html($this->m_model->GetConcurso()); ?></h1>
+                    <div class="concurso-portada-meta">
+                        <?php if ($fechaConcurso !== ''): ?>
+                            <span>
+                                <i class="material-icons" aria-hidden="true">event</i>
+                                <?php echo escape_html($fechaConcurso); ?>
+                            </span>
+                        <?php endif; ?>
+                        <?php if ($lugar !== null && trim((string)$lugar) !== ''): ?>
+                            <span>
+                                <i class="material-icons" aria-hidden="true">location_on</i>
+                                <?php echo escape_html($lugar); ?>
+                            </span>
+                        <?php endif; ?>
+                    </div>
+                    <span class="concurso-estado concurso-estado-<?php echo escape_html($estadoConcurso); ?>">
+                        <?php echo escape_html($etiquetasEstado[$estadoConcurso] ?? 'CONCURSO'); ?>
+                    </span>
+                </div>
+            </div>
+        </section>
         <br>
         <?php $anuncios = $this->m_model->GetAnuncios(); ?>
         <?php
@@ -192,7 +231,6 @@
 							</div>
                         </div>
                     </div>
-                    </p>
                 </div>
             </div>
         <?php endif; ?>
@@ -304,7 +342,6 @@
             </ul>
         <?php endif; ?>
         <?php
-        $lugar = $this->m_model->GetUbicacionNombre();
         if ($this->m_model->GetUbicacionVisible() && $lugar != null) {
             $url_embed_por_nombre = "https://maps.google.com/maps?q=" . urlencode($lugar) . "&output=embed";
             ?>
@@ -331,16 +368,6 @@
             <?php
         }
         ?>
-        <h5>
-            <?php if ($this->m_model->HasJornadas()): ?>
-                <?php echo escape_html($this->m_model->GetFechaInicio()); ?>
-                <?php if ($this->m_model->GetFechaInicio() !== $this->m_model->GetFechaFin()): ?>
-                    - <?php echo escape_html($this->m_model->GetFechaFin()); ?>
-                <?php endif; ?>
-            <?php else: ?>
-                <?php echo escape_html($this->m_model->GetFecha()); ?>
-            <?php endif; ?>
-        </h5>
         </p>
     </div>
 
