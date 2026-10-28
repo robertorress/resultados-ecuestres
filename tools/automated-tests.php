@@ -212,6 +212,11 @@ JSON);
 
     testCondition($resultadoEquiposModel->GetUbicacionVisible() === true, 'Acepta SI como ubicación visible');
     testCondition($resultadoEquiposModel->GetAnunciosVisible() === true, 'Acepta SI como anuncios visibles');
+    testCondition(
+        $resultadoEquiposModel->GetAnuncios() !== null
+        && $resultadoEquiposModel->IsAnuncioVisible($resultadoEquiposModel->GetAnuncios()[0]) === true,
+        'Mantiene visible un anuncio sin etiqueta individual'
+    );
     testCondition(count($clasificacionEquipos['clasificacion']) === 1, 'Clasifica solo equipos válidos');
     testCondition(count($clasificacionEquipos['invalidos']) === 3, 'Marca equipos inválidos por reglas y binomios no encontrados');
 
@@ -275,14 +280,17 @@ XML);
   <concurso>Concurso con anuncios</concurso>
   <fecha>01/01/2026</fecha>
   <anuncios>
-    <anuncio>Aviso sin enlace</anuncio>
+    <anuncio><visible>NO</visible>Aviso oculto</anuncio>
     <anuncio>
+      <visible>SÍ</visible>
       <titulo>Aviso importante</titulo>
       <texto>Aviso con enlace</texto>
       <fecha>25/10/2026</fecha>
       <tipo>importante</tipo>
       <link><texto>ABRIR AVISO</texto><url>https://example.com/aviso</url></link>
     </anuncio>
+    <anuncio><visible>Yes</visible>Segundo aviso visible</anuncio>
+    <anuncio><visible>No</visible>Segundo aviso oculto</anuncio>
   </anuncios>
 </root>
 XML);
@@ -290,8 +298,11 @@ XML);
     resetConcursoWrapperSingleton();
     $anunciosModel = new CResultadoEquipos(3, $anunciosPath);
     $anuncios = $anunciosModel->GetAnuncios();
-    testCondition($anuncios !== null && count($anuncios) === 2, 'Lee todos los anuncios definidos');
-    testCondition($anuncios !== null && trim((string)$anuncios[0]) === 'Aviso sin enlace', 'Lee el texto directo de un anuncio');
+    testCondition($anuncios !== null && count($anuncios) === 4, 'Lee todos los anuncios definidos');
+    testCondition($anuncios !== null && $anunciosModel->IsAnuncioVisible($anuncios[0]) === false, 'Oculta un anuncio con NO');
+    testCondition($anuncios !== null && $anunciosModel->IsAnuncioVisible($anuncios[1]) === true, 'Acepta SÍ como anuncio visible');
+    testCondition($anuncios !== null && $anunciosModel->IsAnuncioVisible($anuncios[2]) === true, 'Acepta Yes como anuncio visible');
+    testCondition($anuncios !== null && $anunciosModel->IsAnuncioVisible($anuncios[3]) === false, 'Oculta un anuncio con No');
     testCondition(
         $anuncios !== null
         && trim((string)$anuncios[1]->titulo) === 'Aviso importante'

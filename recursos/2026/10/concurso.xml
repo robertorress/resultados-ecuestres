@@ -17,8 +17,9 @@
 		<ordensalida>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
     </ordensalidas>
     <anuncios>
-        <visible>no</visible>
+        <visible>si</visible>
         <anuncio>
+			<visible>no</visible>
 			<titulo>Información general</titulo>
 			<texto>Un anuncio simple</texto>
 			<fecha>25/10/2026</fecha>
@@ -26,6 +27,7 @@
 			<link></link>
 		</anuncio>
 		<anuncio>
+			<visible>no</visible>
 			<titulo>Orden de salida</titulo>
 			<texto>Un anuncio mas complejo que tiene más texto y no se si podrá llegar a varias lineas en modo móvil</texto>
 			<fecha>25/10/2026</fecha>
@@ -36,6 +38,7 @@
 			</link>
 		</anuncio>
 		<anuncio>
+			<visible>no</visible>
 			<titulo>Documento de resultados</titulo>
 			<fecha>25/10/2026</fecha>
 			<tipo>resultado</tipo>
@@ -46,6 +49,7 @@
 			</link>
 		</anuncio>
 		<anuncio>
+			<visible>no</visible>
 			<titulo>Ejemplo sin nada, simple</titulo>
 			<fecha>25/10/2026</fecha>
 			<tipo>none</tipo>

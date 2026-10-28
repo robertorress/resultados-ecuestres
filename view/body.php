@@ -100,7 +100,17 @@
         </p>
         <br>
         <?php $anuncios = $this->m_model->GetAnuncios(); ?>
-        <?php if ($anuncios !== null && $this->m_model->GetAnunciosVisible()): ?>
+        <?php
+        $anunciosVisibles = [];
+        if ($anuncios !== null && $this->m_model->GetAnunciosVisible()) {
+            foreach ($anuncios as $anuncio) {
+                if ($this->m_model->IsAnuncioVisible($anuncio)) {
+                    $anunciosVisibles[] = $anuncio;
+                }
+            }
+        }
+        ?>
+        <?php if (count($anunciosVisibles) > 0): ?>
             <div class="card grey darken-1">
                 <div class="card-content white-text">
                     <?php /* <span class="card-title white-text">ANUNCIOS</span> */ ?>
@@ -109,7 +119,7 @@
                         <div class="col s12 center">
 							<div class="card-panel blue-grey lighten-1">
 								<ul class="collection anuncios-coleccion left-align">
-									<?php foreach ($anuncios as $anuncio): ?>
+									<?php foreach ($anunciosVisibles as $anuncio): ?>
 										<?php
 										$tipoAnuncio = strtolower(trim((string)($anuncio->tipo ?? 'info')));
 										$tiposAnuncio = [

@@ -30,6 +30,10 @@ El bloque puede contener uno o varios `plano`. Si no existe el bloque o ningún 
 
 El bloque opcional `<ubicacion>` puede contener `<nombre>` y `<visible>`. Si `<visible>` vale `si`, `sí` o `yes` (sin distinguir mayúsculas), la vista `view/body.php` muestra un bloque desplegable con el icono `location_on`. El mapa se carga dentro del bloque y puede mostrarse u ocultarse al pulsar el encabezado; el contenido desplegado no añade texto adicional al mapa. Si `<visible>` vale `no`, la sección no se renderiza. Cuando se omite `<visible>`, se mantiene visible por compatibilidad.
 
+## Anuncios
+
+El bloque opcional `<anuncios>` puede contener `<visible>` para mostrar u ocultar toda la colección. Cada `<anuncio>` también puede contener `<visible>`: `si`, `sí` o `yes` lo muestran y `no` lo oculta, sin distinguir mayúsculas y aceptando formas acentuadas o sin acento. Si se omite la etiqueta individual, el anuncio se mantiene visible por compatibilidad. Si todos los anuncios quedan ocultos, la tarjeta completa no se renderiza.
+
 ## XML de equipos
 
 `equipos.xml` define `equipos/equipo` con esta estructura mínima:

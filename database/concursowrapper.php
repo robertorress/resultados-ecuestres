@@ -89,7 +89,21 @@ class CConcursoWrapper
             return true;
         }
 
-        $visible = mb_strtolower(trim((string)$this->xml->anuncios->visible), 'UTF-8');
+        return $this->IsVisibleValue($this->xml->anuncios->visible);
+    }
+
+    public function IsAnuncioVisible($anuncio)
+    {
+        if (!isset($anuncio->visible)) {
+            return true;
+        }
+
+        return $this->IsVisibleValue($anuncio->visible);
+    }
+
+    private function IsVisibleValue($value)
+    {
+        $visible = mb_strtolower(trim((string)$value), 'UTF-8');
         $visible = strtr($visible, [
             'á' => 'a',
             'é' => 'e',
