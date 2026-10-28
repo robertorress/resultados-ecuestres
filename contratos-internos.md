@@ -31,6 +31,12 @@ Para la pantalla **PLANO**, el XML del concurso admite el bloque opcional:
 
 El bloque puede contener uno o varios `plano`. Si no existe el bloque o ningún archivo es válido, la vista muestra una tarjeta vacía con el texto `NO HAY PLANOS DISPONIBLES` y un enlace de regreso al detalle del concurso.
 
+## Lectura concurrente de datos
+
+Las peticiones normales son de solo lectura. Los wrappers XML mantienen una caché independiente por ruta y los resultados JSON se reutilizan mientras el archivo conserve la misma versión (fecha de modificación y tamaño). Esto evita lecturas y parseos repetidos sin compartir estado mutable entre usuarios o peticiones PHP.
+
+Los procesos de publicación deben escribir primero un archivo temporal y sustituir el archivo final con un renombrado atómico. La validación no debe ejecutarse sobre un archivo que todavía se esté escribiendo.
+
 ## Ubicación del concurso
 
 El bloque opcional `<ubicacion>` puede contener `<nombre>` y `<visible>`. Si `<visible>` vale `si`, `sí` o `yes` (sin distinguir mayúsculas), la vista `view/body.php` muestra un bloque desplegable con el icono `location_on`. El mapa se carga dentro del bloque y puede mostrarse u ocultarse al pulsar el encabezado; el contenido desplegado no añade texto adicional al mapa. Si `<visible>` vale `no`, la sección no se renderiza. Cuando se omite `<visible>`, se mantiene visible por compatibilidad.

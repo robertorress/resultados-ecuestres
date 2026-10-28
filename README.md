@@ -25,6 +25,14 @@ Las rutas se pueden separar mediante variables de entorno:
 
 Si no se definen, se mantiene la estructura actual y el proyecto usa su propia carpeta como raíz de código, datos y catálogo.
 
+## Concurrencia y publicación de resultados
+
+Las peticiones web solo leen XML y JSON; no se utilizan bloqueos exclusivos para servir resultados, por lo que varios usuarios pueden consultar el mismo concurso simultáneamente. Los XML se cachean por ruta durante la petición y los JSON se cachean mientras no cambien su fecha de modificación o tamaño. Si un JSON cambia durante una lectura, se vuelve a intentar antes de devolver un error.
+
+Para publicar resultados mientras la página está disponible, genera el JSON en un archivo temporal y sustitúyelo mediante un renombrado atómico dentro de la misma carpeta. No sobrescribas un JSON directamente mientras los usuarios puedan estar leyéndolo. Después de publicar, ejecuta `tools\validate-data.php` para detectar enlaces rotos, XML incompleto o resultados inválidos.
+
+La aplicación no escribe los archivos de datos durante las peticiones normales. Los únicos bloqueos de escritura pertenecen al sistema de logs y utilizan `LOCK_EX`, por lo que un error de una petición no debe interrumpir las lecturas de otras peticiones.
+
 Las plantillas `config\development.env.example` y `config\production.env.example` muestran la configuración recomendada para cada entorno. En producción las variables deben configurarse en Apache, PHP o el sistema operativo, nunca en archivos públicos del proyecto.
 
 Los errores de aplicación se escriben en `logs\application-AAAA-MM-DD.log` y los errores de nivel `error` también en `logs\errors-AAAA-MM-DD.log`. La carpeta está protegida mediante `.htaccess` y no se sirve directamente al navegador.

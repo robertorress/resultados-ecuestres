@@ -3,11 +3,11 @@
 require_once __DIR__ . '/projectpath.php';
 
 /**
- * Clase Singleton para la gestión centralizada de un concurso ecuestres.
+ * Caché por ruta para la gestión centralizada de concursos ecuestres.
  */
 class CConcursoWrapper
 {
-    private static $instance = null;
+    private static $instance = [];
     private $xml;
 
     /**
@@ -29,15 +29,22 @@ class CConcursoWrapper
     }
 
     /**
-     * Obtiene la instancia única de la clase (Singleton).
+     * Obtiene la instancia cacheada de la ruta solicitada.
      * Ejemplo: $wrapper = ConcursosWrapper::getInstance('concursos.xml');
      */
     public static function getInstance($path = 'concurso.xml')
     {
-        if (self::$instance === null) {
-            self::$instance = new CConcursoWrapper($path);
+        if (!is_array(self::$instance)) {
+            self::$instance = [];
         }
-        return self::$instance;
+
+        $resolvedPath = $path === 'config.xml' ? CProjectPath::resolveCatalog() : CProjectPath::resolve($path);
+        $cacheKey = strtolower(str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $resolvedPath));
+        if (!isset(self::$instance[$cacheKey])) {
+            self::$instance[$cacheKey] = new CConcursoWrapper($path);
+        }
+
+        return self::$instance[$cacheKey];
     }
 
     public function GetConcurso()
