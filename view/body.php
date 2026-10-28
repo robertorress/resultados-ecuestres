@@ -100,7 +100,7 @@
         </p>
         <br>
         <?php $anuncios = $this->m_model->GetAnuncios(); ?>
-        <?php if ($anuncios !== null): ?>
+        <?php if ($anuncios !== null && $this->m_model->GetAnunciosVisible()): ?>
             <div class="card grey darken-1">
                 <div class="card-content white-text">
                     <?php /* <span class="card-title white-text">ANUNCIOS</span> */ ?>

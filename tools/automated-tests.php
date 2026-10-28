@@ -131,7 +131,8 @@ try {
         . "  <concurso>Concurso de pruebas</concurso>\n"
         . "  <fecha>01/01/2026</fecha>\n"
         . "  <ubicacion><nombre>Centro de pruebas</nombre><visible>SI</visible></ubicacion>\n"
-        . "  <equipos>si</equipos>\n"
+        . "          <anuncios><visible>SI</visible><anuncio><texto>Aviso de prueba</texto></anuncio></anuncios>
+        <equipos>si</equipos>\n"
         . "  <pruebas>\n"
         . "    <prueba><id>1</id><link>{$resultado1Path}</link><titulo>PRUEBA 1</titulo></prueba>\n"
         . "    <prueba><id>2</id><link>{$resultado2Path}</link><titulo>PRUEBA 2</titulo></prueba>\n"
@@ -210,6 +211,7 @@ JSON);
     $clasificacionEquipos = $resultadoEquiposModel->getClasificacionEquipos();
 
     testCondition($resultadoEquiposModel->GetUbicacionVisible() === true, 'Acepta SI como ubicación visible');
+    testCondition($resultadoEquiposModel->GetAnunciosVisible() === true, 'Acepta SI como anuncios visibles');
     testCondition(count($clasificacionEquipos['clasificacion']) === 1, 'Clasifica solo equipos válidos');
     testCondition(count($clasificacionEquipos['invalidos']) === 3, 'Marca equipos inválidos por reglas y binomios no encontrados');
 

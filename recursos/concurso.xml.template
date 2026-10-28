@@ -34,6 +34,9 @@
         El texto principal va en <texto>. El enlace también es opcional.
     -->
     <anuncios>
+        <!-- Valores visibles aceptados: si, sí, yes y cualquier combinación de mayúsculas. -->
+        <!-- Para ocultar toda la lista utiliza no o cualquier combinación de mayúsculas. -->
+        <visible>si</visible>
         <anuncio>
             <!-- Título breve que se muestra destacado. -->
             <titulo>Título del anuncio</titulo>

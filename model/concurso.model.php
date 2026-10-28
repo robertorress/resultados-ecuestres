@@ -55,6 +55,11 @@ abstract class CConcursoModel
         return $this->m_concurso->GetAnuncios();
     }
 
+    public function GetAnunciosVisible()
+    {
+        return $this->m_concurso->GetAnunciosVisible();
+    }
+
     public function GetPruebas()
     {
         return $this->m_concurso->GetPruebas();

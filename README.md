@@ -112,7 +112,7 @@ Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `plano
 
 Si no hay planos válidos o no se define el bloque, la sección **PLANO** muestra una tarjeta vacía con el texto **NO HAY PLANOS DISPONIBLES** y un botón de regreso al detalle del concurso.
 
-El detalle del concurso también admite una sección opcional de anuncios. Si se define `<anuncios>`, cada `<anuncio>` puede contener `<titulo>`, `<texto>`, `<fecha>` y `<tipo>`, además de un `<link>` opcional con su propia etiqueta y URL:
+El detalle del concurso también admite una sección opcional de anuncios. El bloque `<anuncios>` admite el campo `<visible>` con los mismos valores que la ubicación: `si`, `sí` o `yes` muestran la colección, y `no` la oculta, sin distinguir mayúsculas. Si se omite `<visible>`, los anuncios se muestran por compatibilidad. Cada `<anuncio>` puede contener `<titulo>`, `<texto>`, `<fecha>` y `<tipo>`, además de un `<link>` opcional con su propia etiqueta y URL:
 
 ```xml
 <anuncios>

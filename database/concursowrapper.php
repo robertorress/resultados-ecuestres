@@ -83,6 +83,24 @@ class CConcursoWrapper
         return $this->xml->anuncios->anuncio;
     }
 
+    public function GetAnunciosVisible()
+    {
+        if (!isset($this->xml->anuncios->visible)) {
+            return true;
+        }
+
+        $visible = mb_strtolower(trim((string)$this->xml->anuncios->visible), 'UTF-8');
+        $visible = strtr($visible, [
+            'á' => 'a',
+            'é' => 'e',
+            'í' => 'i',
+            'ó' => 'o',
+            'ú' => 'u',
+        ]);
+
+        return in_array($visible, ['si', 'yes'], true);
+    }
+
     public function GetPruebas()
     {
         return $this->xml->pruebas->prueba;

@@ -16,8 +16,9 @@
         <ordensalida>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
 		<ordensalida>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
     </ordensalidas>
-	<anuncios>
-		<anuncio>
+    <anuncios>
+        <visible>no</visible>
+        <anuncio>
 			<titulo>Información general</titulo>
 			<texto>Un anuncio simple</texto>
 			<fecha>25/10/2026</fecha>
@@ -49,7 +50,7 @@
 			<fecha>25/10/2026</fecha>
 			<tipo>none</tipo>
 			<texto>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </texto>
-		</anuncio>		
+		</anuncio>
 	</anuncios>
     <pruebas>
         <prueba>
