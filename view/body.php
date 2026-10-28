@@ -178,6 +178,27 @@
             </div>
         <?php endif; ?>
         <?php
+        $pruebas = $this->m_model->GetPruebas();
+        $concursoId = $this->m_model->GetConcursoId();
+        if (count($pruebas) > 0) {
+            ?>
+            <ul class="collapsible resultados-concurso">
+                <li>
+                    <div class="collapsible-header blue-grey lighten-1">
+                        <i class="material-icons" aria-hidden="true">assessment</i>
+                        <span>RESULTADOS</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="card-panel blue-grey lighten-1">
+                            <?php require __DIR__ . '/partials/result-test-links.php'; ?>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <?php
+        }
+        ?>
+        <?php
         $lugar = $this->m_model->GetUbicacionNombre();
         if ($this->m_model->GetUbicacionVisible() && $lugar != null) {
             $url_embed_por_nombre = "https://maps.google.com/maps?q=" . urlencode($lugar) . "&output=embed";

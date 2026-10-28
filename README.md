@@ -147,7 +147,8 @@ Valores admitidos para `activeSection`:
 - `inicio`
 - `plano`
 - `orden`
-- `resultados`
+
+Los resultados se muestran directamente en el detalle del concurso, dentro de un bloque desplegable como el de la ubicación. La ruta de listado de resultados se mantiene disponible para conservar la compatibilidad con enlaces existentes.
 
 Para añadir o modificar una opción de menú, se debe actualizar una sola vez la estructura de navegación en `view/partials/navigation-concurso.php`.
 

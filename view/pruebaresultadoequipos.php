@@ -273,7 +273,7 @@
 
             <?php
             echo "<div class=\"card-action\">";
-            echo "<a href=\"?c=Prueba&a=ListadoResultado&id=" . $id . "\" aria-label=\"Volver a resultados\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
+            echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . $id . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
             echo "</div>";
             echo "<p class=\"show-on-small hide-on-med-and-up\">Ponga el dispositivo en horizontal para ver más detalles</p>";
             ?>

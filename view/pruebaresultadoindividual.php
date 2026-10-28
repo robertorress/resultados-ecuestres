@@ -381,7 +381,7 @@
 
 					//back button.
 					echo "<div class=\"card-action detalle-acciones\">";
-					echo "<a href=\"?c=Resultado&a=Resultado&id=" . $id . "&prueba=" . $prueba_id . "\" aria-label=\"Volver a resultados\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
+					echo "<a href=\"?c=Resultado&a=Resultado&id=" . $id . "&prueba=" . $prueba_id . "\" aria-label=\"Volver a resultados de la prueba\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
 					echo "</div>";
 
 					echo "</div>";

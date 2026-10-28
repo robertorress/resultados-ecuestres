@@ -20,12 +20,6 @@ $navigationItems = [
         'icon' => 'access_time',
         'label' => 'ORDEN DE SALIDA',
     ],
-    [
-        'section' => 'resultados',
-        'href' => '?c=Prueba&a=ListadoResultado&id=' . $concursoId,
-        'icon' => 'visibility',
-        'label' => 'RESULTADOS',
-    ],
 ];
 $renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
     foreach ($items as $item) {
