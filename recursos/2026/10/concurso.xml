@@ -5,6 +5,7 @@
     <logo>recursos/imagenes/logo_equidepor.png</logo>
     <ubicacion>
         <nombre>Club equitación deportiva Equidepor Víctor Navarro</nombre>
+        <visible>si</visible>
         <coordenadas>
             <latitud></latitud>
             <longitud></longitud>
@@ -15,6 +16,41 @@
         <ordensalida>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
 		<ordensalida>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_003.png</ordensalida>
     </ordensalidas>
+	<anuncios>
+		<anuncio>
+			<titulo>Información general</titulo>
+			<texto>Un anuncio simple</texto>
+			<fecha>25/10/2026</fecha>
+			<tipo>info</tipo>
+			<link></link>
+		</anuncio>
+		<anuncio>
+			<titulo>Orden de salida</titulo>
+			<texto>Un anuncio mas complejo que tiene más texto y no se si podrá llegar a varias lineas en modo móvil</texto>
+			<fecha>25/10/2026</fecha>
+			<tipo>importante</tipo>
+			<link>
+				<texto>Orden de salida</texto>
+				<url>recursos/2026/10/orden_salida/ORDEN_DE_SALIDA_001.png</url>
+			</link>
+		</anuncio>
+		<anuncio>
+			<titulo>Documento de resultados</titulo>
+			<fecha>25/10/2026</fecha>
+			<tipo>resultado</tipo>
+			<texto>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </texto>
+			<link>
+				<texto>documento json</texto>
+				<url>recursos/2026/10/resultados/01-NIVEL_1_FINAL_4_AÑOS_CDT.json</url>
+			</link>
+		</anuncio>
+		<anuncio>
+			<titulo>Ejemplo sin nada, simple</titulo>
+			<fecha>25/10/2026</fecha>
+			<tipo>none</tipo>
+			<texto>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </texto>
+		</anuncio>		
+	</anuncios>
     <pruebas>
         <prueba>
             <id>1</id>
@@ -78,4 +114,3 @@
         </prueba>
     </pruebas>
 </root>
-

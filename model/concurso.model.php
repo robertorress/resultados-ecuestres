@@ -50,6 +50,11 @@ abstract class CConcursoModel
         return $this->m_concurso->GetPlanos();
     }
 
+    public function GetAnuncios()
+    {
+        return $this->m_concurso->GetAnuncios();
+    }
+
     public function GetPruebas()
     {
         return $this->m_concurso->GetPruebas();
@@ -116,6 +121,11 @@ abstract class CConcursoModel
     public function GetUbicacionNombre()
     {
         return $this->m_concurso->GetUbicacionNombre();
+    }
+
+    public function GetUbicacionVisible()
+    {
+        return $this->m_concurso->GetUbicacionVisible();
     }
 
     public function GetUbicacionLatitud()

@@ -80,12 +80,26 @@ powershell -ExecutionPolicy Bypass -File tools\restore-project.ps1 -Archive C:\P
 
 ## Estructura de datos
 
-- `config.xml`: catálogo general de concursos.
+- `config.xml`: catálogo general de concursos, ubicado en la raíz del proyecto (`C:\...\resultados-ecuestres\config.xml`).
+- `recursos\concurso.xml.template`: plantilla comentada para crear el `concurso.xml` de cada concurso.
 - `recursos\AAAA\N\concurso.xml`: metadatos de un concurso.
 - `recursos\AAAA\N\equipos.xml`: definición de equipos (cuando `concurso.xml` habilita resultados por equipos).
 - `recursos\AAAA\N\resultados\*.json`: resultados de cada prueba.
 - `recursos\AAAA\N\orden_salida\`: imágenes de órdenes de salida.
 - `recursos\AAAA\N\plano\` (opcional): imágenes del plano de instalaciones referenciadas desde `concurso.xml`.
+
+Para crear un nuevo concurso, copia `recursos\concurso.xml.template` como `recursos\AAAA\N\concurso.xml`, sustituye los valores de ejemplo y añade una entrada del concurso en `config.xml` dentro del año correspondiente. Las rutas de recursos deben ser relativas a la raíz del proyecto y usar `/` dentro de los archivos XML.
+
+La ubicación del concurso admite el campo opcional `<visible>`:
+
+```xml
+<ubicacion>
+  <nombre>Nombre del centro o lugar</nombre>
+  <visible>si</visible>
+</ubicacion>
+```
+
+La tarjeta del mapa se muestra cuando el valor es `si`, `sí` o `yes`, sin distinguir mayúsculas (`SI`, `Sí`, `YES`, etc.). Para ocultarla se puede utilizar `no` en cualquier combinación de mayúsculas. Si se omite `<visible>`, la ubicación se considera visible por compatibilidad con concursos existentes.
 
 Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `planos` con una o varias entradas `plano`:
 
@@ -97,6 +111,26 @@ Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `plano
 ```
 
 Si no hay planos válidos o no se define el bloque, la sección **PLANO** muestra una tarjeta vacía con el texto **NO HAY PLANOS DISPONIBLES** y un botón de regreso al detalle del concurso.
+
+El detalle del concurso también admite una sección opcional de anuncios. Si se define `<anuncios>`, cada `<anuncio>` puede contener `<titulo>`, `<texto>`, `<fecha>` y `<tipo>`, además de un `<link>` opcional con su propia etiqueta y URL:
+
+```xml
+<anuncios>
+  <anuncio><texto>Información importante para los participantes</texto></anuncio>
+  <anuncio>
+    <titulo>Documentación disponible</titulo>
+    <texto>Consulta la documentación</texto>
+    <fecha>25/10/2026</fecha>
+    <tipo>info</tipo>
+    <link>
+      <texto>ABRIR DOCUMENTACIÓN</texto>
+      <url>https://ejemplo.test/documentacion</url>
+    </link>
+  </anuncio>
+</anuncios>
+```
+
+La tarjeta de anuncios se muestra encima del mapa únicamente cuando existe el bloque `<anuncios>`. Actualmente no se muestra un título visible para la tarjeta; el texto **ANUNCIOS** queda conservado como comentario en la vista para poder recuperarlo en el futuro. Cada elemento puede mostrar un título destacado, texto descriptivo, fecha e indicador visual según el tipo (`none`, `info`, `importante`, `urgente` o `resultado`). El tipo `none` conserva el icono informativo, pero oculta la etiqueta azul `INFO`. El texto queda a la izquierda y el botón del enlace, cuando existe, a la derecha. Los campos nuevos son opcionales para mantener compatibilidad con anuncios antiguos.
 
 ## Navegación y mantenimiento
 

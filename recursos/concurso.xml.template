@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- Nombre completo que se muestra en la página del concurso. -->
+    <concurso>NOMBRE DEL CONCURSO</concurso>
+
+    <!-- Fecha del concurso con formato día/mes/año. -->
+    <fecha>DD/MM/AAAA</fecha>
+
+    <!-- Ruta pública de la imagen del logotipo, relativa a la raíz del proyecto. -->
+    <logo>recursos/imagenes/logo.png</logo>
+
+    <!-- Ubicación utilizada para generar el mapa de Google. -->
+    <ubicacion>
+        <nombre>Nombre del centro o lugar del concurso</nombre>
+        <!-- Valores visibles aceptados: si, sí, yes y cualquier combinación de mayúsculas. -->
+        <!-- Para ocultar la tarjeta utiliza no o cualquier combinación de mayúsculas. -->
+        <visible>si</visible>
+        <!-- Las coordenadas se conservan para futuras integraciones. -->
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+
+    <!-- Imágenes del orden de salida. El bloque puede quedar vacío si no hay imágenes. -->
+    <ordensalidas>
+        <ordensalida>recursos/AAAA/N/orden_salida/ORDEN_DE_SALIDA_001.png</ordensalida>
+        <ordensalida>recursos/AAAA/N/orden_salida/ORDEN_DE_SALIDA_002.png</ordensalida>
+    </ordensalidas>
+
+    <!--
+        Bloque opcional de anuncios.
+        Si no hay anuncios, elimina todo este bloque para ocultar la tarjeta.
+        El texto principal va en <texto>. El enlace también es opcional.
+    -->
+    <anuncios>
+        <anuncio>
+            <!-- Título breve que se muestra destacado. -->
+            <titulo>Título del anuncio</titulo>
+            <texto>Texto del anuncio sin enlace</texto>
+            <!-- Fecha opcional de publicación, por ejemplo 25/10/2026. -->
+            <fecha>DD/MM/AAAA</fecha>
+            <!-- Valores admitidos: none, info, importante, urgente o resultado. -->
+            <!-- "none" conserva el icono informativo, pero no muestra la etiqueta INFO. -->
+            <tipo>info</tipo>
+            <link></link>
+        </anuncio>
+        <anuncio>
+            <titulo>Título del anuncio con enlace</titulo>
+            <texto>Texto del anuncio con enlace</texto>
+            <fecha>DD/MM/AAAA</fecha>
+            <tipo>importante</tipo>
+            <link>
+                <!-- Texto que aparecerá en el botón. -->
+                <texto>ABRIR DOCUMENTO</texto>
+                <!-- Ruta relativa o URL absoluta del destino. -->
+                <url>recursos/AAAA/N/documentos/documento.pdf</url>
+            </link>
+        </anuncio>
+    </anuncios>
+
+    <!--
+        Bloque opcional de planos.
+        Si no se define, el menú PLANO sigue existiendo pero no encontrará imágenes.
+    -->
+    <planos>
+        <plano>recursos/AAAA/N/plano/plano_instalaciones_01.png</plano>
+        <plano>recursos/AAAA/N/plano/plano_instalaciones_02.png</plano>
+    </planos>
+
+    <!--
+        Escribe "si" para habilitar los resultados por equipos.
+        Escribe "no" o elimina el bloque para deshabilitarlos.
+        Cuando está habilitado, crea equipos.xml en esta misma carpeta.
+    -->
+    <equipos>no</equipos>
+
+    <!--
+        Cada prueba debe tener un identificador único, un JSON de resultados
+        y un título que se mostrará en la aplicación.
+    -->
+    <pruebas>
+        <prueba>
+            <id>1</id>
+            <link>recursos/AAAA/N/resultados/01-RESULTADOS.json</link>
+            <titulo>NOMBRE DE LA PRUEBA</titulo>
+        </prueba>
+        <prueba>
+            <id>2</id>
+            <link>recursos/AAAA/N/resultados/02-RESULTADOS.json</link>
+            <titulo>NOMBRE DE LA SEGUNDA PRUEBA</titulo>
+        </prueba>
+    </pruebas>
+</root>

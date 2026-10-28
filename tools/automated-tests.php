@@ -130,6 +130,7 @@ try {
         . "<root>\n"
         . "  <concurso>Concurso de pruebas</concurso>\n"
         . "  <fecha>01/01/2026</fecha>\n"
+        . "  <ubicacion><nombre>Centro de pruebas</nombre><visible>SI</visible></ubicacion>\n"
         . "  <equipos>si</equipos>\n"
         . "  <pruebas>\n"
         . "    <prueba><id>1</id><link>{$resultado1Path}</link><titulo>PRUEBA 1</titulo></prueba>\n"
@@ -208,6 +209,7 @@ JSON);
     $resultadoEquiposModel = new CResultadoEquipos(1, $concursoPath);
     $clasificacionEquipos = $resultadoEquiposModel->getClasificacionEquipos();
 
+    testCondition($resultadoEquiposModel->GetUbicacionVisible() === true, 'Acepta SI como ubicación visible');
     testCondition(count($clasificacionEquipos['clasificacion']) === 1, 'Clasifica solo equipos válidos');
     testCondition(count($clasificacionEquipos['invalidos']) === 3, 'Marca equipos inválidos por reglas y binomios no encontrados');
 
@@ -263,6 +265,45 @@ XML);
     }
 
     testCondition($invalidStructureDetected, 'Valida la estructura mínima de equipos.xml');
+
+    $anunciosPath = $fixtureRoot . DIRECTORY_SEPARATOR . 'evento-anuncios' . DIRECTORY_SEPARATOR . 'concurso.xml';
+    writeFixtureFile($anunciosPath, <<<'XML'
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <concurso>Concurso con anuncios</concurso>
+  <fecha>01/01/2026</fecha>
+  <anuncios>
+    <anuncio>Aviso sin enlace</anuncio>
+    <anuncio>
+      <titulo>Aviso importante</titulo>
+      <texto>Aviso con enlace</texto>
+      <fecha>25/10/2026</fecha>
+      <tipo>importante</tipo>
+      <link><texto>ABRIR AVISO</texto><url>https://example.com/aviso</url></link>
+    </anuncio>
+  </anuncios>
+</root>
+XML);
+
+    resetConcursoWrapperSingleton();
+    $anunciosModel = new CResultadoEquipos(3, $anunciosPath);
+    $anuncios = $anunciosModel->GetAnuncios();
+    testCondition($anuncios !== null && count($anuncios) === 2, 'Lee todos los anuncios definidos');
+    testCondition($anuncios !== null && trim((string)$anuncios[0]) === 'Aviso sin enlace', 'Lee el texto directo de un anuncio');
+    testCondition(
+        $anuncios !== null
+        && trim((string)$anuncios[1]->titulo) === 'Aviso importante'
+        && trim((string)$anuncios[1]->texto) === 'Aviso con enlace'
+        && trim((string)$anuncios[1]->fecha) === '25/10/2026'
+        && trim((string)$anuncios[1]->tipo) === 'importante'
+        && trim((string)$anuncios[1]->link->texto) === 'ABRIR AVISO'
+        && trim((string)$anuncios[1]->link->url) === 'https://example.com/aviso',
+        'Lee el texto y enlace opcional de un anuncio'
+    );
+
+    resetConcursoWrapperSingleton();
+    $sinAnunciosModel = new CResultadoEquipos(4, $concursoPath);
+    testCondition($sinAnunciosModel->GetAnuncios() === null, 'No crea anuncios cuando falta el bloque anuncios');
 } finally {
     deleteDirectoryRecursive($fixtureRoot);
     putenv('RESULTADOS_DATA_ROOT');

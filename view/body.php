@@ -34,6 +34,56 @@
         height: 100%;
         border: 0;
     }
+
+    .anuncios-coleccion .collection-item {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+    }
+
+    .anuncio-texto {
+        flex: 1;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .anuncio-contenido {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .anuncio-cabecera {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    .anuncio-titulo {
+        font-weight: 600;
+    }
+
+    .anuncio-fecha {
+        color: #757575;
+        font-size: 0.85rem;
+    }
+
+    .anuncio-tipo {
+        border-radius: 3px;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 2px 6px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .anuncios-coleccion .collection-item {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
 </style>
 
 <div class="row">
@@ -49,20 +99,93 @@
             <img class="hipica-logo" loading="lazy" decoding="async" style="border:0;width:auto;max-width:300px;height:150px" src="<?php echo escape_html($this->m_model->GetLogo()) ?>" alt="<?php echo escape_html($this->m_model->GetConcurso()) ?>" />
         </p>
         <br>
+        <?php $anuncios = $this->m_model->GetAnuncios(); ?>
+        <?php if ($anuncios !== null): ?>
+            <div class="card grey darken-1">
+                <div class="card-content white-text">
+                    <?php /* <span class="card-title white-text">ANUNCIOS</span> */ ?>
+                    <p>
+                    <div class="row">
+                        <div class="col s12 center">
+							<div class="card-panel blue-grey lighten-1">
+								<ul class="collection anuncios-coleccion left-align">
+									<?php foreach ($anuncios as $anuncio): ?>
+										<?php
+										$tipoAnuncio = strtolower(trim((string)($anuncio->tipo ?? 'info')));
+										$tiposAnuncio = [
+											'info' => ['icono' => 'info', 'clase' => 'blue darken-2', 'etiqueta' => 'INFO'],
+											'none' => ['icono' => 'info', 'clase' => '', 'etiqueta' => ''],
+											'importante' => ['icono' => 'priority_high', 'clase' => 'orange darken-2', 'etiqueta' => 'IMPORTANTE'],
+											'urgente' => ['icono' => 'warning', 'clase' => 'red darken-2', 'etiqueta' => 'URGENTE'],
+											'resultado' => ['icono' => 'assessment', 'clase' => 'green darken-2', 'etiqueta' => 'RESULTADO'],
+										];
+										$tipoPresentacion = $tiposAnuncio[$tipoAnuncio] ?? $tiposAnuncio['info'];
+										$tituloAnuncio = trim((string)($anuncio->titulo ?? ''));
+										$fechaAnuncio = trim((string)($anuncio->fecha ?? ''));
+										$textoAnuncio = isset($anuncio->texto)
+											? trim((string)$anuncio->texto)
+											: trim((string)$anuncio);
+										$textoEnlace = trim((string)($anuncio->link->texto ?? ''));
+										$urlEnlace = trim((string)($anuncio->link->url ?? ''));
+										if ($urlEnlace === '') {
+											$urlEnlace = trim((string)($anuncio->link ?? ''));
+										}
+										if ($textoEnlace === '' && $urlEnlace !== '') {
+											$textoEnlace = 'VER ENLACE';
+										}
+										?>
+										<?php if ($textoAnuncio !== ''): ?>
+											<li class="collection-item">
+												<div class="anuncio-contenido">
+													<div class="anuncio-cabecera">
+														<i class="material-icons" aria-hidden="true"><?php echo escape_html($tipoPresentacion['icono']); ?></i>
+														<?php if ($tituloAnuncio !== ''): ?>
+															<span class="anuncio-titulo"><?php echo escape_html($tituloAnuncio); ?></span>
+														<?php endif; ?>
+														<?php if ($tipoPresentacion['etiqueta'] !== ''): ?>
+															<span class="anuncio-tipo <?php echo escape_html($tipoPresentacion['clase']); ?>"><?php echo escape_html($tipoPresentacion['etiqueta']); ?></span>
+														<?php endif; ?>
+														<?php if ($fechaAnuncio !== ''): ?>
+															<span class="anuncio-fecha"><?php echo escape_html($fechaAnuncio); ?></span>
+														<?php endif; ?>
+													</div>
+													<div class="anuncio-texto"><?php echo escape_html($textoAnuncio); ?></div>
+												</div>
+												<?php if ($urlEnlace !== ''): ?>
+													<a class="waves-effect waves-light btn blue accent-1" href="<?php echo escape_html($urlEnlace); ?>" target="_blank" rel="noopener noreferrer">
+														<?php echo escape_html($textoEnlace); ?>
+													</a>
+												<?php endif; ?>
+											</li>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        <?php endif; ?>
         <?php
         $lugar = $this->m_model->GetUbicacionNombre();
-        if ($lugar != null) {
+        if ($this->m_model->GetUbicacionVisible() && $lugar != null) {
             /**
              * OPCIÓN A: Usar directamente el nombre del sitio
              * Es la forma más limpia si la base de datos almacena el texto.
              */
             $url_embed_por_nombre = "https://maps.google.com/maps?q=" . urlencode($lugar) . "&output=embed";
 
-            echo "<p>";
+            echo "<div class=\"card grey darken-1\">";
+            echo "<div class=\"card-content white-text\">";
+            echo "<span class=\"card-title white-text\">UBICACIÓN</span>";
+            echo "<div class=\"card-panel blue-grey lighten-1\">";
             echo "<div class=\"map-responsive\">";
             echo "<iframe title=\"Ubicación del concurso\" src=\"" . escape_html($url_embed_por_nombre) . "\" allowfullscreen loading=\"lazy\"></iframe>";
             echo "</div>";
-            echo "</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
         }
         ?>
         <h5>

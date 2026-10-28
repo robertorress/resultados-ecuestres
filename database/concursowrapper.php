@@ -74,6 +74,15 @@ class CConcursoWrapper
         return [];
     }
 
+    public function GetAnuncios()
+    {
+        if (!isset($this->xml->anuncios)) {
+            return null;
+        }
+
+        return $this->xml->anuncios->anuncio;
+    }
+
     public function GetPruebas()
     {
         return $this->xml->pruebas->prueba;
@@ -100,6 +109,24 @@ class CConcursoWrapper
         }
 
         return null;
+    }
+
+    public function GetUbicacionVisible()
+    {
+        if (!isset($this->xml->ubicacion->visible)) {
+            return true;
+        }
+
+        $visible = mb_strtolower(trim((string)$this->xml->ubicacion->visible), 'UTF-8');
+        $visible = strtr($visible, [
+            'á' => 'a',
+            'é' => 'e',
+            'í' => 'i',
+            'ó' => 'o',
+            'ú' => 'u',
+        ]);
+
+        return in_array($visible, ['si', 'yes'], true);
     }
 
     public function GetUbicacionLatitud()
