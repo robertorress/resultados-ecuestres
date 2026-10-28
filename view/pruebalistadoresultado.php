@@ -5,7 +5,6 @@
         <div class="card grey darken-1">
             <div class="card-content">
                 <span class="card-title white-text">RESULTADOS PROVISIONALES</span>
-                <p class="detalle-seccion-titulo"><?php echo escape_html($this->m_model->GetFecha()); ?></p>
 
                 <div class="row">
                     <div class="col s12 center">

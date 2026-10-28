@@ -5,9 +5,8 @@
         <div class="card grey darken-1">
             <div class="card-content white-text">
                 <span class="card-title white-text">ORDEN DE SALIDA</span>
-                <?php $concursoId = $this->m_model->GetConcursoId(); ?>
-                <p class="detalle-seccion-titulo"><?php echo escape_html($this->m_model->GetFecha()); ?></p>
-                <p>
+            <?php $concursoId = $this->m_model->GetConcursoId(); ?>
+            <p>
                 <div class="row">
                     <div class="col s12 center">
                         <?php
