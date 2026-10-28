@@ -188,25 +188,64 @@
             </div>
         <?php endif; ?>
         <?php
-        $pruebas = $this->m_model->GetPruebas();
         $concursoId = $this->m_model->GetConcursoId();
-        if (count($pruebas) > 0) {
+        $jornadas = $this->m_model->GetJornadas();
+        if ($this->m_model->HasJornadas()) {
             ?>
-            <ul class="collapsible resultados-concurso">
-                <li>
-                    <div class="collapsible-header blue-grey lighten-1">
-                        <i class="material-icons" aria-hidden="true">assessment</i>
-                        <span>RESULTADOS</span>
-                        <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
-                    </div>
-                    <div class="collapsible-body">
-                        <div class="card-panel blue-grey lighten-1">
-                            <?php require __DIR__ . '/partials/result-test-links.php'; ?>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <div class="resultados-concurso">
+                <?php foreach ($jornadas as $jornada): ?>
+                    <?php
+                    $jornadaId = (string)$jornada->id;
+                    $jornadaTitulo = trim((string)($jornada->titulo ?? ''));
+                    if ($jornadaTitulo === '') {
+                        $jornadaTitulo = trim((string)$jornada->fecha);
+                    }
+                    $pruebasJornada = $this->m_model->GetPruebasJornada($jornadaId);
+                    if (count($pruebasJornada) === 0) {
+                        continue;
+                    }
+                    ?>
+                    <ul class="collapsible resultados-jornada">
+                        <li>
+                            <div class="collapsible-header blue-grey lighten-1">
+                                <i class="material-icons" aria-hidden="true">assessment</i>
+                                <span>RESULTADOS - <?php echo escape_html($jornadaTitulo); ?></span>
+                                <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="card-panel blue-grey lighten-1">
+                                    <?php
+                                    $pruebas = $pruebasJornada;
+                                    require __DIR__ . '/partials/result-test-links.php';
+                                    unset($jornadaId);
+                                    ?>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                <?php endforeach; ?>
+            </div>
             <?php
+        } else {
+            $pruebas = $this->m_model->GetPruebas();
+            if (count($pruebas) > 0) {
+                ?>
+                <ul class="collapsible resultados-concurso">
+                    <li>
+                        <div class="collapsible-header blue-grey lighten-1">
+                            <i class="material-icons" aria-hidden="true">assessment</i>
+                            <span>RESULTADOS</span>
+                            <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
+                        </div>
+                        <div class="collapsible-body">
+                            <div class="card-panel blue-grey lighten-1">
+                                <?php require __DIR__ . '/partials/result-test-links.php'; ?>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <?php
+            }
         }
         ?>
         <?php
@@ -238,7 +277,14 @@
         }
         ?>
         <h5>
-            <?php echo escape_html($this->m_model->GetFecha()); ?>
+            <?php if ($this->m_model->HasJornadas()): ?>
+                <?php echo escape_html($this->m_model->GetFechaInicio()); ?>
+                <?php if ($this->m_model->GetFechaInicio() !== $this->m_model->GetFechaFin()): ?>
+                    - <?php echo escape_html($this->m_model->GetFechaFin()); ?>
+                <?php endif; ?>
+            <?php else: ?>
+                <?php echo escape_html($this->m_model->GetFecha()); ?>
+            <?php endif; ?>
         </h5>
         </p>
     </div>

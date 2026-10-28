@@ -7,12 +7,18 @@ abstract class CConcursoModel
     protected $m_concurso;
     protected $m_id = -1;
     protected $m_path = '';
+    protected $m_jornadaId = null;
 
-    public function __construct($id, $path)
+    public function __construct($id, $path, $jornadaId = null)
     {
         $this->m_id = $id;
         $this->m_path = (string)$path;
+        $this->m_jornadaId = $jornadaId;
         $this->m_concurso = CConcursoWrapper::getInstance($path);
+
+        if ($this->m_jornadaId !== null && $this->m_concurso->GetJornada($this->m_jornadaId) === null) {
+            $this->m_jornadaId = null;
+        }
     }
 
     public function GetConcursoId()
@@ -67,7 +73,12 @@ abstract class CConcursoModel
 
     public function GetPruebas()
     {
-        return $this->m_concurso->GetPruebas();
+        return $this->m_concurso->GetPruebas($this->m_jornadaId);
+    }
+
+    public function GetPruebasJornada($jornadaId)
+    {
+        return $this->m_concurso->GetPruebas($jornadaId);
     }
 
     public function GetPrueba($id)
@@ -83,7 +94,44 @@ abstract class CConcursoModel
 
     public function GetFecha()
     {
-        return $this->m_concurso->GetFecha();
+        return $this->m_concurso->GetFecha($this->m_jornadaId);
+    }
+
+    public function GetFechaInicio()
+    {
+        return $this->m_concurso->GetFechaInicio();
+    }
+
+    public function GetFechaFin()
+    {
+        return $this->m_concurso->GetFechaFin();
+    }
+
+    public function GetJornadas()
+    {
+        return $this->m_concurso->GetJornadas();
+    }
+
+    public function HasJornadas()
+    {
+        return $this->m_concurso->HasJornadas();
+    }
+
+    public function GetJornadaId()
+    {
+        $jornada = $this->m_concurso->GetJornada($this->m_jornadaId);
+        return $jornada === null ? null : (string)$jornada->id;
+    }
+
+    public function GetJornadaNombre()
+    {
+        $jornada = $this->m_concurso->GetJornada($this->m_jornadaId);
+        if ($jornada === null) {
+            return null;
+        }
+
+        $titulo = trim((string)($jornada->titulo ?? ''));
+        return $titulo !== '' ? $titulo : trim((string)$jornada->fecha);
     }
 
     public function GetConcursoDataPath()

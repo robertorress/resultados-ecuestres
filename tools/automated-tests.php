@@ -314,8 +314,17 @@ XML);
         'Lee el texto y enlace opcional de un anuncio'
     );
 
+    $sinAnunciosPath = $fixtureRoot . DIRECTORY_SEPARATOR . 'evento-sin-anuncios' . DIRECTORY_SEPARATOR . 'concurso.xml';
+    writeFixtureFile($sinAnunciosPath, <<<'XML'
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <concurso>Concurso sin anuncios</concurso>
+  <fecha>01/01/2026</fecha>
+</root>
+XML);
+
     resetConcursoWrapperSingleton();
-    $sinAnunciosModel = new CResultadoEquipos(4, $concursoPath);
+    $sinAnunciosModel = new CResultadoEquipos(4, $sinAnunciosPath);
     testCondition($sinAnunciosModel->GetAnuncios() === null, 'No crea anuncios cuando falta el bloque anuncios');
 } finally {
     deleteDirectoryRecursive($fixtureRoot);

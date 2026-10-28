@@ -1,6 +1,9 @@
 <?php
 $activeSection = $activeSection ?? '';
 $concursoId = escape_html($this->m_model->GetConcursoId());
+$jornadaQuery = $this->m_model->GetJornadaId() !== null
+    ? '&jornada=' . escape_html($this->m_model->GetJornadaId())
+    : '';
 $navigationItems = [
     [
         'section' => 'inicio',
@@ -10,13 +13,13 @@ $navigationItems = [
     ],
     [
         'section' => 'plano',
-        'href' => '?c=Prueba&a=Plano&id=' . $concursoId,
+        'href' => '?c=Prueba&a=Plano&id=' . $concursoId . $jornadaQuery,
         'icon' => 'map',
         'label' => 'PLANO',
     ],
     [
         'section' => 'orden',
-        'href' => '?c=Prueba&a=ListadoOrdenSalida&id=' . $concursoId,
+        'href' => '?c=Prueba&a=ListadoOrdenSalida&id=' . $concursoId . $jornadaQuery,
         'icon' => 'access_time',
         'label' => 'ORDEN DE SALIDA',
     ],

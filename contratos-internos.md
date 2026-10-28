@@ -9,6 +9,7 @@ Este documento describe los formatos que comparten el catalogo, los datos, los m
 - `id`: entero positivo y unico.
 - `nombre`: nombre visible del concurso.
 - `fecha`: formato `dd/mm/aaaa`.
+- `fecha_inicio` y `fecha_fin`: opcionales para concursos de varios días; deben aparecer juntas y conservar el mismo formato.
 - `datos`: ruta relativa al XML del concurso.
 - `tipo` y `visible`: metadatos del catalogo.
 
@@ -17,6 +18,10 @@ El catalogo no se modifica desde la aplicacion. `CConcursosWrapper` valida el XM
 ## XML de concurso
 
 El XML referenciado por `datos` debe contener el nodo `concurso`, la fecha, las pruebas y, cuando proceda, las ordenes de salida. Cada prueba incluye al menos un `id`, un titulo y un enlace relativo al JSON de resultados.
+
+El formato antiguo utiliza `<fecha>` y un único bloque `<pruebas>`. Para un concurso de varios días se puede utilizar `<fecha_inicio>`, `<fecha_fin>` y `<jornadas>`. Cada `<jornada>` debe tener un `id` único, una `fecha` dentro del intervalo del concurso y su propio bloque `<pruebas>`. Los identificadores de prueba solo deben ser únicos dentro de su jornada, porque cada jornada representa resultados independientes.
+
+La aplicación muestra una sección desplegable `RESULTADOS - fecha` por cada jornada. Si no existe `<jornadas>`, el formato antiguo se interpreta como una única jornada y se mantiene la sección `RESULTADOS` original. La validación de datos comprueba fechas, jornadas, identificadores duplicados, enlaces a JSON y que no falten pruebas.
 
 Para resultados por equipos, el XML del concurso admite `equipos` (y por compatibilidad `equipo`) con valor `si/yes` o `no`. Si está habilitado, debe existir `equipos.xml` en la misma carpeta.
 

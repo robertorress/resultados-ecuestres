@@ -115,8 +115,44 @@ class CConcursoWrapper
         return in_array($visible, ['si', 'yes'], true);
     }
 
-    public function GetPruebas()
+    public function GetJornadas()
     {
+        if (!isset($this->xml->jornadas->jornada)) {
+            return [];
+        }
+
+        return $this->xml->jornadas->jornada;
+    }
+
+    public function HasJornadas()
+    {
+        return count($this->GetJornadas()) > 0;
+    }
+
+    public function GetJornada($id = null)
+    {
+        $jornadas = $this->GetJornadas();
+        if (count($jornadas) === 0) {
+            return null;
+        }
+
+        $selectedId = $id === null ? (string)$jornadas[0]->id : (string)$id;
+        foreach ($jornadas as $jornada) {
+            if ((string)$jornada->id === $selectedId) {
+                return $jornada;
+            }
+        }
+
+        return $jornadas[0];
+    }
+
+    public function GetPruebas($jornadaId = null)
+    {
+        $jornada = $this->GetJornada($jornadaId);
+        if ($jornada !== null) {
+            return $jornada->pruebas->prueba ?? [];
+        }
+
         return $this->xml->pruebas->prueba;
     }
 
@@ -129,9 +165,34 @@ class CConcursoWrapper
         return $this->xml->equipo[0] ?? null;
     }
 
-    public function GetFecha()
+    public function GetFecha($jornadaId = null)
     {
+        $jornada = $this->GetJornada($jornadaId);
+        if ($jornada !== null) {
+            return $jornada->fecha;
+        }
+
         return $this->xml->fecha[0];
+    }
+
+    public function GetFechaInicio()
+    {
+        if (isset($this->xml->fecha_inicio) && trim((string)$this->xml->fecha_inicio) !== '') {
+            return $this->xml->fecha_inicio[0];
+        }
+
+        $jornadas = $this->GetJornadas();
+        return count($jornadas) > 0 ? $jornadas[0]->fecha : $this->xml->fecha[0];
+    }
+
+    public function GetFechaFin()
+    {
+        if (isset($this->xml->fecha_fin) && trim((string)$this->xml->fecha_fin) !== '') {
+            return $this->xml->fecha_fin[0];
+        }
+
+        $jornadas = $this->GetJornadas();
+        return count($jornadas) > 0 ? $jornadas[count($jornadas) - 1]->fecha : $this->xml->fecha[0];
     }
 
     public function GetUbicacionNombre()

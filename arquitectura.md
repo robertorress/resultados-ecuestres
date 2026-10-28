@@ -169,7 +169,20 @@ recursos\2026\15\
   orden_salida\*.png
 ```
 
-`config.xml` relaciona los concursos con sus fechas, nombres y directorios. Debe tratarse como catálogo de producción y no modificarse accidentalmente.
+En concursos de varios días, los resultados pueden organizarse por jornada para facilitar su mantenimiento:
+
+```text
+recursos\2027\20\
+  concurso.xml
+  resultados\
+    dia-1\*.json
+    dia-2\*.json
+  orden_salida\*.png
+```
+
+`concurso.xml` mantiene un bloque `<pruebas>` para concursos antiguos. En el formato de varias jornadas, cada `<jornada>` contiene su propio bloque `<pruebas>` y los enlaces de resultados no se mezclan entre días.
+
+`config.xml` relaciona los concursos con sus fechas, nombres y directorios. Para un concurso de varios días conserva `<fecha>` por compatibilidad y añade `<fecha_inicio>` y `<fecha_fin>` para mostrar el intervalo en la página principal. Debe tratarse como catálogo de producción y no modificarse accidentalmente.
 
 ## 4. Cómo actualizar datos
 

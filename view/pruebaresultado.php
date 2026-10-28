@@ -40,6 +40,9 @@
 
 				$id = request_positive_int('id');
 				$prueba_id = request_positive_int('prueba');
+				$jornadaQuery = $this->m_model->GetJornadaId() !== null
+					? '&jornada=' . rawurlencode($this->m_model->GetJornadaId())
+					: '';
 				if ($id !== null && $prueba_id !== null) {
 					$prueba = $this->m_model->GetPrueba($prueba_id);
 					$json_file = false;
@@ -161,7 +164,7 @@
 								echo "<td class=\"center-align\">";
 								if (is_numeric($dato["puesto"]) && ($dato["puesto"] > 0)) {
 									echo "<a class = \"puntuacion-final waves-effect waves-teal btn-small blue accent-1\" href = \"?c=ResultadoIndividual&a=ResultadoIndividual&id=";
-									echo $id . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
+									echo $id . $jornadaQuery . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
 									echo format_score($dato["total"]);
 									echo "</a>";
 								}
@@ -251,7 +254,7 @@
 									//Total
 									echo "<td class=\"center-align\">";
 									echo "<a class = \"puntuacion-final waves-effect waves-teal btn-small blue accent-1\" href = \"?c=ResultadoIndividual&a=ResultadoIndividual&id=";
-									echo $id . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
+									echo $id . $jornadaQuery . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
 									echo format_score($dato["infantiles"]["total"]);
 									echo "</a>";
 								}
@@ -306,7 +309,7 @@
 									//Total
 									echo "<td class=\"center-align\">";
 									echo "<a class = \"puntuacion-final waves-effect waves-teal btn-small blue accent-1\" href = \"?c=ResultadoIndividual&a=ResultadoIndividual&id=";
-									echo $id . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
+									echo $id . $jornadaQuery . "&prueba=" . $prueba_id . "&jinete=" . $dato["jinete_licencia"] . "&caballo=" . $dato["caballo_licencia"] . "\">";
 									echo format_score($dato["siete_annos"]["total"]);
 									echo "</a>";
 								}
@@ -375,7 +378,7 @@
 
 					//back button.
 					echo "<div class=\"card-action\">";
-					echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . $id . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
+					echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . $id . $jornadaQuery . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>";
 					echo "</div>";
 
 					echo "<p class=\"show-on-small hide-on-med-and-up\">Ponga el dispositivo en horizontal para ver más detalles</p>";

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!--
+        El catálogo contiene un bloque aAAAA por cada año.
+        Copia este archivo como config.xml y conserva únicamente
+        los años y concursos que correspondan a tu instalación.
+    -->
+    <aAAAA>
+        <concursos>
+            <concurso>
+                <!-- Identificador entero positivo y único en todo el catálogo. -->
+                <id>1</id>
+
+                <!-- Nombre que aparecerá en la página principal. -->
+                <nombre>NOMBRE DEL CONCURSO</nombre>
+
+                <!--
+                    Fecha principal y obligatoria por compatibilidad.
+                    En concursos de varios días debe coincidir con fecha_inicio.
+                -->
+                <fecha>DD/MM/AAAA</fecha>
+
+                <!--
+                    Opcional para concursos de varios días.
+                    Si se define uno de estos campos, deben definirse los dos.
+                    El formato es DD/MM/AAAA y fecha_inicio no puede ser
+                    posterior a fecha_fin.
+                -->
+                <!--
+                <fecha_inicio>DD/MM/AAAA</fecha_inicio>
+                <fecha_fin>DD/MM/AAAA</fecha_fin>
+                -->
+
+                <!-- Ruta al XML principal del concurso, relativa a la raíz. -->
+                <datos>recursos/AAAA/N/concurso.xml</datos>
+
+                <!-- Tipo usado para el filtro y el icono del concurso. -->
+                <tipo>Doma Clásica</tipo>
+
+                <!-- Valores admitidos: si o no. -->
+                <visible>si</visible>
+            </concurso>
+        </concursos>
+    </aAAAA>
+
+    <!-- Añade otros bloques anuales cuando sea necesario. -->
+    <!--
+    <aBBBB>
+        <concursos>
+            <concurso>
+                <id>2</id>
+                <nombre>OTRO CONCURSO</nombre>
+                <fecha>DD/MM/BBBB</fecha>
+                <datos>recursos/BBBB/N/concurso.xml</datos>
+                <tipo>Doma Vaquera</tipo>
+                <visible>si</visible>
+            </concurso>
+        </concursos>
+    </aBBBB>
+    -->
+</root>

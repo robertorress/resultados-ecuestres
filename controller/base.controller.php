@@ -20,9 +20,10 @@ abstract class CBaseController
         $id = -1;
         $path = '';
         $requestId = request_positive_int('id');
+        $jornadaId = request_positive_int('jornada');
 
         if ($requestId === null) {
-            $this->m_model = new $modelClass($id, $path);
+            $this->m_model = new $modelClass($id, $path, $jornadaId);
             return;
         }
 
@@ -32,7 +33,7 @@ abstract class CBaseController
             $path = (string)$concurso->datos;
         }
 
-        $this->m_model = new $modelClass($id, $path);
+        $this->m_model = new $modelClass($id, $path, $jornadaId);
     }
 
     protected function render($view, $header = 'header.php')

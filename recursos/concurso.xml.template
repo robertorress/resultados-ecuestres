@@ -3,8 +3,31 @@
     <!-- Nombre completo que se muestra en la página del concurso. -->
     <concurso>NOMBRE DEL CONCURSO</concurso>
 
-    <!-- Fecha del concurso con formato día/mes/año. -->
+    <!-- Fecha del concurso con formato día/mes/año. Para varios días usa fecha_inicio/fecha_fin. -->
     <fecha>DD/MM/AAAA</fecha>
+
+    <!--
+        Opcional para concursos de varios días. Si se define jornadas,
+        cada jornada debe contener sus propias pruebas y resultados.
+    -->
+    <!--
+    <fecha_inicio>DD/MM/AAAA</fecha_inicio>
+    <fecha_fin>DD/MM/AAAA</fecha_fin>
+    <jornadas>
+        <jornada>
+            <id>1</id>
+            <fecha>DD/MM/AAAA</fecha>
+            <titulo>Día 1</titulo>
+            <pruebas>
+                <prueba>
+                    <id>1</id>
+                    <link>recursos/AAAA/N/resultados/dia-1/01-RESULTADOS.json</link>
+                    <titulo>NOMBRE DE LA PRUEBA</titulo>
+                </prueba>
+            </pruebas>
+        </jornada>
+    </jornadas>
+    -->
 
     <!-- Ruta pública de la imagen del logotipo, relativa a la raíz del proyecto. -->
     <logo>recursos/imagenes/logo.png</logo>

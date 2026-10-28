@@ -44,10 +44,13 @@ class CConcursos
 
         $concursos = iterator_to_array($concursos, false);
         usort($concursos, static function ($a, $b) {
-            $fechaA = DateTime::createFromFormat('d/m/Y', (string)$a->fecha);
-            $fechaB = DateTime::createFromFormat('d/m/Y', (string)$b->fecha);
+            $fechaA = self::getEndDate($a);
+            $fechaB = self::getEndDate($b);
 
-            return $fechaB <=> $fechaA;
+            $timestampA = $fechaA instanceof DateTimeInterface ? $fechaA->getTimestamp() : PHP_INT_MIN;
+            $timestampB = $fechaB instanceof DateTimeInterface ? $fechaB->getTimestamp() : PHP_INT_MIN;
+
+            return $timestampB <=> $timestampA;
         });
 
         return $concursos;
@@ -59,10 +62,10 @@ class CConcursos
         $ids = [];
 
         foreach ($concursos as $concurso) {
-            $fecha = DateTime::createFromFormat('d/m/Y', (string)$concurso->fecha);
+            $fecha = self::getEndDate($concurso);
             if (
                 strcasecmp((string)$concurso->visible, 'si') === 0
-                && $fecha !== false
+                && $fecha instanceof DateTimeInterface
                 && $fecha >= $today
             ) {
                 $ids[] = (string)$concurso->id;
@@ -88,6 +91,7 @@ class CConcursos
 
             $isUpcoming = isset($upcomingIdSet[(string)$concurso->id]);
             $type = (string)$concurso->tipo;
+            $fecha = self::getDateDisplay($concurso);
             $typeImage = null;
             $typeAlt = null;
 
@@ -101,10 +105,10 @@ class CConcursos
 
             $display[] = new ConcursoDisplayData(
                 (string)$concurso->id,
-                (string)$concurso->fecha,
+                $fecha,
                 (string)$concurso->nombre,
                 $type,
-                strtolower((string)$concurso->fecha . ' ' . (string)$concurso->nombre . ' ' . $type),
+                strtolower($fecha . ' ' . (string)$concurso->nombre . ' ' . $type),
                 $isUpcoming,
                 $isUpcoming
                     ? 'recursos/imagenes/cartel_abierto.png'
@@ -122,7 +126,7 @@ class CConcursos
     public function GetFechaConcurso($concurso)
     {
         if ($concurso != null) {
-            return $concurso->fecha;
+            return self::getDateDisplay($concurso);
         } else {
             return "ERROR XML";
         }
@@ -130,7 +134,8 @@ class CConcursos
 
     public function GetFechaConcursoById($id)
     {
-        return $this->getConcursoFieldById($id, 'fecha');
+        $concurso = $this->GetConcurso($id);
+        return $concurso !== null ? self::getDateDisplay($concurso) : null;
     }
 
     public function GetNombreConcurso($concurso)
@@ -155,5 +160,48 @@ class CConcursos
 
         $concurso = $this->GetConcurso($id);
         return $concurso !== null ? $concurso->{$field} : null;
+    }
+
+    private static function getStartDate($concurso)
+    {
+        $value = trim((string)($concurso->fecha_inicio ?? ''));
+        if ($value === '') {
+            $value = trim((string)($concurso->fecha ?? ''));
+        }
+
+        return self::parseDate($value);
+    }
+
+    private static function getEndDate($concurso)
+    {
+        $value = trim((string)($concurso->fecha_fin ?? ''));
+        if ($value === '') {
+            $value = trim((string)($concurso->fecha ?? ''));
+        }
+
+        return self::parseDate($value) ?: self::getStartDate($concurso);
+    }
+
+    private static function getDateDisplay($concurso)
+    {
+        $start = trim((string)($concurso->fecha_inicio ?? ''));
+        if ($start === '') {
+            $start = trim((string)($concurso->fecha ?? ''));
+        }
+
+        $end = trim((string)($concurso->fecha_fin ?? ''));
+        if ($end === '' || $end === $start) {
+            return $start;
+        }
+
+        $startDate = self::parseDate($start);
+        $endDate = self::parseDate($end);
+        return $startDate !== null && $endDate !== null ? $start . ' - ' . $end : $start;
+    }
+
+    private static function parseDate($value)
+    {
+        $date = DateTime::createFromFormat('d/m/Y', $value);
+        return $date !== false && $date->format('d/m/Y') === $value ? $date : null;
     }
 }

@@ -65,7 +65,7 @@
                 </p>
             </div>
             <div class="card-action">
-                <?php echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . escape_html($concursoId) . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>"; ?>
+                <?php echo "<a href=\"?c=Prueba&a=MostrarPrueba&id=" . escape_html($concursoId) . ($this->m_model->GetJornadaId() !== null ? '&jornada=' . escape_html($this->m_model->GetJornadaId()) : '') . "\" aria-label=\"Volver al concurso\"><i class=\"large material-icons\" aria-hidden=\"true\">arrow_back</i></a>"; ?>
             </div>
         </div>
     </div>

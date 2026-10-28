@@ -81,6 +81,7 @@ powershell -ExecutionPolicy Bypass -File tools\restore-project.ps1 -Archive C:\P
 ## Estructura de datos
 
 - `config.xml`: catálogo general de concursos, ubicado en la raíz del proyecto (`C:\...\resultados-ecuestres\config.xml`).
+- `config.xml.template`: plantilla comentada para crear el catálogo general de concursos.
 - `recursos\concurso.xml.template`: plantilla comentada para crear el `concurso.xml` de cada concurso.
 - `recursos\AAAA\N\concurso.xml`: metadatos de un concurso.
 - `recursos\AAAA\N\equipos.xml`: definición de equipos (cuando `concurso.xml` habilita resultados por equipos).
@@ -88,7 +89,45 @@ powershell -ExecutionPolicy Bypass -File tools\restore-project.ps1 -Archive C:\P
 - `recursos\AAAA\N\orden_salida\`: imágenes de órdenes de salida.
 - `recursos\AAAA\N\plano\` (opcional): imágenes del plano de instalaciones referenciadas desde `concurso.xml`.
 
-Para crear un nuevo concurso, copia `recursos\concurso.xml.template` como `recursos\AAAA\N\concurso.xml`, sustituye los valores de ejemplo y añade una entrada del concurso en `config.xml` dentro del año correspondiente. Las rutas de recursos deben ser relativas a la raíz del proyecto y usar `/` dentro de los archivos XML.
+Para crear una instalación nueva, copia `config.xml.template` como `config.xml` y sustituye los valores de ejemplo. Para añadir un concurso, copia `recursos\concurso.xml.template` como `recursos\AAAA\N\concurso.xml`, sustituye sus valores y añade una entrada dentro del año correspondiente en `config.xml`. Las rutas de recursos deben ser relativas a la raíz del proyecto y usar `/` dentro de los archivos XML.
+
+Los concursos de varios días pueden usar un bloque `<jornadas>`. Cada jornada tiene su propia fecha y su propio bloque `<pruebas>`, por lo que sus resultados son independientes. En `config.xml`, conserva `<fecha>` por compatibilidad y añade también `<fecha_inicio>` y `<fecha_fin>` para que el intervalo se muestre en la página principal:
+
+```xml
+<concurso>
+  <id>20</id>
+  <nombre>CDT DE VARIOS DÍAS</nombre>
+  <fecha>12/06/2027</fecha>
+  <fecha_inicio>12/06/2027</fecha_inicio>
+  <fecha_fin>14/06/2027</fecha_fin>
+  <datos>recursos/2027/20/concurso.xml</datos>
+  <tipo>Doma Clásica</tipo>
+  <visible>si</visible>
+</concurso>
+```
+
+Los tres campos de fecha deben utilizar el formato `DD/MM/AAAA`; `fecha_inicio` y `fecha_fin` deben aparecer juntos y el inicio no puede ser posterior al fin. En `concurso.xml`, `fecha_inicio` y `fecha_fin` también deben cubrir el intervalo de las jornadas.
+
+```xml
+<fecha_inicio>12/06/2027</fecha_inicio>
+<fecha_fin>14/06/2027</fecha_fin>
+<jornadas>
+  <jornada>
+    <id>1</id>
+    <fecha>12/06/2027</fecha>
+    <titulo>Viernes 12 de junio</titulo>
+    <pruebas>
+      <prueba>
+        <id>1</id>
+        <link>recursos/2027/20/resultados/dia-1/prueba-01.json</link>
+        <titulo>PRELIMINAR 4 AÑOS</titulo>
+      </prueba>
+    </pruebas>
+  </jornada>
+</jornadas>
+```
+
+La entrada correspondiente de `config.xml` debe representar el concurso completo. La página principal mostrará el intervalo entre `fecha_inicio` y `fecha_fin`. En la página del concurso se mostrará una sección desplegable `RESULTADOS - fecha` por cada jornada, con la lista de pruebas de ese día. Los concursos antiguos que solo tienen `<fecha>` y `<pruebas>` se siguen interpretando como una única jornada con una sección `RESULTADOS`.
 
 La ubicación del concurso admite el campo opcional `<visible>`:
 
