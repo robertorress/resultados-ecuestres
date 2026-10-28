@@ -77,6 +77,8 @@ La navegación de la pantalla inicial está centralizada en `view/partials/navig
 
 La navegación interna de concurso (Inicio, Plano, Orden de salida y Resultados) está centralizada en `view/partials/navigation-concurso.php`. Las vistas de detalle solo definen `activeSection` y reutilizan ese partial para escritorio y móvil, reduciendo duplicación y simplificando cambios futuros.
 
+En la portada de un concurso, `model/concurso.model.php` prepara los participantes mediante `GetParticipantes()`. El método recorre todas las pruebas —incluidas las de todas las jornadas—, carga sus JSON mediante `database/resultadojson.php`, proyecta los campos de jinete, caballo, prueba y jornada, y ordena el resultado antes de entregarlo a `view/body.php`. La vista presenta los bloques en el orden `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`; la tabla de participantes se oculta si no hay datos válidos.
+
 La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por `escape_html()` antes de insertarse en HTML. Los identificadores de petición se validan con `request_positive_int()` y los identificadores de jinete/caballo se normalizan mediante una lista de caracteres permitidos antes de usarse en enlaces.
 
 ### Archivos PHP principales
@@ -362,6 +364,8 @@ Las tablas principales se han mantenido en formato clásico vertical. En móvil 
 La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú lateral para móvil y una marca de página consistente. El bloque de navegación de concurso se genera desde un único partial (`navigation-concurso.php`) con sección activa configurable, de forma que todas las vistas mantienen el mismo comportamiento. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
 
 Los listados de resultados incorporan búsqueda por atleta o caballo y un aviso cuando no existen coincidencias.
+
+La portada del concurso incluye la sección desplegable `PARTICIPANTES`, que muestra cada binomio y la prueba correspondiente ordenados por jinete. En concursos con jornadas añade la jornada para evitar ambigüedades entre pruebas con el mismo título.
 
 La sección `PLANO` replica la estructura visual de `ORDEN DE SALIDA`: una tarjeta por cada imagen configurada. Cuando no hay imágenes válidas en `concurso.xml`, muestra una tarjeta vacía con el mensaje `NO HAY PLANOS DISPONIBLES` y un botón para volver al detalle del concurso.
 

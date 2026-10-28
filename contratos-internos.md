@@ -76,6 +76,21 @@ Reglas de negocio:
 
 Los consumidores deben tratar `cabecera` y `datos` como arrays. Los campos adicionales dependen del tipo de prueba, por ejemplo `notas`, `puesto`, `total`, `jueces`, `errores` y `observaciones`.
 
+## Participantes del concurso
+
+La portada del concurso obtiene los participantes recorriendo todas las pruebas configuradas en el XML. En concursos con `<jornadas>`, se recorren las pruebas de todas las jornadas, aunque la URL incluya una jornada concreta, porque la sección pertenece al resumen general del concurso.
+
+Cada fila se construye con estos campos de `resultados.datos`:
+
+- `jinete`: `jinete_nombre`; si está vacío, se utiliza `jinete_licencia`.
+- `caballo`: `caballo_nombre`; si está vacío, se utiliza `caballo_licencia`.
+- `prueba`: título de la prueba definido en el XML.
+- `jornada`: título de la jornada o su fecha cuando el concurso utiliza jornadas.
+
+Las filas se ordenan por jinete y, para hacer el resultado determinista, por caballo y prueba. La vista escapa todos los valores antes de insertarlos en HTML. La sección no se renderiza cuando ninguna prueba contiene datos de participante.
+
+En la página principal del concurso, el orden de presentación es `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`.
+
 ## Peticiones HTTP
 
 - `c`: controlador permitido por la lista blanca de `index.php`.

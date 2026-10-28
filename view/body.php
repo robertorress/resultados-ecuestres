@@ -88,6 +88,15 @@
         padding: 2px 6px;
     }
 
+    .participantes-tabla {
+        margin-bottom: 0;
+    }
+
+    .participantes-tabla th,
+    .participantes-tabla td {
+        vertical-align: middle;
+    }
+
     @media only screen and (max-width: 600px) {
         .anuncios-coleccion .collection-item {
             align-items: flex-start;
@@ -189,6 +198,8 @@
         <?php endif; ?>
         <?php
         $concursoId = $this->m_model->GetConcursoId();
+        // El orden de estos bloques forma parte de la presentación de la portada:
+        // anuncios, resultados, participantes y ubicación.
         $jornadas = $this->m_model->GetJornadas();
         if ($this->m_model->HasJornadas()) {
             ?>
@@ -248,6 +259,50 @@
             }
         }
         ?>
+        <?php
+        $participantes = $this->m_model->GetParticipantes();
+        ?>
+        <?php if (count($participantes) > 0): ?>
+            <ul class="collapsible participantes-concurso">
+                <li>
+                    <div class="collapsible-header blue-grey lighten-1">
+                        <i class="material-icons" aria-hidden="true">groups</i>
+                        <span>PARTICIPANTES</span>
+                        <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="card-panel blue-grey lighten-1">
+                            <div class="table-responsive">
+                                <table class="highlight responsive-table participantes-tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>JINETE / AMAZONA</th>
+                                            <th>CABALLO</th>
+                                            <th>PRUEBA</th>
+                                            <?php if ($this->m_model->HasJornadas()): ?>
+                                                <th>JORNADA</th>
+                                            <?php endif; ?>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($participantes as $participante): ?>
+                                            <tr>
+                                                <td><?php echo escape_html($participante['jinete']); ?></td>
+                                                <td><?php echo escape_html($participante['caballo']); ?></td>
+                                                <td><?php echo escape_html($participante['prueba']); ?></td>
+                                                <?php if ($this->m_model->HasJornadas()): ?>
+                                                    <td><?php echo escape_html($participante['jornada']); ?></td>
+                                                <?php endif; ?>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        <?php endif; ?>
         <?php
         $lugar = $this->m_model->GetUbicacionNombre();
         if ($this->m_model->GetUbicacionVisible() && $lugar != null) {

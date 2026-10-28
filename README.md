@@ -137,6 +137,8 @@ Los tres campos de fecha deben utilizar el formato `DD/MM/AAAA`; `fecha_inicio` 
 
 La entrada correspondiente de `config.xml` debe representar el concurso completo. La página principal mostrará el intervalo entre `fecha_inicio` y `fecha_fin`. En la página del concurso se mostrará una sección desplegable `RESULTADOS - fecha` por cada jornada, con la lista de pruebas de ese día. Los concursos antiguos que solo tienen `<fecha>` y `<pruebas>` se siguen interpretando como una única jornada con una sección `RESULTADOS`.
 
+En la portada del concurso, los bloques se muestran en este orden: `ANUNCIOS` (si existen), `RESULTADOS` (uno por cada jornada cuando corresponda), `PARTICIPANTES` y `UBICACIÓN`. La sección desplegable `PARTICIPANTES` se construye a partir del campo `resultados.datos` de cada JSON enlazado desde las pruebas y muestra el jinete o amazona, el caballo y la prueba en la que participa. En concursos con jornadas también muestra la jornada asociada. Las filas se ordenan alfabéticamente por jinete; caballo y prueba se utilizan como desempates.
+
 La ubicación del concurso admite el campo opcional `<visible>`:
 
 ```xml
@@ -177,7 +179,7 @@ El detalle del concurso también admite una sección opcional de anuncios. El bl
 </anuncios>
 ```
 
-La tarjeta de anuncios se muestra encima del mapa únicamente cuando existe el bloque `<anuncios>`. Actualmente no se muestra un título visible para la tarjeta; el texto **ANUNCIOS** queda conservado como comentario en la vista para poder recuperarlo en el futuro. Cada elemento puede mostrar un título destacado, texto descriptivo, fecha e indicador visual según el tipo (`none`, `info`, `importante`, `urgente` o `resultado`). El tipo `none` conserva el icono informativo, pero oculta la etiqueta azul `INFO`. El texto queda a la izquierda y el botón del enlace, cuando existe, a la derecha. Los campos nuevos son opcionales para mantener compatibilidad con anuncios antiguos.
+La tarjeta de anuncios se muestra antes de los resultados, participantes y ubicación únicamente cuando existe el bloque `<anuncios>`. Actualmente no se muestra un título visible para la tarjeta; el texto **ANUNCIOS** queda conservado como comentario en la vista para poder recuperarlo en el futuro. Cada elemento puede mostrar un título destacado, texto descriptivo, fecha e indicador visual según el tipo (`none`, `info`, `importante`, `urgente` o `resultado`). El tipo `none` conserva el icono informativo, pero oculta la etiqueta azul `INFO`. El texto queda a la izquierda y el botón del enlace, cuando existe, a la derecha. Los campos nuevos son opcionales para mantener compatibilidad con anuncios antiguos.
 
 ## Navegación y mantenimiento
 

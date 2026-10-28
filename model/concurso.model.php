@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../database/concursowrapper.php';
+require_once __DIR__ . '/../database/resultadojson.php';
 
 abstract class CConcursoModel
 {
@@ -90,6 +91,95 @@ abstract class CConcursoModel
         }
 
         return null;
+    }
+
+    /**
+     * Reúne los binomios de todas las pruebas del concurso para la tabla de participantes.
+     *
+     * En concursos con jornadas, las pruebas se recorren todas (no solo la jornada
+     * seleccionada en la URL), porque esta información se muestra en la portada
+     * general del concurso.
+     */
+    public function GetParticipantes()
+    {
+        $participantes = [];
+        $pruebas = [];
+
+        if ($this->HasJornadas()) {
+            // Guardamos también el nombre de la jornada para distinguir pruebas iguales
+            // celebradas en días diferentes.
+            foreach ($this->GetJornadas() as $jornada) {
+                $jornadaId = (string)$jornada->id;
+                $jornadaNombre = trim((string)($jornada->titulo ?? ''));
+                if ($jornadaNombre === '') {
+                    $jornadaNombre = trim((string)$jornada->fecha);
+                }
+
+                foreach ($this->GetPruebasJornada($jornadaId) as $prueba) {
+                    $pruebas[] = [$prueba, $jornadaNombre];
+                }
+            }
+        } else {
+            foreach ($this->GetPruebas() as $prueba) {
+                $pruebas[] = [$prueba, null];
+            }
+        }
+
+        // CResultadoJson valida la estructura del archivo y mantiene una caché por ruta,
+        // por lo que la misma fuente no se vuelve a leer innecesariamente durante la petición.
+        foreach ($pruebas as [$prueba, $jornadaNombre]) {
+            $link = trim((string)($prueba->link ?? ''));
+            if ($link === '') {
+                continue;
+            }
+
+            $resultado = CResultadoJson::load($link);
+            foreach ($resultado['resultados']['datos'] as $dato) {
+                if (!is_array($dato)) {
+                    continue;
+                }
+
+                $jinete = trim((string)($dato['jinete_nombre'] ?? ''));
+                $caballo = trim((string)($dato['caballo_nombre'] ?? ''));
+                if ($jinete === '' && $caballo === '') {
+                    continue;
+                }
+
+                $participantes[] = [
+                    'jinete' => $jinete !== '' ? $jinete : trim((string)($dato['jinete_licencia'] ?? '')),
+                    'caballo' => $caballo !== '' ? $caballo : trim((string)($dato['caballo_licencia'] ?? '')),
+                    'prueba' => trim((string)($prueba->titulo ?? '')),
+                    'jornada' => $jornadaNombre,
+                ];
+            }
+        }
+
+        // Además del jinete, usamos caballo y prueba como desempates para que el orden
+        // sea determinista cuando un jinete participa en varias pruebas.
+        usort($participantes, static function (array $a, array $b): int {
+            $jineteComparison = strcoll(
+                mb_strtolower($a['jinete'], 'UTF-8'),
+                mb_strtolower($b['jinete'], 'UTF-8')
+            );
+            if ($jineteComparison !== 0) {
+                return $jineteComparison;
+            }
+
+            $caballoComparison = strcoll(
+                mb_strtolower($a['caballo'], 'UTF-8'),
+                mb_strtolower($b['caballo'], 'UTF-8')
+            );
+            if ($caballoComparison !== 0) {
+                return $caballoComparison;
+            }
+
+            return strcoll(
+                mb_strtolower($a['prueba'], 'UTF-8'),
+                mb_strtolower($b['prueba'], 'UTF-8')
+            );
+        });
+
+        return $participantes;
     }
 
     public function GetFecha()
