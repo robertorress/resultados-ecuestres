@@ -6,6 +6,16 @@
         translate: no !important;
     }
 
+    .collapsible-header .indicador-despliegue {
+        margin-left: auto;
+        margin-right: 0;
+        transition: transform 0.2s ease;
+    }
+
+    .collapsible li.active .indicador-despliegue {
+        transform: rotate(180deg);
+    }
+
     /* Estilo personalizado para hacer el mapa responsivo y mantener proporción 16:9 de Google*/
     .video-container iframe {
         position: absolute;
@@ -187,6 +197,7 @@
                     <div class="collapsible-header blue-grey lighten-1">
                         <i class="material-icons" aria-hidden="true">assessment</i>
                         <span>RESULTADOS</span>
+                        <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
                     </div>
                     <div class="collapsible-body">
                         <div class="card-panel blue-grey lighten-1">
@@ -208,6 +219,7 @@
                     <div class="collapsible-header blue-grey lighten-1">
                         <i class="material-icons" aria-hidden="true">location_on</i>
                         <span>UBICACIÓN</span>
+                        <i class="material-icons indicador-despliegue" aria-hidden="true">expand_more</i>
                     </div>
                     <div class="collapsible-body">
                         <div class="card-panel blue-grey lighten-1">

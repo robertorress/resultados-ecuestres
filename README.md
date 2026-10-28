@@ -99,7 +99,7 @@ La ubicación del concurso admite el campo opcional `<visible>`:
 </ubicacion>
 ```
 
-La ubicación se muestra cuando el valor es `si`, `sí` o `yes`, sin distinguir mayúsculas (`SI`, `Sí`, `YES`, etc.). En el detalle del concurso aparece como un bloque desplegable con el icono de ubicación; al pulsarlo se muestra u oculta únicamente el mapa. Para ocultar toda la sección se puede utilizar `no` en cualquier combinación de mayúsculas. Si se omite `<visible>`, la ubicación se considera visible por compatibilidad con concursos existentes.
+La ubicación se muestra cuando el valor es `si`, `sí` o `yes`, sin distinguir mayúsculas (`SI`, `Sí`, `YES`, etc.). En el detalle del concurso aparece como un bloque desplegable con el icono de ubicación y un indicador `expand_more` que gira al abrirse; al pulsarlo se muestra u oculta únicamente el mapa. Para ocultar toda la sección se puede utilizar `no` en cualquier combinación de mayúsculas. Si se omite `<visible>`, la ubicación se considera visible por compatibilidad con concursos existentes.
 
 Para mostrar el menú **PLANO**, `concurso.xml` admite un bloque opcional `planos` con una o varias entradas `plano`:
 
@@ -148,7 +148,7 @@ Valores admitidos para `activeSection`:
 - `plano`
 - `orden`
 
-Los resultados se muestran directamente en el detalle del concurso, dentro de un bloque desplegable como el de la ubicación. La ruta de listado de resultados se mantiene disponible para conservar la compatibilidad con enlaces existentes.
+Los resultados se muestran directamente en el detalle del concurso, dentro de un bloque desplegable como el de la ubicación. El encabezado incluye un indicador `expand_more` que gira al abrirse para señalar que contiene más opciones. La ruta de listado de resultados se mantiene disponible para conservar la compatibilidad con enlaces existentes.
 
 Para añadir o modificar una opción de menú, se debe actualizar una sola vez la estructura de navegación en `view/partials/navigation-concurso.php`.
 
