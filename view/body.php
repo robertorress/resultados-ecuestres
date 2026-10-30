@@ -97,6 +97,15 @@
         vertical-align: middle;
     }
 
+   /* Corrección de visibilidad para el título del concurso en modo contraste */
+    body.contrast-mode .concurso-portada h1 {
+        color: var(--color-text) !important;
+    }
+
+    body.contrast-mode .concurso-portada-meta {
+        color: var(--color-text) !important;
+    }
+
     @media only screen and (max-width: 600px) {
         .anuncios-coleccion .collection-item {
             align-items: flex-start;
