@@ -11,6 +11,7 @@ $navigationItems = [
         'icon' => 'home',
         'label' => 'INICIO',
     ],
+    /*
     [
         'section' => 'plano',
         'href' => '?c=Prueba&a=Plano&id=' . $concursoId . $jornadaQuery,
@@ -23,6 +24,7 @@ $navigationItems = [
         'icon' => 'access_time',
         'label' => 'ORDEN DE SALIDA',
     ],
+    */
 ];
 $renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
     foreach ($items as $item) {
