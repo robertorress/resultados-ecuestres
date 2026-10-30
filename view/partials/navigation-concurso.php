@@ -9,8 +9,15 @@ $navigationItems = [
         'section' => 'inicio',
         'href' => 'index.php',
         'icon' => 'home',
-        'label' => 'INICIO',
+        /*'label' => 'INICIO',*/
+        'label' => '',
     ],
+    [
+        'section' => 'contraste',
+        'href' => '"#" class="contrast-menu-item" role="button" aria-pressed="false"',
+        'icon' => 'contrast',
+        'label' => '',
+    ]
     /*
     [
         'section' => 'plano',
@@ -28,7 +35,7 @@ $navigationItems = [
 ];
 $renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
     foreach ($items as $item) {
-        $isActive = $activeSection === $item['section'];
+        $isActive = false;//$activeSection === $item['section'];
         $iconClasses = $isMobile && $item['section'] === 'inicio'
             ? 'large material-icons notranslate'
             : 'left large material-icons notranslate';
@@ -44,15 +51,18 @@ $renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
 ?>
 <nav aria-label="Navegación del concurso">
     <div class="nav-wrapper blue darken-4">
-        <ul class="right hide-on-med-and-down">
+        <ul class="right">
             <?php $renderNavigationItems($navigationItems, $activeSection); ?>
         </ul>
         <ul id="nav-mobile" class="sidenav blue accent-1">
             <div class="user-view"></div>
             <?php $renderNavigationItems($navigationItems, $activeSection, true); ?>
         </ul>
+        <!-- Botón de activación del menú lateral para dispositivos móviles -->
+        <!-- 
         <a href="#" data-target="nav-mobile" class="sidenav-trigger" aria-label="Abrir menú de navegación">
             <i class="material-icons notranslate">&#xE5D2;</i>
         </a>
+        -->
     </div>
 </nav>

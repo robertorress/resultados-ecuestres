@@ -35,6 +35,55 @@
 
 <div class="row">
     <div class="col s12 center">
+        <?php
+        $fechaInicio = trim((string)$this->m_model->GetFechaInicio());
+        $fechaFin = trim((string)$this->m_model->GetFechaFin());
+        $fechaConcurso = $fechaInicio === $fechaFin || $fechaFin === ''
+            ? $fechaInicio
+            : $fechaInicio . ' - ' . $fechaFin;
+        $lugar = $this->m_model->GetUbicacionNombre();
+        $estadoConcurso = $this->m_model->GetEstadoConcurso();
+        $etiquetasEstado = [
+            'proximo' => 'PRÓXIMO',
+            'en-curso' => 'EN CURSO',
+            'finalizado' => 'FINALIZADO',
+        ];
+        ?>
+        <section class="concurso-portada" aria-labelledby="titulo-concurso">
+            <div class="concurso-portada-decoracion" aria-hidden="true"></div>
+            <div class="concurso-portada-contenido">
+                <div class="concurso-portada-logo">
+                    <img
+                        class="hipica-logo"
+                        loading="lazy"
+                        decoding="async"
+                        src="<?php echo escape_html($this->m_model->GetLogo()); ?>"
+                        alt="Logo de <?php echo escape_html($this->m_model->GetConcurso()); ?>"
+                    />
+                </div>
+                <div class="concurso-portada-datos">
+                    <h1 id="titulo-concurso"><?php echo escape_html($this->m_model->GetConcurso()); ?></h1>
+                    <div class="concurso-portada-meta">
+                        <?php if ($fechaConcurso !== ''): ?>
+                            <span>
+                                <i class="material-icons" aria-hidden="true">event</i>
+                                <?php echo escape_html($fechaConcurso); ?>
+                            </span>
+                        <?php endif; ?>
+                        <?php if ($lugar !== null && trim((string)$lugar) !== ''): ?>
+                            <span>
+                                <i class="material-icons" aria-hidden="true">location_on</i>
+                                <?php echo escape_html($lugar); ?>
+                            </span>
+                        <?php endif; ?>
+                    </div>
+                    <span class="concurso-estado concurso-estado-<?php echo escape_html($estadoConcurso); ?>">
+                        <?php echo escape_html($etiquetasEstado[$estadoConcurso] ?? 'CONCURSO'); ?>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <br>
         <div class="card grey darken-1">
             <div class="card-content">
                 <span class="card-title white-text">RESULTADOS GENERALES</span>

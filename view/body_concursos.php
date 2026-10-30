@@ -28,7 +28,7 @@
 
 <div class="row">
     <div class="col s12 center">
-        <h1 class="titulo-inicio">Concursos ecuestres</h1>
+        <h1 class="titulo-inicio">RESULTADOS ECUESTRES</h1>
         <p class="subtitulo-inicio">Consulta por fechas y/o pruebas</p>
         <div class="input-field inicio-busqueda">
             <i class="material-icons prefix">search</i>

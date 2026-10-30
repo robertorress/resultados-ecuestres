@@ -1,5 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
   var contrastEnabled = window.localStorage.getItem('resultados-contrast') === 'true';
+  
+  // Seleccionamos todos los botones de contraste que ya existen en el HTML
+  var contrastLinks = document.querySelectorAll('.contrast-menu-item');
+
+  function updateContrastMode(enabled) {
+    document.body.classList.toggle('contrast-mode', enabled);
+    
+    contrastLinks.forEach(function(link) {
+      link.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      
+      // Buscamos el contenedor del texto dentro de cada botón para actualizarlo
+      var textSpan = link.querySelector('.btn-contrast-text');
+      if (textSpan) {
+        textSpan.textContent = enabled ? 'MODO NORMAL' : 'MODO CONTRASTE';
+      }
+    });
+  }
+
+  // Asignamos el evento click a todos los botones encontrados
+  contrastLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var enabled = !document.body.classList.contains('contrast-mode');
+      updateContrastMode(enabled);
+      window.localStorage.setItem('resultados-contrast', enabled ? 'true' : 'false');
+    });
+  });
+
+  // Ejecutamos el estado inicial guardado
+  updateContrastMode(contrastEnabled);
+
+  // Inicialización correcta y limpia de los Sidenavs de Materialize
+  var sidenavs = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(sidenavs);
+
+  document.querySelectorAll('.sidenav-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var target = document.getElementById(trigger.getAttribute('data-target'));
+      if (!target) return;
+
+      var instance = M.Sidenav.getInstance(target) || M.Sidenav.init(target);
+      instance.open();
+    });
+  });
+});
+
+/*Antiguo con la navegación lateral y menú de contraste dinámico*/
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  var contrastEnabled = window.localStorage.getItem('resultados-contrast') === 'true';
   var contrastItems = [];
 
   function updateContrastMode(enabled) {
@@ -62,3 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+*/
