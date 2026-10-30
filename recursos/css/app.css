@@ -1,15 +1,15 @@
 /* Paleta del modo normal: modificar estos valores para cambiar el tema completo. */
 :root {
-    --color-background: #f4f7fb;
-    --color-primary: #1e3a5f;
-    --color-secondary: #197c78;
-    --color-surface: #ffffff;
-    --color-panel: #e6f0f2;
-    --color-panel-header: #dce9ef;
-    --color-text: #1f2937;
-    --color-text-inverse: #ffffff;
-    --color-focus: #ffeb3b;
-    --color-muted: #9e9e9e;
+    --color-background: #f4f7fb; /* Fondo base */
+    --color-primary: #1e3a5f; /* Color principal */
+    --color-secondary: #197c78; /* Color secundario */
+    --color-surface: #ffffff; /* Superficie de tarjetas y paneles */
+    --color-panel: #e6f0f2; /* Paneles internos */
+    --color-panel-header: #dce9ef; /* Cabeceras de paneles */
+    --color-text: #1f2937; /* Texto principal */
+    --color-text-inverse: #ffffff; /* Texto sobre botones y elementos destacados */
+    --color-focus: #ffeb3b; /* Foco de accesibilidad */
+    --color-muted: #9e9e9e; /* Texto secundario/Muted */
 }
 
 /* Paleta del modo contraste: modificar estos valores para cambiar ese tema. */
@@ -365,7 +365,7 @@ body.contrast-mode .hipica-logo {
 
     table.participantes-tabla td::before {
         flex: 0 0 42%;
-        color: var(--color-primary);
+        color: var(--color-text);
         content: attr(data-label);
         font-size: 0.72rem;
         font-weight: 700;
