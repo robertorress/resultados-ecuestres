@@ -223,9 +223,9 @@ body.contrast-mode .hipica-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 5rem;
-    min-height: 4rem;
-    padding: 0.5rem;
+    flex: 0 0 10rem;
+    min-height: 8rem;
+    padding: 0.75rem;
     border: 1px solid var(--color-panel-header);
     border-radius: 0.75rem;
     background: var(--color-background);
@@ -233,7 +233,7 @@ body.contrast-mode .hipica-logo {
 
 .concurso-portada-logo .hipica-logo {
     width: 100%;
-    height: 3.75rem;
+    height: 7.5rem;
     border: 0;
     object-fit: contain;
 }
@@ -318,11 +318,11 @@ body.contrast-mode .hipica-logo {
 
     .concurso-portada-logo {
         flex-basis: auto;
-        min-height: 3.5rem;
+        min-height: 7rem;
     }
 
     .concurso-portada-logo .hipica-logo {
-        height: 3rem;
+        height: 6rem;
     }
 }
 
