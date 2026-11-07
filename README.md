@@ -141,7 +141,9 @@ En la portada del concurso, los bloques se muestran en este orden: `ANUNCIOS` (s
 
 En pantallas móviles, la lista no utiliza scroll horizontal: en orientación vertical cada participante se presenta como una tarjeta con etiquetas, y en orientación horizontal se mantiene una tabla compacta que ocupa todo el ancho disponible.
 
-La cabecera del detalle presenta el logo de la hípica junto al título, las fechas, la ubicación y el estado calculado del concurso (`PRÓXIMO`, `EN CURSO` o `FINALIZADO`). El diseño se adapta a móvil apilando el logo y la información.
+La cabecera del detalle presenta el logo de la hípica dentro de una tarjeta visual junto al título, las fechas, la ubicación y el estado calculado del concurso (`PRÓXIMO`, `EN CURSO` o `FINALIZADO`). Esta misma cabecera se muestra en la portada del concurso y en las vistas de resultados. El diseño se adapta a móvil apilando la tarjeta del logo y la información.
+
+La tarjeta utiliza la clase `concurso-portada` y el logo la clase `hipica-logo`. Los estilos comunes están en `recursos/css/app.css`; cuando se modifica esta hoja, hay que incrementar `RESULTADOS_APP_CSS_VERSION` en `config/constants.php` para invalidar la caché HTTP del servidor.
 
 La ubicación del concurso admite el campo opcional `<visible>`:
 

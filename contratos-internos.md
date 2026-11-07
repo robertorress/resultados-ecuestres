@@ -91,6 +91,8 @@ Las filas se ordenan por jinete y, para hacer el resultado determinista, por cab
 
 En la página principal del concurso, el orden de presentación es `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`.
 
+La cabecera visual del concurso es común a la portada y a las vistas de resultados. Debe conservar una sección `concurso-portada` con un bloque `concurso-portada-logo` que contenga la imagen `hipica-logo`, además de los datos del concurso. El estilo de la tarjeta y su adaptación a móvil se define en `recursos/css/app.css`; no se deben sustituir estos estilos por atributos inline específicos de una vista.
+
 El contrato visual responsive de la tabla es el siguiente:
 
 - En móvil vertical, cada fila se transforma en una tarjeta vertical y cada celda utiliza `data-label` para mostrar el nombre del campo.

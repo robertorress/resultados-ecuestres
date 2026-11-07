@@ -361,11 +361,11 @@ Las tablas principales se han mantenido en formato clásico vertical. En móvil 
 - Ajustar tablas de notas y jueces.
 - Mantener las puntuaciones completas con tres decimales.
 
-La navegación incluye un enlace permanente a `INICIO`, acceso a `PLANO`, menú lateral para móvil y una marca de página consistente. El bloque de navegación de concurso se genera desde un único partial (`navigation-concurso.php`) con sección activa configurable, de forma que todas las vistas mantienen el mismo comportamiento. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
+La navegación incluye un enlace permanente a `INICIO`, menú lateral para móvil y una marca de página consistente. Las opciones de `PLANO` y `ORDEN DE SALIDA` se consultan desde la sección de anuncios cuando están disponibles, no desde el menú principal. El bloque de navegación de concurso se genera desde un único partial (`navigation-concurso.php`) con sección activa configurable, de forma que todas las vistas mantienen el mismo comportamiento. La página inicial incorpora un título descriptivo, una explicación breve y búsqueda instantánea por fecha, nombre o tipo de concurso.
 
 Los listados de resultados incorporan búsqueda por atleta o caballo y un aviso cuando no existen coincidencias.
 
-La portada del concurso incluye una cabecera visual con el logo, título, fechas, ubicación y estado calculado mediante `GetEstadoConcurso()`. Debajo muestra la sección desplegable `PARTICIPANTES`, que presenta cada binomio y la prueba correspondiente ordenados por jinete. En concursos con jornadas añade la jornada para evitar ambigüedades entre pruebas con el mismo título. La vista usa `data-label` y reglas CSS específicas para transformar cada fila en una tarjeta vertical en móviles en orientación vertical; en horizontal conserva una tabla compacta sin scroll lateral.
+La portada del concurso incluye una cabecera visual en forma de tarjeta con el logo del centro, título, fechas, ubicación y estado calculado mediante `GetEstadoConcurso()`. La misma estructura se repite en `view/pruebaresultado.php`, `view/pruebaresultadogeneral.php` y `view/pruebaresultadoindividual.php`, de modo que la navegación entre portada y resultados conserva una presentación consistente. Debajo muestra la sección desplegable `PARTICIPANTES`, que presenta cada binomio y la prueba correspondiente ordenados por jinete. En concursos con jornadas añade la jornada para evitar ambigüedades entre pruebas con el mismo título. La vista usa `data-label` y reglas CSS específicas para transformar cada fila en una tarjeta vertical en móviles en orientación vertical; en horizontal conserva una tabla compacta sin scroll lateral.
 
 La sección `PLANO` replica la estructura visual de `ORDEN DE SALIDA`: una tarjeta por cada imagen configurada. Cuando no hay imágenes válidas en `concurso.xml`, muestra una tarjeta vacía con el mensaje `NO HAY PLANOS DISPONIBLES` y un botón para volver al detalle del concurso.
 
@@ -373,7 +373,7 @@ El detalle individual incorpora títulos de sección y estilos de impresión pre
 
 Las mejoras de accesibilidad incluyen foco visible de alto contraste, objetivos táctiles mínimos para el menú, enlaces del menú lateral con altura suficiente y respeto de `prefers-reduced-motion`.
 
-Para rendimiento se usan los archivos minificados locales de Materialize, los scripts se cargan con `defer` y las imágenes secundarias de los listados usan carga diferida (`loading="lazy"`). Se mantiene la caché HTTP y el versionado de `app.css`.
+Para rendimiento se usan los archivos minificados locales de Materialize, los scripts se cargan con `defer` y las imágenes secundarias de los listados usan carga diferida (`loading="lazy"`). Se mantiene la caché HTTP y el versionado de `app.css`; cada cambio de estilos debe actualizar `RESULTADOS_APP_CSS_VERSION` para que producción no conserve una hoja anterior.
 
 La validación de calidad de datos comprueba además que los IDs de concurso no estén duplicados, que los campos obligatorios del catálogo existan y que las fechas del catálogo tengan formato `dd/mm/aaaa`.
 
