@@ -148,7 +148,7 @@ La cabecera del detalle presenta el logo de la hípica dentro de una tarjeta vis
 
 La tarjeta utiliza la clase `concurso-portada` y el logo la clase `hipica-logo`. Los estilos comunes están en `recursos/css/app.css`; cuando se modifica esta hoja, hay que incrementar `RESULTADOS_APP_CSS_VERSION` en `config/constants.php` para invalidar la caché HTTP del servidor.
 
-La sección `PARTICIPANTES` utiliza una caché compartida de APCu cuando está disponible. La clave incorpora la versión del XML del concurso y de los JSON de resultados, por lo que se invalida automáticamente al cambiar los datos. Si APCu no está instalado o habilitado, la aplicación mantiene la caché por petición y sigue funcionando sin configuración adicional.
+La sección `PARTICIPANTES` utiliza una caché compartida de APCu cuando está disponible. Si APCu no está instalado o habilitado, utiliza una caché compartida en `logs/cache/participants` mediante archivos JSON escritos de forma atómica. La clave incorpora la versión del XML del concurso y de los JSON de resultados, por lo que se invalida automáticamente al cambiar los datos. Si el directorio no puede escribirse, la aplicación mantiene la caché por petición y sigue funcionando sin configuración adicional.
 
 La ubicación del concurso admite el campo opcional `<visible>`:
 

@@ -80,7 +80,7 @@ Los consumidores deben tratar `cabecera` y `datos` como arrays. Los campos adici
 
 La portada del concurso obtiene los participantes recorriendo todas las pruebas configuradas en el XML. En concursos con `<jornadas>`, se recorren las pruebas de todas las jornadas, aunque la URL incluya una jornada concreta, porque la sección pertenece al resumen general del concurso.
 
-El resultado de participantes puede almacenarse en APCu con una clave derivada de la versión del XML del concurso y de cada JSON enlazado. La caché debe invalidarse cuando cambia cualquiera de esos archivos; si APCu no está disponible, el comportamiento debe degradar a la caché estática de la petición sin alterar la salida.
+El resultado de participantes puede almacenarse en APCu con una clave derivada de la versión del XML del concurso y de cada JSON enlazado. Si APCu no está disponible, se utiliza `logs/cache/participants` como caché compartida en archivos JSON. Las escrituras deben ser atómicas mediante archivo temporal y `rename`; si el directorio no puede escribirse, el comportamiento debe degradar a la caché estática de la petición sin alterar la salida. La caché debe invalidarse cuando cambia cualquiera de los archivos fuente.
 
 Cada fila se construye con estos campos de `resultados.datos`:
 

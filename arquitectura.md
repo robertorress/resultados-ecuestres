@@ -307,7 +307,7 @@ Después de modificar un recurso estático hay que incrementar la constante corr
 
 La versión actual de `app.css` es `20261107-63`. El número no representa una versión de la aplicación: es únicamente un identificador de cambio del recurso estático. Puede utilizarse cualquier identificador nuevo y distinto, por ejemplo una fecha o un número incremental.
 
-La caché de participantes utiliza APCu si `apcu_fetch`, `apcu_store` y `apcu_enabled` están disponibles y APCu está habilitado. La clave incluye la versión del XML del concurso, la ruta y versión de cada JSON, el título de la prueba y la jornada. El TTL es de una hora, pero cualquier cambio de archivo genera una clave nueva inmediatamente. Sin APCu, la aplicación conserva la caché estática por petición.
+La caché de participantes utiliza APCu si `apcu_fetch`, `apcu_store` y `apcu_enabled` están disponibles y APCu está habilitado. Si APCu no está disponible, utiliza `logs/cache/participants` como caché compartida en archivos JSON. Las escrituras se realizan en un archivo temporal y después mediante `rename`, para que las peticiones concurrentes solo vean archivos completos. La clave incluye la versión del XML del concurso, la ruta y versión de cada JSON, el título de la prueba y la jornada. El TTL de APCu es de una hora; la caché de archivos se invalida al generar una clave nueva cuando cambia cualquier archivo. Si el directorio no puede escribirse, la aplicación conserva la caché estática por petición.
 
 Para cambiar la configuración:
 

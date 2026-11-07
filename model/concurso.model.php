@@ -137,6 +137,12 @@ abstract class CConcursoModel
             }
         }
 
+        $cachedParticipantes = $this->loadParticipantsFileCache($cacheKey);
+        if ($cachedParticipantes !== null) {
+            self::$participantesCache[$cacheKey] = $cachedParticipantes;
+            return $cachedParticipantes;
+        }
+
         $participantes = [];
 
         // CResultadoJson valida la estructura del archivo y mantiene una caché por ruta,
@@ -197,6 +203,7 @@ abstract class CConcursoModel
         if ($this->canUseApcu()) {
             apcu_store($cacheKey, $participantes, 3600);
         }
+        $this->storeParticipantsFileCache($cacheKey, $participantes);
 
         return $participantes;
     }
@@ -244,6 +251,83 @@ abstract class CConcursoModel
         }
 
         return !function_exists('apcu_enabled') || apcu_enabled();
+    }
+
+    private function loadParticipantsFileCache(string $cacheKey): ?array
+    {
+        $cachePath = $this->getParticipantsCachePath($cacheKey);
+        if ($cachePath === null || !is_file($cachePath) || !is_readable($cachePath)) {
+            return null;
+        }
+
+        $content = file_get_contents($cachePath);
+        if ($content === false || trim($content) === '') {
+            return null;
+        }
+
+        try {
+            $cached = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        } catch (JsonException $exception) {
+            return null;
+        }
+
+        return is_array($cached) ? $cached : null;
+    }
+
+    private function storeParticipantsFileCache(string $cacheKey, array $participantes): void
+    {
+        $cacheDirectory = $this->getParticipantsCacheDirectory();
+        if ($cacheDirectory === null) {
+            return;
+        }
+
+        $cachePath = $cacheDirectory . DIRECTORY_SEPARATOR . $cacheKey . '.json';
+        $temporaryPath = tempnam($cacheDirectory, 'participants-');
+        if ($temporaryPath === false) {
+            return;
+        }
+
+        $content = json_encode(
+            $participantes,
+            JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR
+        );
+        if (file_put_contents($temporaryPath, $content, LOCK_EX) === false) {
+            @unlink($temporaryPath);
+            return;
+        }
+
+        if (!rename($temporaryPath, $cachePath)) {
+            @unlink($temporaryPath);
+        }
+    }
+
+    private function getParticipantsCachePath(string $cacheKey): ?string
+    {
+        $cacheDirectory = $this->getParticipantsCacheDirectory();
+        return $cacheDirectory === null
+            ? null
+            : $cacheDirectory . DIRECTORY_SEPARATOR . $cacheKey . '.json';
+    }
+
+    private function getParticipantsCacheDirectory(): ?string
+    {
+        $cacheDirectory = CProjectPath::logRoot()
+            . DIRECTORY_SEPARATOR . 'cache'
+            . DIRECTORY_SEPARATOR . 'participants';
+
+        if (is_dir($cacheDirectory)) {
+            return is_readable($cacheDirectory) && is_writable($cacheDirectory)
+                ? $cacheDirectory
+                : null;
+        }
+
+        if (!@mkdir($cacheDirectory, 0770, true) && !is_dir($cacheDirectory)) {
+            return null;
+        }
+
+        return is_readable($cacheDirectory) && is_writable($cacheDirectory)
+            ? $cacheDirectory
+            : null;
     }
 
     public function GetFecha()
