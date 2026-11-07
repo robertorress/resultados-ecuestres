@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <concurso>CAMPEONATO DE DOMA CLÁSICA DE CASTILLA LA MANCHA (Cuenca)</concurso>
+    <fecha>07/11/2026</fecha>
+    <fecha_inicio>07/11/2026</fecha_inicio>
+    <fecha_fin>08/11/2026</fecha_fin>
+    <logo>recursos/imagenes/logo_fhclm_transparente.png</logo>
+    <ubicacion>
+		<visible>si</visible>
+        <nombre>Recinto Ferial La Hípica</nombre>
+        <coordenadas>
+            <latitud></latitud>
+            <longitud></longitud>
+        </coordenadas>
+    </ubicacion>
+    <ordensalidas>
+    </ordensalidas>
+	<equipos>no</equipos>
+    <jornadas>
+        <jornada>
+            <id>1</id>
+            <fecha>07/11/2026</fecha>
+            <titulo>07/11/2026</titulo>
+			<pruebas>
+				<prueba>
+					<id>1</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/01-NIVEL_1_PRELIMINAR_4_AÑOS_CDT.json</link>
+					<titulo>PRELIMINAR 4 AÑOS</titulo>
+				</prueba>
+				<prueba>
+					<id>2</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/02-NIVEL_2_PRELIMINAR_5_AÑOS_CDT.json</link>
+					<titulo>PRELIMINAR 5 AÑOS</titulo>
+				</prueba>
+				<prueba>
+					<id>3</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/03-NIVEL_1_ALEVINES_EQUIPOS_CDT.json</link>
+					<titulo>ALEVINES EQUIPOS</titulo>
+				</prueba>
+				<prueba>
+					<id>4</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/04-NIVEL_0_ASIENTO_POSICION_PRELIMINAR_CDT.json</link>
+					<titulo>ASIENTO Y POSICIÓN PRELIMINAR</titulo>
+				</prueba>
+				<prueba>
+					<id>5</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/05-NIVEL_2_INFANTILES_EQUIPOS_CDT.json</link>
+					<titulo>INFANTILES EQUIPOS</titulo>
+				</prueba>
+				<prueba>
+					<id>6</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/06-NIVEL_3_JUVENILES_0E_EQUIPOS_CDT.json</link>
+					<titulo>JUVENILES 0* EQUIPOS</titulo>
+				</prueba>
+				<prueba>
+					<id>7</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/07-NIVEL_4_JUVENILES_EQUIPOS_CDT.json</link>
+					<titulo>JUVENILES EQUIPOS</titulo>
+				</prueba>
+				<prueba>
+					<id>8</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/08-NIVEL_4_CLASICA_1_CDT.json</link>
+					<titulo>CLÁSICA 1</titulo>
+				</prueba>
+				<prueba>
+					<id>9</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/09-NIVEL_SAN_JORGE_SAN_JORGE_CDT.json</link>
+					<titulo>SAN JORGE</titulo>
+				</prueba>
+				<prueba>
+					<id>10</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/10-NIVEL_1_RIDER_1A_CDT.json</link>
+					<titulo>RIDER 1A</titulo>
+				</prueba>
+				<prueba>
+					<id>11</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/11-NIVEL_2_RIDER_2A_CDT.json</link>
+					<titulo>RIDER 2A</titulo>
+				</prueba>
+				<prueba>
+					<id>12</id>
+					<link>recursos/2026/16/resultados/07.11.2026/CAMPEONATO/12-NIVEL_3_RIDER_3A_CDT.json</link>
+					<titulo>RIDER 3A</titulo>
+				</prueba>
+				<prueba>
+					<id>13</id>
+					<link>recursos/2026/16/resultados/07.11.2026/TERRITORIAL/01-NIVEL_0_ASIENTO_POSICION_PRELIMINAR_CDT.json</link>
+					<titulo>ASIENTO Y POSICIÓN PRELIMINAR (CDT)</titulo>
+				</prueba>
+				<prueba>
+					<id>14</id>
+					<link>recursos/2026/16/resultados/07.11.2026/TERRITORIAL/01-NIVEL_1_RIDER_1A_CDT.json</link>
+					<titulo>RIDER 1A (CDT)</titulo>
+				</prueba>
+				<prueba>
+					<id>15</id>
+					<link>recursos/2026/16/resultados/07.11.2026/TERRITORIAL/02-NIVEL_2_RIDER_2A_CDT.json</link>
+					<titulo>RIDER 2A (CDT)</titulo>
+				</prueba>
+				<prueba>
+					<id>16</id>
+					<link>recursos/2026/16/resultados/07.11.2026/TERRITORIAL/03-NIVEL_4_JUVENILES_EQUIPOS_CDT.json</link>
+					<titulo>JUVENILES EQUIPOS (CDT)</titulo>
+				</prueba>
+				<prueba>
+					<id>17</id>
+					<link>recursos/2026/16/resultados/07.11.2026/TERRITORIAL/04-NIVEL_1_PRELIMINAR_4_AÑOS_CDT.json</link>
+					<titulo>PRELIMINAR 1 AÑOS (CDT)</titulo>
+				</prueba>
+			</pruebas>
+        </jornada>
+        <jornada>
+            <id>2</id>
+            <fecha>08/11/2026</fecha>
+            <titulo>08/11/2026</titulo>
+			<pruebas>
+			</pruebas>
+        </jornada>		
+    </jornadas>	
+</root>
+

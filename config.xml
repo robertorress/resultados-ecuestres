@@ -122,6 +122,16 @@
 				<tipo>Doma Clásica</tipo>
 				<visible>si</visible>
             </concurso>
+            <concurso>
+                <id>16</id>
+                <nombre>CAMPEONATO DE DOMA CLÁSICA DE CASTILLA LA MANCHA (Cuenca)</nombre>
+                <fecha>07/11/2026</fecha>
+                <fecha_inicio>07/11/2026</fecha_inicio>
+                <fecha_fin>08/11/2026</fecha_fin>				
+                <datos>recursos/2026/16/concurso.xml</datos>
+				<tipo>Doma Clásica</tipo>
+				<visible>si</visible>
+            </concurso>
         </concursos>
     </a2026>
     <a2025>
