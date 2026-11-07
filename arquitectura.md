@@ -305,7 +305,7 @@ init.js?v=20260814-1
 
 Después de modificar un recurso estático hay que incrementar la constante correspondiente en `config/constants.php`. No es necesario borrar la caché del navegador.
 
-La versión actual de `app.css` es `20261107-63`. El número no representa una versión de la aplicación: es únicamente un identificador de cambio del recurso estático. Puede utilizarse cualquier identificador nuevo y distinto, por ejemplo una fecha o un número incremental.
+La versión actual de `app.css` es `20261107-63` y la de `init.js` es `20261107-8`. El número no representa una versión de la aplicación: es únicamente un identificador de cambio del recurso estático. Puede utilizarse cualquier identificador nuevo y distinto, por ejemplo una fecha o un número incremental.
 
 La caché de participantes utiliza APCu si `apcu_fetch`, `apcu_store` y `apcu_enabled` están disponibles y APCu está habilitado. Si APCu no está disponible, utiliza `logs/cache/participants` como caché compartida en archivos JSON. Las escrituras se realizan en un archivo temporal y después mediante `rename`, para que las peticiones concurrentes solo vean archivos completos. La clave incluye la versión del XML del concurso, la ruta y versión de cada JSON, el título de la prueba y la jornada. El TTL de APCu es de una hora; la caché de archivos se invalida al generar una clave nueva cuando cambia cualquier archivo. Si el directorio no puede escribirse, la aplicación conserva la caché estática por petición.
 
@@ -389,7 +389,7 @@ La paleta visual normal usa fondo `#f4f7fb`, superficies blancas, azul marino `#
 
 La hoja `recursos/css/app.css` incluye comentarios de sección para identificar la paleta, navegación y footer, tarjetas y paneles, accesibilidad, buscadores, impresión, tablas responsive, multimedia y reducción de animaciones. Esta organización permite localizar cada grupo de estilos sin revisar archivo por archivo.
 
-El usuario puede alternar entre modo normal y modo de alto contraste mediante el elemento `contrast-menu-item`, añadido automáticamente al menú lateral móvil y al menú superior de escritorio. En anchos móviles inferiores a 993 px no se crea el elemento del menú superior, evitando que aparezca fuera del menú lateral. La selección se aplica con la clase `contrast-mode`, utiliza una escala de grises azulados diferenciados, texto blanco y amarillo para acciones, y se conserva en `localStorage` con la clave `resultados-contrast`. El comportamiento se inicializa en `materialize/js/init.js`.
+El usuario puede alternar entre modo normal y modo de alto contraste mediante los elementos `contrast-menu-item` declarados en la navegación de Inicio y de concurso. El JavaScript registra todos los controles existentes, sin crear nuevos elementos ni añadir texto visible. La selección se aplica con la clase `contrast-mode`, utiliza una escala de grises azulados diferenciados, y se conserva en `localStorage` con la clave `resultados-contrast`. El comportamiento se inicializa en `materialize/js/init.js`.
 
 En modo contraste, los logotipos con clase `hipica-logo` se muestran sobre una superficie blanca con borde claro para conservar su visibilidad independientemente de los colores originales de cada imagen.
 

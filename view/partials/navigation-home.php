@@ -10,8 +10,8 @@
         </a>
         -->
         <ul class="right">
-            <li><a href="?c=Concursos&a=Index"><i class="material-icons left">home</i><!--INICIO--></a></li>
-            <li><a href="#" class="contrast-menu-item" role="button" aria-pressed="false"><i class="left material-icons">contrast</i><!--MODO CONTRASTE--></a></li>
+            <li><a href="?c=Concursos&a=Index" aria-label="Inicio" title="Inicio"><i class="material-icons left">home</i></a></li>
+            <li><a href="#" class="contrast-menu-item" role="button" aria-label="Cambiar modo de contraste" title="Cambiar modo de contraste" aria-pressed="false"><i class="left material-icons">contrast</i></a></li>
         </ul>
     </div>
 </nav>

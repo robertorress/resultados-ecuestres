@@ -14,7 +14,8 @@ $navigationItems = [
     ],
     [
         'section' => 'contraste',
-        'href' => '"#" class="contrast-menu-item" role="button" aria-pressed="false"',
+        'href' => '#',
+        'class' => 'contrast-menu-item',
         'icon' => 'contrast',
         'label' => '',
     ]
@@ -41,7 +42,11 @@ $renderNavigationItems = function ($items, $activeSection, $isMobile = false) {
             : 'left large material-icons notranslate';
         ?>
         <li class="<?php echo $isActive ? 'active' : ''; ?>">
-            <a href="<?php echo $item['href']; ?>">
+            <a
+                href="<?php echo escape_html($item['href']); ?>"
+                <?php if (!empty($item['class'])): ?>class="<?php echo escape_html($item['class']); ?>"<?php endif; ?>
+                <?php if ($item['section'] === 'contraste'): ?>role="button" aria-label="Cambiar modo de contraste" title="Cambiar modo de contraste" aria-pressed="false"<?php else: ?>aria-label="Inicio" title="Inicio"<?php endif; ?>
+            >
                 <i class="<?php echo $iconClasses; ?>"><?php echo $item['icon']; ?></i><?php echo $item['label']; ?>
             </a>
         </li>
