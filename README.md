@@ -7,6 +7,7 @@ Aplicación PHP para publicar concursos, órdenes de salida y resultados ecuestr
 - PHP 8.2 o superior.
 - Apache con `mod_rewrite` y `mod_headers` recomendados.
 - Extensiones PHP: `SimpleXML`, `JSON`, `mbstring` y `BCMath`.
+- `APCu` opcional y recomendado en producción para compartir la caché de participantes entre peticiones.
 
 ## Configuración
 
@@ -27,13 +28,15 @@ Si no se definen, se mantiene la estructura actual y el proyecto usa su propia c
 
 ## Concurrencia y publicación de resultados
 
-Las peticiones web solo leen XML y JSON; no se utilizan bloqueos exclusivos para servir resultados, por lo que varios usuarios pueden consultar el mismo concurso simultáneamente. Los XML se cachean por ruta durante la petición y los JSON se cachean mientras no cambien su fecha de modificación o tamaño. Si un JSON cambia durante una lectura, se vuelve a intentar antes de devolver un error.
+Las peticiones web solo leen XML y JSON; no se utilizan bloqueos exclusivos para servir resultados, por lo que varios usuarios pueden consultar el mismo concurso simultáneamente. Los XML se cachean por ruta durante la petición y los JSON se cachean mientras no cambien su fecha de modificación o tamaño. La tabla de `PARTICIPANTES` utiliza APCu cuando está disponible, con una clave basada en las versiones del XML y de los JSON implicados. Si APCu no está instalado o habilitado, se usa la caché estática de la petición. Si un JSON cambia durante una lectura, se vuelve a intentar antes de devolver un error.
 
 Para publicar resultados mientras la página está disponible, genera el JSON en un archivo temporal y sustitúyelo mediante un renombrado atómico dentro de la misma carpeta. No sobrescribas un JSON directamente mientras los usuarios puedan estar leyéndolo. Después de publicar, ejecuta `tools\validate-data.php` para detectar enlaces rotos, XML incompleto o resultados inválidos.
 
 La aplicación no escribe los archivos de datos durante las peticiones normales. Los únicos bloqueos de escritura pertenecen al sistema de logs y utilizan `LOCK_EX`, por lo que un error de una petición no debe interrumpir las lecturas de otras peticiones.
 
 Las plantillas `config\development.env.example` y `config\production.env.example` muestran la configuración recomendada para cada entorno. En producción las variables deben configurarse en Apache, PHP o el sistema operativo, nunca en archivos públicos del proyecto.
+
+Para activar la caché compartida, instala y habilita APCu en la misma versión de PHP que utiliza Apache y configura `apc.enabled=1`. No es necesario añadir una variable de entorno ni limpiar manualmente la caché: los cambios de XML y JSON invalidan la entrada correspondiente automáticamente.
 
 Los errores de aplicación se escriben en `logs\application-AAAA-MM-DD.log` y los errores de nivel `error` también en `logs\errors-AAAA-MM-DD.log`. La carpeta está protegida mediante `.htaccess` y no se sirve directamente al navegador.
 
@@ -144,6 +147,8 @@ En pantallas móviles, la lista no utiliza scroll horizontal: en orientación ve
 La cabecera del detalle presenta el logo de la hípica dentro de una tarjeta visual junto al título, las fechas, la ubicación y el estado calculado del concurso (`PRÓXIMO`, `EN CURSO` o `FINALIZADO`). Esta misma cabecera se muestra en la portada del concurso y en las vistas de resultados. El diseño se adapta a móvil apilando la tarjeta del logo y la información.
 
 La tarjeta utiliza la clase `concurso-portada` y el logo la clase `hipica-logo`. Los estilos comunes están en `recursos/css/app.css`; cuando se modifica esta hoja, hay que incrementar `RESULTADOS_APP_CSS_VERSION` en `config/constants.php` para invalidar la caché HTTP del servidor.
+
+La sección `PARTICIPANTES` utiliza una caché compartida de APCu cuando está disponible. La clave incorpora la versión del XML del concurso y de los JSON de resultados, por lo que se invalida automáticamente al cambiar los datos. Si APCu no está instalado o habilitado, la aplicación mantiene la caché por petición y sigue funcionando sin configuración adicional.
 
 La ubicación del concurso admite el campo opcional `<visible>`:
 
@@ -257,6 +262,5 @@ Los errores se registran mediante la configuración de logs de PHP/Apache. En pr
 
 ## Mejoras propuestas (sin cambios funcionales)
 
-- Añadir caché en memoria por petición para lecturas repetidas de JSON de resultados cuando se encadenan varias vistas del mismo concurso.
 - Extraer renderizado HTML de tablas grandes de resultados a helpers/partials dedicados para reducir complejidad en `view/pruebaresultado.php`.
 - Incorporar una batería de pruebas de rutas (smoke de `config/routes.php`) en CI para detectar rápido desajustes entre rutas y controladores.

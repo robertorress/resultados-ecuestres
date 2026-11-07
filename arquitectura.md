@@ -17,6 +17,7 @@ Requisitos principales:
 - PHP 8.2 o superior.
 - Apache.
 - Extensiones PHP `SimpleXML`, `JSON`, `mbstring` y `BCMath`.
+- APCu opcional y recomendado para compartir la caché de participantes entre peticiones.
 - `mod_headers` recomendado para las cabeceras de seguridad y la caché.
 
 ## 2. Flujo de una petición
@@ -75,9 +76,9 @@ La preparación de la pantalla inicial también está separada: `model/concursos
 
 La navegación de la pantalla inicial está centralizada en `view/partials/navigation-home.php`, evitando duplicar su estructura HTML en la vista principal.
 
-La navegación interna de concurso (Inicio, Plano, Orden de salida y Resultados) está centralizada en `view/partials/navigation-concurso.php`. Las vistas de detalle solo definen `activeSection` y reutilizan ese partial para escritorio y móvil, reduciendo duplicación y simplificando cambios futuros.
+La navegación interna de concurso está centralizada en `view/partials/navigation-concurso.php`. Las vistas de detalle solo definen `activeSection` y reutilizan ese partial para escritorio y móvil, reduciendo duplicación y simplificando cambios futuros. Las opciones de `PLANO` y `ORDEN DE SALIDA` se muestran desde los anuncios cuando están configuradas.
 
-En la portada de un concurso, `model/concurso.model.php` prepara los participantes mediante `GetParticipantes()`. El método recorre todas las pruebas —incluidas las de todas las jornadas—, carga sus JSON mediante `database/resultadojson.php`, proyecta los campos de jinete, caballo, prueba y jornada, y ordena el resultado antes de entregarlo a `view/body.php`. La vista presenta los bloques en el orden `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`; la tabla de participantes se oculta si no hay datos válidos.
+En la portada de un concurso, `model/concurso.model.php` prepara los participantes mediante `GetParticipantes()`. El método recorre todas las pruebas —incluidas las de todas las jornadas—, carga sus JSON mediante `database/resultadojson.php`, proyecta los campos de jinete, caballo, prueba y jornada, y ordena el resultado antes de entregarlo a `view/body.php`. El resultado se guarda en APCu cuando está disponible, usando como clave la versión del XML y de los JSON implicados; si APCu no está disponible, se utiliza la caché estática de la petición. La vista presenta los bloques en el orden `ANUNCIOS`, `RESULTADOS`, `PARTICIPANTES` y `UBICACIÓN`; la tabla de participantes se oculta si no hay datos válidos.
 
 La salida de datos procedentes de XML, JSON o parámetros de URL debe pasar por `escape_html()` antes de insertarse en HTML. Los identificadores de petición se validan con `request_positive_int()` y los identificadores de jinete/caballo se normalizan mediante una lista de caracteres permitidos antes de usarse en enlaces.
 
@@ -302,15 +303,18 @@ app.css?v=20260814-15
 init.js?v=20260814-1
 ```
 
-Después de modificar un recurso estático hay que incrementar la versión en `view/header.php` y `view/header_concursos.php` (o en la vista que lo cargue). No es necesario borrar la caché del navegador.
+Después de modificar un recurso estático hay que incrementar la constante correspondiente en `config/constants.php`. No es necesario borrar la caché del navegador.
 
-La versión actual de `app.css` es `20260814-61`. El número no representa una versión de la aplicación: es únicamente un identificador de cambio del recurso estático. Puede utilizarse cualquier identificador nuevo y distinto, por ejemplo una fecha o un número incremental.
+La versión actual de `app.css` es `20261107-63`. El número no representa una versión de la aplicación: es únicamente un identificador de cambio del recurso estático. Puede utilizarse cualquier identificador nuevo y distinto, por ejemplo una fecha o un número incremental.
+
+La caché de participantes utiliza APCu si `apcu_fetch`, `apcu_store` y `apcu_enabled` están disponibles y APCu está habilitado. La clave incluye la versión del XML del concurso, la ruta y versión de cada JSON, el título de la prueba y la jornada. El TTL es de una hora, pero cualquier cambio de archivo genera una clave nueva inmediatamente. Sin APCu, la aplicación conserva la caché estática por petición.
 
 Para cambiar la configuración:
 
 - Cambiar la duración `7 days` o `30 days` en `.htaccess`.
 - Cambiar el valor equivalente `max-age`.
 - Mantener el versionado cuando se cambie CSS o JavaScript.
+- Habilitar APCu en producción cuando haya concurrencia o concursos con muchos resultados.
 - Reiniciar Apache si la configuración del módulo no se aplica inmediatamente.
 
 Una duración demasiado larga mejora el rendimiento, pero retrasa la llegada de cambios si se olvida actualizar la versión.

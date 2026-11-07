@@ -5,6 +5,7 @@ require_once __DIR__ . '/../database/resultadojson.php';
 
 abstract class CConcursoModel
 {
+    private static $participantesCache = [];
     protected $m_concurso;
     protected $m_id = -1;
     protected $m_path = '';
@@ -102,12 +103,9 @@ abstract class CConcursoModel
      */
     public function GetParticipantes()
     {
-        $participantes = [];
         $pruebas = [];
 
         if ($this->HasJornadas()) {
-            // Guardamos también el nombre de la jornada para distinguir pruebas iguales
-            // celebradas en días diferentes.
             foreach ($this->GetJornadas() as $jornada) {
                 $jornadaId = (string)$jornada->id;
                 $jornadaNombre = trim((string)($jornada->titulo ?? ''));
@@ -124,6 +122,22 @@ abstract class CConcursoModel
                 $pruebas[] = [$prueba, null];
             }
         }
+
+        $cacheKey = $this->getParticipantesCacheKey($pruebas);
+        if (isset(self::$participantesCache[$cacheKey])) {
+            return self::$participantesCache[$cacheKey];
+        }
+
+        if ($this->canUseApcu()) {
+            $apcuHit = false;
+            $cachedParticipantes = apcu_fetch($cacheKey, $apcuHit);
+            if ($apcuHit && is_array($cachedParticipantes)) {
+                self::$participantesCache[$cacheKey] = $cachedParticipantes;
+                return $cachedParticipantes;
+            }
+        }
+
+        $participantes = [];
 
         // CResultadoJson valida la estructura del archivo y mantiene una caché por ruta,
         // por lo que la misma fuente no se vuelve a leer innecesariamente durante la petición.
@@ -179,7 +193,57 @@ abstract class CConcursoModel
             );
         });
 
+        self::$participantesCache[$cacheKey] = $participantes;
+        if ($this->canUseApcu()) {
+            apcu_store($cacheKey, $participantes, 3600);
+        }
+
         return $participantes;
+    }
+
+    private function getParticipantesCacheKey(array $pruebas): string
+    {
+        $versions = [];
+        $concursoPath = CProjectPath::resolve($this->m_path);
+        $versions[] = $this->getFileVersion($concursoPath);
+
+        foreach ($pruebas as [$prueba, $jornadaNombre]) {
+            $link = trim((string)($prueba->link ?? ''));
+            $path = $link === '' ? '' : CProjectPath::resolveData($link);
+            $versions[] = [
+                'path' => $path,
+                'version' => $this->getFileVersion($path),
+                'titulo' => trim((string)($prueba->titulo ?? '')),
+                'jornada' => $jornadaNombre,
+            ];
+        }
+
+        return 'resultados-participantes-' . hash('sha256', serialize([
+            'concurso' => (string)$this->m_id,
+            'versions' => $versions,
+        ]));
+    }
+
+    private function getFileVersion(string $path): string
+    {
+        if ($path === '' || !is_file($path)) {
+            return 'missing';
+        }
+
+        $mtime = filemtime($path);
+        $size = filesize($path);
+        return ($mtime === false ? 'unknown' : (string)$mtime)
+            . ':'
+            . ($size === false ? 'unknown' : (string)$size);
+    }
+
+    private function canUseApcu(): bool
+    {
+        if (!function_exists('apcu_fetch') || !function_exists('apcu_store')) {
+            return false;
+        }
+
+        return !function_exists('apcu_enabled') || apcu_enabled();
     }
 
     public function GetFecha()

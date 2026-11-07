@@ -33,7 +33,7 @@ El bloque puede contener uno o varios `plano`. Si no existe el bloque o ningún 
 
 ## Lectura concurrente de datos
 
-Las peticiones normales son de solo lectura. Los wrappers XML mantienen una caché independiente por ruta y los resultados JSON se reutilizan mientras el archivo conserve la misma versión (fecha de modificación y tamaño). Esto evita lecturas y parseos repetidos sin compartir estado mutable entre usuarios o peticiones PHP.
+Las peticiones normales son de solo lectura. Los wrappers XML mantienen una caché independiente por ruta y los resultados JSON se reutilizan mientras el archivo conserve la misma versión (fecha de modificación y tamaño). La lista de participantes puede reutilizarse entre peticiones mediante APCu; si no está disponible, solo se reutiliza dentro de la petición actual. Esto evita lecturas y parseos repetidos sin cambiar los datos publicados.
 
 Los procesos de publicación deben escribir primero un archivo temporal y sustituir el archivo final con un renombrado atómico. La validación no debe ejecutarse sobre un archivo que todavía se esté escribiendo.
 
@@ -79,6 +79,8 @@ Los consumidores deben tratar `cabecera` y `datos` como arrays. Los campos adici
 ## Participantes del concurso
 
 La portada del concurso obtiene los participantes recorriendo todas las pruebas configuradas en el XML. En concursos con `<jornadas>`, se recorren las pruebas de todas las jornadas, aunque la URL incluya una jornada concreta, porque la sección pertenece al resumen general del concurso.
+
+El resultado de participantes puede almacenarse en APCu con una clave derivada de la versión del XML del concurso y de cada JSON enlazado. La caché debe invalidarse cuando cambia cualquiera de esos archivos; si APCu no está disponible, el comportamiento debe degradar a la caché estática de la petición sin alterar la salida.
 
 Cada fila se construye con estos campos de `resultados.datos`:
 
