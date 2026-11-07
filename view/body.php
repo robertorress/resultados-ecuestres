@@ -181,7 +181,6 @@
             <div class="card grey darken-1">
                 <div class="card-content white-text">
                     <?php /* <span class="card-title white-text">ANUNCIOS</span> */ ?>
-                    <p>
                     <div class="row">
                         <div class="col s12 center">
 							<div class="card-panel blue-grey lighten-1">
@@ -377,7 +376,6 @@
             <?php
         }
         ?>
-        </p>
     </div>
 
 </div>
